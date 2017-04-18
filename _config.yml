@@ -17,11 +17,12 @@ rss: default
 # Menu Settings
 # ===========================================
 menu:
-  Home: /
+  # Home: /
   Archives: /archives/
-  # Tags: /tags
+  Tags: /tags
   # Categories: /categories
-  # About: /about
+  Github: https://github.com/ahonn
+  About: /about
 
 # ===========================================
 # Theme Settings
@@ -49,15 +50,15 @@ reward:
 # Social links Settings
 # ===========================================
 social:
-  email: your@email.com
+  email: ahonn95@outlook.com
   stack-overflow:
   twitter:
   facebook:
   linkedin:
   google:
-  github:
+  github: https://github.com/ahonn
   weibo:
-  zhihu:
+  zhihu: https://www.zhihu.com/people/ahonn/activities
   pocket:
 
 # ===========================================
@@ -65,16 +66,16 @@ social:
 # ===========================================
 
 # Baidu Analytics
-baidu_analytics:
+baidu_analytics: 8466adbc25665cf7ee1a15e4fcb73643
 # Google Analytics
-google_analytics:
+google_analytics: UA-74273646-1
 
 # Duoshuo
-# duoshuo_shortname:
+# duoshuo_shortname: ahonn
 # Disqus
-disqus_shortname:
+disqus_shortname: ahonn
 # netease
-# netease_key:
+# netease_key: 8c89124062934daf963154d81c305348
 
 # ===========================================
 # Version
