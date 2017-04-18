@@ -42,7 +42,7 @@ copyright:
 
 reward:
   enable: true
-  qrCode: 
+  qrCode:
     wechat: /image/reward/wechat.png
     alipay: /image/reward/alipay.png
 
@@ -80,4 +80,4 @@ disqus_shortname: ahonn
 # ===========================================
 # Version
 # ===========================================
-version: 2.3.x
+version: 2.4.x
