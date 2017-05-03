@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="The harder you work, the luckier you get."/>
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Ahonn">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.4.x" />
+
+
+
+<link rel="canonical" href="http://www.ahonn.me/page/2/"/>
+
+
+<meta name="description" content="The harder you work, the luckier you get.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ahonn">
+<meta property="og:url" content="http://www.ahonn.me/page/2/index.html">
+<meta property="og:site_name" content="Ahonn">
+<meta property="og:description" content="The harder you work, the luckier you get.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ahonn">
+<meta name="twitter:description" content="The harder you work, the luckier you get.">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
+
+
+
+
+
+
+
+<script>
+  var CONFIG = {
+    search: false,
+    searchPath: "/search.xml",
+    fancybox: false,
+    toc: true,
+  }
+</script>
+
+
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?8466adbc25665cf7ee1a15e4fcb73643";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-74273646-1', 'auto');
+        ga('send', 'pageview');
+  </script>
+
+
+
+    <title> Ahonn </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">Ahonn</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            Tags
+          
+        </li>
+      </a>
+    
+      <a href="https://github.com/ahonn">
+        <li class="mobile-menu-item">
+          
+          
+            Github
+          
+        </li>
+      </a>
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            About
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">Ahonn</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              Archives
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              Tags
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="https://github.com/ahonn">
+            
+            
+              Github
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              About
+            
+          </a>
+        </li>
+      
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts">
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2016/11/21/javascript-data-type-judgment/">JavaScript 数据类型判断</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Nov 21, 2016
+        </span>
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <p>最近开始读之前没有读完的 underscore 的源码，刚把 Object 部分读完。对 JavaScript 中类型判断部分的总结。</p>
+<h2 id="Object-prototype-toString"><a href="#Object-prototype-toString" class="headerlink" title="Object.prototype.toString()"></a>Object.prototype.toString()</h2><p>在进行类型判断时，使用到最多的当属 <code>Object.prototype.toString()</code>。</p>
+<p><code>toString()</code> 方法返回一个代表该对象的字符串。每个对象都会继承 Object 上的 <code>toString</code> 方法，如果该方法没有被同名方法覆盖的话。使用 <code>toString()</code> 方法将会返回字符串 <code>&quot;[object type]&quot;</code>。其中 type 根据对象的类型的不同而不同。</p>
+<p>关于 <code>Object.prototype.toString()</code> 的详细描述可以查看：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString" target="_blank" rel="external">Object.prototype.toString() - JavaScript | MDN</a></p>
+          <div class="read-more">
+            <a href="/2016/11/21/javascript-data-type-judgment/" class="read-more-link">Read more..</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2016/11/14/wechat-app-summary/">「微信小程序」入坑总结</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Nov 14, 2016
+        </span>
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <p>前段时间去了广州参加了关于「微信小程序」的技术沙龙，整场下来收获颇多。实际上微信小程序刚刚发布出来的时候就关注，弄了破解了的开发工具，跑了个官方的 Demo。</p>
+<p>听完回来之后就想着挖个相关的坑，正好看到手机上的 「ONE · 一个」。上网找到了 ONE 的接口，打算搞一个仿照 ONE 官方 APP 的小程序，最后就有了 <a href="https://github.com/ahonn/weapp-one" target="_blank" rel="external">weapp-one</a> 这个项目。</p>
+<h2 id="关于小程序"><a href="#关于小程序" class="headerlink" title="关于小程序"></a>关于小程序</h2><p>微信小程序不是 Web 也不是 Native，尝试之后给我的感觉有点像是 weex。因为之前尝试 weex 的时候是下载一个 APP，然后通过应用内扫码来运行对应的应用。这一点上小程序类似。</p>
+<p>在沙龙上有位分享嘉宾有提到，小程序实际上是在 Webview 之上再加上一层原生的组件。例如底部的 tabbar 以及顶部的 navbar 就是原生的。还有小程序的 map 组件，是调用原生的 map 组件。</p>
+          <div class="read-more">
+            <a href="/2016/11/14/wechat-app-summary/" class="read-more-link">Read more..</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2016/10/11/after-the-react-routing-scroll-to-the-top-of-the-page/">React 路由跳转后回到页面顶部</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Oct 11, 2016
+        </span>
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <p>在 React 组件间进行页面跳转后，发现页面的位置并不在页面顶部，而是在页面跳转前的位置。就是说浏览器的滚动条并没有回到顶部的位置。</p>
+<p>经过搜索之后找到了解决方案：<a href="http://stackoverflow.com/questions/33188994/scroll-to-the-top-of-the-page-after-render-in-react-js" target="_blank" rel="external">Scroll to the top of the page after render in react.js</a></p>
+<p>可以使用下面这种解决，但是这种方式不是一种很好的解决方法。而且 <code>scrollIntoView()</code> 方法并不回到页面的顶部，应该使用 <code>scrollTop = 0</code> 的方式。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">componentDidUpdate = <span class="function"><span class="params">()</span> =&gt;</span> &#123; ReactDom.findDOMNode(<span class="keyword">this</span>).scrollIntoView(); &#125;</div></pre></td></tr></table></figure>
+<p>所以得到的解决方案是：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">componentDidUpdate() &#123;</div><div class="line">  ReactDOM.findDOMNode(<span class="keyword">this</span>).scrollTop = <span class="number">0</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          <div class="read-more">
+            <a href="/2016/10/11/after-the-react-routing-scroll-to-the-top-of-the-page/" class="read-more-link">Read more..</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2016/10/02/react-lifecycle-methods/">React 生命周期函数小结</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Oct 2, 2016
+        </span>
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <p>生命周期函数是指，在组件生命周期上的特定点上执行的各个函数。<br>React 的组件声明周期函数分为三种：挂载，更新以及卸载。</p>
+<h2 id="挂载"><a href="#挂载" class="headerlink" title="挂载"></a>挂载</h2><p>组件挂载的生命周期函数都在初始化渲染前后被调用。</p>
+<h3 id="componentWillMount"><a href="#componentWillMount" class="headerlink" title="componentWillMount"></a>componentWillMount</h3><p>只调用一次，在客户端与服务端都执行。在初始化渲染之前被调用。</p>
+          <div class="read-more">
+            <a href="/2016/10/02/react-lifecycle-methods/" class="read-more-link">Read more..</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2016/09/13/the-memo-of-javascript-regexp/">正则表达式备忘录</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Sep 13, 2016
+        </span>
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <p>JavaScript 创建正则表达式有两种方式：</p>
+<ul>
+<li>使用正则表达式字面量：<code>var re = /abc/;</code></li>
+<li>调用 RegExp 对象的构造函数：<code>var re = new RegExp(&quot;abc&quot;);</code></li>
+</ul>
+<h2 id="什么时候使用构造函数？"><a href="#什么时候使用构造函数？" class="headerlink" title="什么时候使用构造函数？"></a>什么时候使用构造函数？</h2><p>当正则表达式的模式会变发生改变，或者需要从其他地方得到时（例如用户输入），适合使用构造函数的方式。</p>
+          <div class="read-more">
+            <a href="/2016/09/13/the-memo-of-javascript-regexp/" class="read-more-link">Read more..</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2016/08/31/javascript-best-practices/">JavaScript 最佳实践：提升代码质量的建议和技巧</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Aug 31, 2016
+        </span>
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <blockquote>
+<p>翻译自：<a href="https://www.codementor.io/javascript/tutorial/javascript-best-practices" target="_blank" rel="external">JavaScript Best Practices: Tips &amp; Tricks to Level Up Your Code</a><br>没有严格的按照原文翻译，删减修改了部分内容。</p>
+</blockquote>
+<p>在这个教程中，会列出一些重要的 JavaScript 的最佳实践，学习这些并不会很困难。</p>
+<h2 id="避免污染全局作用域"><a href="#避免污染全局作用域" class="headerlink" title="避免污染全局作用域"></a>避免污染全局作用域</h2><p>声明变量是很有趣的，有时候你会在你不知情的情况下声明了全局变量。在现在的浏览器中，全局变量将会存储在 <code>window</code> 变量中。在全局作用域中的变量可能在不经意间被覆盖。</p>
+          <div class="read-more">
+            <a href="/2016/08/31/javascript-best-practices/" class="read-more-link">Read more..</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2016/08/02/javascript-reduce-the-browser-reflow/">如何减少浏览器回流</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Aug 2, 2016
+        </span>
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h2 id="什么是浏览器回流"><a href="#什么是浏览器回流" class="headerlink" title="什么是浏览器回流"></a>什么是浏览器回流</h2><p>浏览器在显示网页时，需要计算每一个元素应该放置的位置，这个计算过程就称为浏览器回流（browser reflow）。回流会重新计算页面的布局，在回流中会重新计算元素的尺寸与位置，并且也会触发对子元素的回流。</p>
+<p>触发浏览器回流的操作：</p>
+<ul>
+<li>在 DOM 中插入，移除或者更新元素</li>
+<li>修改页面上的内容</li>
+<li>移动 DOM 元素</li>
+<li>修改元素 CSS 样式</li>
+<li>修改元素的类名</li>
+<li>调整窗口的大小</li>
+</ul>
+          <div class="read-more">
+            <a href="/2016/08/02/javascript-reduce-the-browser-reflow/" class="read-more-link">Read more..</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2016/07/25/the-right-way-to-array-of-random-sequence/">数组乱序的正确姿势</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Jul 25, 2016
+        </span>
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <p>在 <code>underscore</code> 中有一个函数，其作用是将数组乱序排序，实现如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Shuffle a collection, using the modern version of the</span></div><div class="line"><span class="comment">// [Fisher-Yates shuffle](http://en.wikipedia.org/wiki/Fisher–Yates_shuffle).</span></div><div class="line"><span class="comment">// `shuffle` 函数。</span></div><div class="line">_.shuffle = <span class="function"><span class="keyword">function</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> set = isArrayLike(obj) ? obj : _.values(obj);</div><div class="line">  <span class="keyword">var</span> length = set.length;</div><div class="line">  <span class="keyword">var</span> shuffled = <span class="built_in">Array</span>(length);</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> index = <span class="number">0</span>, rand; index &lt; length; index++) &#123;</div><div class="line">    rand = _.random(<span class="number">0</span>, index);</div><div class="line">    <span class="keyword">if</span> (rand !== index) shuffled[index] = shuffled[rand];</div><div class="line">    shuffled[rand] = set[index];</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> shuffled;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+          <div class="read-more">
+            <a href="/2016/07/25/the-right-way-to-array-of-random-sequence/" class="read-more-link">Read more..</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2016/07/24/langshi-grocery-store/">浪矢杂货店</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Jul 24, 2016
+        </span>
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <p>解忧杂货店，零零散散的在地铁上看完了这本之前一直听到却没有去看的小说。其实几天前想写这篇读书笔记的，一直被拖延至今。</p>
+<p>爱情公寓中有一集曾小贤说了这样一句话。当面对两个选择时，抛硬币总能奏效，并不是因为它总能给出对的答案，而是在你把它抛在空中的那一秒里，你突然知道你希望它是什么。就像是那些向浪矢杂货店投递烦恼信件一样，其实真正来向浪矢爷爷咨询的人大多心里已经有了答案。只是自己没有发现，当杂货店回信中的建议并不像所期望的回答的时候，咨询者就发现自己想要的那个答案。<br>
+          <div class="read-more">
+            <a href="/2016/07/24/langshi-grocery-store/" class="read-more-link">Read more..</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2016/07/13/getting-highlightjs-to-work-with-vue.js/">Vue 中使用 highlight.js</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Jul 13, 2016
+        </span>
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <p>今天遇到一个问题：在使用 vue 的练手项目中，渲染的 HTML 里 <code>&lt;code&gt;</code> 标签中的代码没有代码高亮。</p>
+<p>遂想到用 highlight.js 来解决，按照平常那样在 HTML 文件中引入 <code>js</code> 和 <code>css</code> 文件，然后在<code>&lt;header&gt;</code> 中加上一句 <code>&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;</code>。但是却没有效果。</p>
+<p>在 Vue.js 的论坛上找到了解决方案 <a href="https://forum.vuejs.org/topic/3514/getting-highlightjs-to-work-with-vue-router" target="_blank" rel="external">Getting highlightjs to work with vue-router</a>。highlight.js 没有效果是因为使用了 <code>vue-route</code>，在 route 改变时，页面将会重新渲染并且会移除事件，这里就把 highlight 的事件给移除了。<br>
+          <div class="read-more">
+            <a href="/2016/07/13/getting-highlightjs-to-work-with-vue.js/" class="read-more-link">Read more..</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    
+      <a class="prev" href="/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/page/3/">
+        <span class="next-text">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+
+          </div>
+          
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:ahonn95@outlook.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/ahonn" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+        
+          <a href="https://www.zhihu.com/people/ahonn/activities" class="iconfont icon-zhihu" title="zhihu"></a>
+        
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+  </span>
+  
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Ahonn</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
+
+    
+  </body>
+</html>
