@@ -1,0 +1,1087 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ahonn</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.ahonn.me/"/>
+  <updated>2017-05-03T14:34:21.000Z</updated>
+  <id>http://www.ahonn.me/</id>
+  
+  <author>
+    <name>Ahonn</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>转投 neovim</title>
+    <link href="http://www.ahonn.me/2017/03/27/use-neovim/"/>
+    <id>http://www.ahonn.me/2017/03/27/use-neovim/</id>
+    <published>2017-03-27T03:10:06.000Z</published>
+    <updated>2017-05-03T14:34:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://ww2.sinaimg.cn/large/006tNc79gy1fe1885ws5rj315w0n4n12.jpg" alt=""></p>
+<p>很久之前就听说过 neovim，但一直没有怎么了解过。昨天下午折腾了一下，彻底转投 neovim 了。</p>
+<p>虽然说这两货的差别目前还不是很大，但是 neovim 实现了嵌入式终端模拟器，Excited! 各种 REPL 插件统统都可以卸载了！</p>
+<a id="more"></a>
+<h2 id="迁移配置文件"><a href="#迁移配置文件" class="headerlink" title="迁移配置文件"></a>迁移配置文件</h2><p>neovim 配置完全兼容原来的 <code>.vimrc</code>，只需要：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir -p <span class="variable">$&#123;XDG_CONFIG_HOME:=$HOME/.config&#125;</span></div><div class="line">ln <span class="_">-s</span> ~/.vim <span class="variable">$XDG_CONFIG_HOME</span>/nvim</div><div class="line">ln <span class="_">-s</span> ~/.vimrc <span class="variable">$XDG_CONFIG_HOME</span>/nvim/init.vim</div></pre></td></tr></table></figure>
+<h2 id="使用-ale-代替-syntastic"><a href="#使用-ale-代替-syntastic" class="headerlink" title="使用 ale 代替 syntastic"></a>使用 ale 代替 syntastic</h2><p>老早就觉得 <code>syntastic</code> 同步检查代码好难用，这下换成 <code>ale</code> 舒服多了。有之前使用 atom 时自带的代码检查的感觉。</p>
+<p>(Vim 8 好像也已经提供了异步 API，但是我等到换成 neovim 才知道..)</p>
+<h2 id="把-Leader-改成空格"><a href="#把-Leader-改成空格" class="headerlink" title="把 Leader 改成空格"></a>把 Leader 改成空格</h2><p>其实是看了 <a href="https://zhuanlan.zhihu.com/p/25905625" target="_blank" rel="external">Vim 高效率配置导论</a> 这篇文章之后试着改的，改完发现空格比起原先的 <code>,</code> 好用多了。让大拇指动了起来。</p>
+<p>然后切换 buffter 的快捷键就映射成了 <code>&lt;Space&gt; + n/m</code>，简直不要太顺手。</p>
+<h2 id="使用-Spacegray-主题"><a href="#使用-Spacegray-主题" class="headerlink" title="使用 Spacegray 主题"></a>使用 Spacegray 主题</h2><p>之前使用的 <code>molokai</code> 看久了有点视觉疲劳，发现之前在用 <code>sublime text</code> 时使用的 <code>Spacegray</code> 也有 Vim 版本，果断换之。（折腾高亮主题是永恒的.. ）</p>
+<h2 id="优化难用的缩进调整"><a href="#优化难用的缩进调整" class="headerlink" title="优化难用的缩进调整"></a>优化难用的缩进调整</h2><p>在 Visual 模式下调整缩进很不好用，<code>v&gt;</code> 之后又得重新选中，虽然说可以 <code>v3&gt;</code> 之类的，但是需要去计算多少个缩进，看起来并不是很明显。</p>
+<p>遂，添加了下面这两个 mapping：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">vnoremap &lt; &lt;v</div><div class="line">vnoremap &gt; &gt;v</div></pre></td></tr></table></figure>
+<p>这样映射之后我就可以 <code>v&gt;&gt;&gt;</code> 去缩进了，好用到不行！</p>
+<h2 id="Vim-使用总结"><a href="#Vim-使用总结" class="headerlink" title="Vim 使用总结"></a>Vim 使用总结</h2><p>使用 Vim 也差不多一个来月了，越来越发现 Vim 的便利之处，虽然说折腾配置插件花的时间会久一点。但是折腾完之后效率提高还是蛮多的，以至于现在在别的编辑器里下意识的用 Vim 模式，发现没有之后用方向键或者鼠标去移动都觉得超级慢。</p>
+<p>开始理解 Vim 学习路线那张图表的意思了～</p>
+<blockquote>
+<p>我的 Vim 配置：<a href="https://github.com/ahonn/vimrc" target="_blank" rel="external">vimrc</a></p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://ww2.sinaimg.cn/large/006tNc79gy1fe1885ws5rj315w0n4n12.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;很久之前就听说过 neovim，但一直没有怎么了解过。昨天下午折腾了一下，彻底转投 neovim 了。&lt;/p&gt;
+&lt;p&gt;虽然说这两货的差别目前还不是很大，但是 neovim 实现了嵌入式终端模拟器，Excited! 各种 REPL 插件统统都可以卸载了！&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.ahonn.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Vim" scheme="http://www.ahonn.me/tags/Vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>阿里巴巴暑假实习面试总结</title>
+    <link href="http://www.ahonn.me/2017/03/16/alibaba-summer-internship-interview-summary/"/>
+    <id>http://www.ahonn.me/2017/03/16/alibaba-summer-internship-interview-summary/</id>
+    <published>2017-03-16T07:15:24.000Z</published>
+    <updated>2017-05-03T14:34:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>2月末的时候，通过 <a href="https://simplyy.space/" target="_blank" rel="external">simplyY</a> 内推了阿里巴巴暑期实习的前端开发岗，在此表示感谢。<br>接着3月1号收到了内推的通知邮件，完善信息后很快就接到了一面的电话（3月3号）。</p>
+<h2 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h2><p>面试了大概20分钟左右，整体内容还是比较偏基础。一开始是正常流程的自我介绍，说是三分钟自我介绍，但是我语速比较快的不到两分钟的介绍完了。(刚好是临近中午，原本打算吃饭的，要是去吃饭的话就得在路上面了…）</p>
+<h3 id="CSS-垂直居中"><a href="#CSS-垂直居中" class="headerlink" title="CSS 垂直居中"></a>CSS 垂直居中</h3><p>这个写过一篇博文专门总结过，不过面试的时候还是太过紧张没有答全。主要是 Flexbox 布局的垂直居中比较容易忘记。</p>
+<p>具体就不再啰嗦了，详情可以查看：<a href="http://www.ahonn.me/2016/06/29/vertical-center-for-css/">CSS 实现垂直居中</a></p>
+<a id="more"></a>
+<h3 id="call-与-apply-的区别，以及性能差别"><a href="#call-与-apply-的区别，以及性能差别" class="headerlink" title="call 与 apply 的区别，以及性能差别"></a>call 与 apply 的区别，以及性能差别</h3><p><code>call</code> 与 <code>apply</code> 的区别，这是一个老生常谈的面试题了。<code>call()</code> 与 <code>apply()</code> 都是用于在指定 this 值与参数的情况下调用函数，主要的区别在于除了传入 this 值之外，<code>apply()</code> 接收类数组或者类数组对象来作为调用的函数的参数，而 <code>call()</code> 则是需要分别传入函数的每一个参数（除第一个参数之外的其他参数）。</p>
+<blockquote>
+<p>call()方法与apply()方法的作用相同，它们的区别仅在于接收参数的方式不同。对于call()方法而言，第一个参数是this值没有变化，变化的是其余参数都直接传递给函数。换句话说，在使用call()方法时，传递给函数的参数必须逐个列举出来。—— 『JavaScript 高级程序设计』</p>
+</blockquote>
+<p>区别的话基本上只要看过书或者刷过面试题都会知道，但 <code>call()</code> 与 <code>apply()</code> 之间的性能差别就不是那么常见了。<br>比较幸运的是，之前在阅读 underscore 源码的时候有注意到这个细节，为此也写过另外的文章：<a href="http://www.ahonn.me/2016/05/03/starting-from-the-optimizeCb/">从 optimizeCb 说起</a>。</p>
+<p>实践证明，在知道调用函数的参数数量时，使用 <code>call()</code> 的性能会优于 <code>apply()</code>。主要在实现的过程中 <code>apply()</code> 需要完成额外的操作（判断第二个参数类数组的长度，etc.）。具体为什么有这种差别，可以在 ECMAScript Language Specification 中查看 <a href="https://www.ecma-international.org/ecma-262/5.1/#sec-15.3.4.3" target="_blank" rel="external">Function.prototype.apply</a> 与 <a href="https://www.ecma-international.org/ecma-262/5.1/#sec-15.3.4.4" target="_blank" rel="external">Function.prototype.call</a> 的具体实现差异。</p>
+<p><strong>参考链接</strong></p>
+<ul>
+<li><a href="http://stackoverflow.com/questions/1986896/what-is-the-difference-between-call-and-apply" target="_blank" rel="external">javascript - What is the difference between call and apply? - Stack Overflow</a></li>
+<li><a href="http://stackoverflow.com/questions/23769556/why-is-call-so-much-faster-than-apply" target="_blank" rel="external">javascript - Why is call so much faster than apply? - Stack Overflow</a></li>
+<li><a href="https://jsperf.com/call-apply-segu" target="_blank" rel="external">call vs apply · jsPerf</a></li>
+</ul>
+<h3 id="什么是闭包"><a href="#什么是闭包" class="headerlink" title="什么是闭包"></a>什么是闭包</h3><p>又是一个老生常谈的问题。我的理解比较肤浅，就是 A 函数返回 B 函数，B 函数能够访问 A 函数中的局部变量，使得在 A 外部的作用域中能够使用 B 函数间接操作 A 函数中的局部变量，这样就形成了一个闭包。A 函数中的局部变量与返回的 B 函数一同存在，不会被垃圾回收机制清理（引用还存在）。</p>
+<blockquote>
+<p>在计算机科学中，闭包（英语：Closure），又称词法闭包（Lexical Closure）或函数闭包（function closures），是引用了自由变量的函数。这个被引用的自由变量将和这个函数一同存在，即使已经离开了创造它的环境也不例外。—— 维基百科</p>
+</blockquote>
+<p>建议阅读 <a href="https://book.douban.com/subject/26351021/" target="_blank" rel="external">『你不知道的 JavaScript（上卷）』</a> 中有关作用域与闭包的部分。</p>
+<h3 id="什么是尾递归"><a href="#什么是尾递归" class="headerlink" title="什么是尾递归"></a>什么是尾递归</h3><blockquote>
+<p>在计算机科学里，尾调用是指一个函数里的最后一个动作是一个函数调用的情形：即这个调用的返回值直接被当前函数返回的情形。这种情形下称该调用位置为尾位置。若这个函数在尾位置调用本身（或是一个尾调用本身的其他函数等等），则称这种情况为尾递归，是递归的一种特殊情形。—— 维基百科</p>
+</blockquote>
+<p>一般递归实现阶乘：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fact</span>(<span class="params">n</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (n == <span class="number">0</span> || n == <span class="number">1</span>) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="keyword">return</span> n * fact(n - <span class="number">1</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>一般递归需要中栈上维护函数的调用信息直到函数返回后才释放，容易发生『栈溢出』错误。但对于尾递归来说，只需要维护一个调用记录。</p>
+<p>尾递归实现阶乘：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fact</span>(<span class="params">n</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> fact-iter(n, <span class="number">1</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fact</span>-<span class="title">iter</span>(<span class="params">n, a</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (n == <span class="number">0</span>) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (n == <span class="number">1</span>) &#123;</div><div class="line">    <span class="keyword">return</span> a;</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="keyword">return</span> fact-iter(n - <span class="number">1</span>, n * a);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>关于递归与尾递归，在 <a href="https://book.douban.com/subject/1148282/" target="_blank" rel="external">『计算机程序的构造和解释』</a>中也有类似的讨论。</p>
+<h3 id="React-的设计理念"><a href="#React-的设计理念" class="headerlink" title="React 的设计理念"></a>React 的设计理念</h3><p>这部分答得不是很好，只提到了组件化，单向数据流，Virtual DOM 之类的。</p>
+<p>有关 React 的设计思想可以参考这一篇文章：<a href="https://github.com/react-guide/react-basic" target="_blank" rel="external">React 设计思想</a>。</p>
+<h3 id="前端安全（攻击方式与如何防范）"><a href="#前端安全（攻击方式与如何防范）" class="headerlink" title="前端安全（攻击方式与如何防范）"></a>前端安全（攻击方式与如何防范）</h3><p>第一反应就是 <code>XSS</code> 与 <code>CSRF</code>，<code>XSS</code> 可以通过对输入数据进行转义来防范，而 <code>CSRF</code> 则通过使用 SSL 链接访问资源或者请求中添加验证码来进行防范。</p>
+<p>除此之外我漏掉了网络劫持，控制台注入代码等攻击方式，这里有篇文章做了详细介绍：<a href="https://segmentfault.com/a/1190000006672214" target="_blank" rel="external">聊一聊WEB前端安全那些事儿</a>。</p>
+<h2 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h2><p>第一次远程视频面试，好紧张。</p>
+<p>一开始问了 CSS 中 position 属性的 absolute 的作用以及应用场景，这个基本上没有什么问题。接着叫我拿纸写冒泡排序（手写 T-T），飞快的写完。<br>然后跟一面一样也问了前端安全相关的问题，一下子都不紧张了.. 没有想象中的难。</p>
+<h3 id="实现-bind-函数"><a href="#实现-bind-函数" class="headerlink" title="实现 bind 函数"></a>实现 bind 函数</h3><p>同样是让我写代码，同样是手写（T-T）。这个问题对我来说不算难，不过只是写了简单的实现，没有考虑其他情况。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Function</span>.prototype.bind = <span class="built_in">Function</span>.prototype.bind || <span class="function"><span class="keyword">function</span> (<span class="params">context</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> self = <span class="keyword">this</span>;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> self.apply(context, <span class="built_in">arguments</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>基本原理就是使用 <code>apply()</code> 与闭包，返回包含 <code>apply()</code> 的闭包使得 <code>apply()</code> 绑定指定作用域，但并未执行。</p>
+<h3 id="阅读-Underscore-源码的经历"><a href="#阅读-Underscore-源码的经历" class="headerlink" title="阅读 Underscore 源码的经历"></a>阅读 Underscore 源码的经历</h3><p>之前拖拖拉拉的阅读完了 Underscore 的源码，并提交了一个小 <a href="https://github.com/jashkenas/underscore/pull/2630" target="_blank" rel="external">Pull Request</a>。</p>
+<p>在阅读的过程中学到了许多的东西，例如上面提到的 call 与 apply 的性能差别，除此之外还有如何去判断变量的类型，以及如何判断两个变量是否相等，等等。另外也了解到许多闭包的使用场景。</p>
+<h3 id="阅读其他类库的收获"><a href="#阅读其他类库的收获" class="headerlink" title="阅读其他类库的收获"></a>阅读其他类库的收获</h3><p>除了 Underscore 之外还阅读过一点 Bootstrap 和 jQuery，这个博客主题的样式部分的组织方式就是参考了 Bootstrap 的组织方式，另外也稍微阅读过 jQuery中 <code>$.ajax</code> 以及事件相关的源码。</p>
+<p>在阅读代码的过程中的收获就是学习了一些组织代码的方式，还有如何写才能有利于拓展，更加健壮。其中也学到了一些提高性能的技巧，函数缓存，事件队列之类的。</p>
+<h3 id="博客主题的开发经历"><a href="#博客主题的开发经历" class="headerlink" title="博客主题的开发经历"></a>博客主题的开发经历</h3><p>其实一开始写主题只是想给自己用，之后发现蛮多人也喜欢我这个主题的，并时不时有人中 Github 上提 Issue，这对我是莫大的鼓励。虽然我水平并不是很高，但是写出来的东西有人用感觉真的是特别开心，也特别有动力去改进。</p>
+<p>从开始去写主题到现在差不多也一年了，这一年中我从前端小白变成前端大白。在维护的过程中学习到很多东西，虽然目前写得也不是很好，但是我还是会慢慢改进继续维护下去的。</p>
+<p>维护的过程中的收获就是，当站在自己的角度看问题与在别人的角度看完全是不一样的，或许有个功能我并不需要，但是有人提了，我就得站在『用户』的角度去思考，去实现。『用户』只关心能不能用，好不好用，而并不关心代码写得怎么样。</p>
+<h3 id="实习期间遇到得难题"><a href="#实习期间遇到得难题" class="headerlink" title="实习期间遇到得难题"></a>实习期间遇到得难题</h3><p>可能我做的工作相对简单，就算不会，基本上靠搜索引擎都能够解决。<strong>我觉得能用 Google 解决的问题不算难题。</strong>以我现在的水平，还达不到遇到的难题 Google 搜索不到的😹</p>
+<h2 id="三面"><a href="#三面" class="headerlink" title="三面"></a>三面</h2><p>三面基本上没有问太过具体的前端相关的问题，大部分是在聊聊看法，聊聊项目。</p>
+<p>开始让我用纸画出博客的设计，其实主要还是主题，没什么难度，毕竟代码都是我自己写的。</p>
+<p>然后让我介绍一下我熟悉的一个框架，说的 React，提及到了 Vitrual DOM 和 diff 算法，说了一下 diff 算法的大概策略。还有说到组件化，单向数据流等等。幸运的是，我在二面之前刷了 『深入 React 技术栈』这本书，结合之前的实践能够说个大概。</p>
+<p>中间有聊到兴趣爱好，我想了想好像只有写代码。听歌应该也算？写代码的时候必定要听歌。我记得去年国庆有一天从起床写到晚上睡觉，差不多写了 11 个小时，那时候正在折腾 React 与 Meteor。我自己都觉得不可思议。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>可能是运气问题，我觉得我的这几面难度都不高😹。得益于看的书，好多知识点都是书上有的。基本上基础的前端面试题都可以在红宝书上找到，真不愧为前端面试宝典。另外 Github 上的这个博客主题也帮了很大的忙，300+ star 果然还是有点用处的（虽然说 star 不能代表什么，而且的确写得也很水，但作用不可否认）。</p>
+<p>最后，基础很重要，基础扎实是基本。但是如果想要有突出的表现还是需要更有深度的研究。需要经常思考总结，不仅仅是浮于表面，更要深入原理。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;2月末的时候，通过 &lt;a href=&quot;https://simplyy.space/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;simplyY&lt;/a&gt; 内推了阿里巴巴暑期实习的前端开发岗，在此表示感谢。&lt;br&gt;接着3月1号收到了内推的通知邮件，完善信息后很快就接到了一面的电话（3月3号）。&lt;/p&gt;
+&lt;h2 id=&quot;一面&quot;&gt;&lt;a href=&quot;#一面&quot; class=&quot;headerlink&quot; title=&quot;一面&quot;&gt;&lt;/a&gt;一面&lt;/h2&gt;&lt;p&gt;面试了大概20分钟左右，整体内容还是比较偏基础。一开始是正常流程的自我介绍，说是三分钟自我介绍，但是我语速比较快的不到两分钟的介绍完了。(刚好是临近中午，原本打算吃饭的，要是去吃饭的话就得在路上面了…）&lt;/p&gt;
+&lt;h3 id=&quot;CSS-垂直居中&quot;&gt;&lt;a href=&quot;#CSS-垂直居中&quot; class=&quot;headerlink&quot; title=&quot;CSS 垂直居中&quot;&gt;&lt;/a&gt;CSS 垂直居中&lt;/h3&gt;&lt;p&gt;这个写过一篇博文专门总结过，不过面试的时候还是太过紧张没有答全。主要是 Flexbox 布局的垂直居中比较容易忘记。&lt;/p&gt;
+&lt;p&gt;具体就不再啰嗦了，详情可以查看：&lt;a href=&quot;http://www.ahonn.me/2016/06/29/vertical-center-for-css/&quot;&gt;CSS 实现垂直居中&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="总结" scheme="http://www.ahonn.me/tags/%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="面试" scheme="http://www.ahonn.me/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Don&#39;t Let Me Down</title>
+    <link href="http://www.ahonn.me/2017/03/15/don-t-let-me-down/"/>
+    <id>http://www.ahonn.me/2017/03/15/don-t-let-me-down/</id>
+    <published>2017-03-15T08:40:08.000Z</published>
+    <updated>2017-05-03T14:34:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>单人 Acapella 版本的『 Don’t Let Me Down 』, 分享～</p>
+<blockquote>
+<p>无法翻墙上油管的话可以查看：<a href="http://music.163.com/#/mv?id=5347652" target="_blank" rel="external">Don’t Let Me Down (Remix)</a></p>
+</blockquote>
+<a id="more"></a>
+<div class="video-container"><iframe src="//www.youtube.com/embed/2juA5xNObGk" frameborder="0" allowfullscreen></iframe></div>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;单人 Acapella 版本的『 Don’t Let Me Down 』, 分享～&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;无法翻墙上油管的话可以查看：&lt;a href=&quot;http://music.163.com/#/mv?id=5347652&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Don’t Let Me Down (Remix)&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="Music" scheme="http://www.ahonn.me/tags/Music/"/>
+    
+      <category term="Acapella" scheme="http://www.ahonn.me/tags/Acapella/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>答前端面试题</title>
+    <link href="http://www.ahonn.me/2017/03/11/answer-front-end-questions/"/>
+    <id>http://www.ahonn.me/2017/03/11/answer-front-end-questions/</id>
+    <published>2017-03-11T09:13:46.000Z</published>
+    <updated>2017-05-03T14:34:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>答 <a href="https://zhuanlan.zhihu.com/p/25701897" target="_blank" rel="external">中级前端工程师面试 我想问的几个问题</a> 中的几个问题，感谢 <a href="https://www.zhihu.com/people/simplyy/answers" target="_blank" rel="external">@SimplyY
+</a></p>
+</blockquote>
+<h2 id="我最大的优势以及为什么选择前端"><a href="#我最大的优势以及为什么选择前端" class="headerlink" title="我最大的优势以及为什么选择前端"></a>我最大的优势以及为什么选择前端</h2><ul>
+<li>我最大的优势是自学能力与理解能力强，并且不给自己套上『我是前端程序员』的枷锁，对于所有技术保持好奇心，不畏惧舒适圈外的事物并敢于尝试。</li>
+<li>选择前端的理由是，前端能够迅速的把想法实现，可选技术栈广泛（Web，移动端，桌面客户端），也是前端的优点之一。</li>
+</ul>
+<a id="more"></a>
+<h2 id="前后端分离的原理及意义"><a href="#前后端分离的原理及意义" class="headerlink" title="前后端分离的原理及意义"></a>前后端分离的原理及意义</h2><p>后端提供数据接口，前端获取数据并呈现。</p>
+<h3 id="前后端分离的意义"><a href="#前后端分离的意义" class="headerlink" title="前后端分离的意义"></a>前后端分离的意义</h3><ul>
+<li>后端无须套模版，前后端解耦。</li>
+<li>提高工作效率，前后端同步开发。</li>
+</ul>
+<h2 id="对-react-的理解与相对于-jQuery-开发的优势"><a href="#对-react-的理解与相对于-jQuery-开发的优势" class="headerlink" title="对 react 的理解与相对于 jQuery 开发的优势"></a>对 react 的理解与相对于 jQuery 开发的优势</h2><h3 id="对-React-的理解"><a href="#对-React-的理解" class="headerlink" title="对 React 的理解"></a>对 React 的理解</h3><ul>
+<li>通过 Virtual DOM 和 Diff 算法隔离 DOM 操作。</li>
+<li>采用单向数据流，数据流动方向单一，可跟踪。</li>
+<li>组件化，JSX 自定义标签，便于抽象化。</li>
+</ul>
+<h3 id="对比-jQuery-开发的优势"><a href="#对比-jQuery-开发的优势" class="headerlink" title="对比 jQuery 开发的优势"></a>对比 jQuery 开发的优势</h3><ul>
+<li>无需直接操作 DOM，事件通过改变 state 间接操作 DOM。</li>
+</ul>
+<p><img src="https://ww3.sinaimg.cn/large/006tKfTcgy1fdj0r2scb1j313u10u7c4.jpg" alt="React-vs-jQuery.png"></p>
+<h2 id="页面性能优化"><a href="#页面性能优化" class="headerlink" title="页面性能优化"></a>页面性能优化</h2><blockquote>
+<p><strong>页面生成过程</strong></p>
+<ul>
+<li>HTML代码转化为DOM</li>
+<li>CSS代码转化成CSSOM</li>
+<li>结合DOM和CSSOM，生成一棵渲染树</li>
+<li>生成布局（layout），即将所有渲染树的所有节点进行平面合成</li>
+<li>将布局绘制（paint）在屏幕上</li>
+</ul>
+</blockquote>
+<ul>
+<li>减少 HTTP 请求（合并 CSS/JS，小于 10k 的图片 base64）</li>
+<li>减少 DOM 操作（可使用 DocumentFragment）</li>
+<li>避免不必要的重绘与重排（重排必定导致重绘）</li>
+<li>优化 CSS 选择器（从右向左匹配）</li>
+<li>CSS/JS minify，减少文件体积</li>
+<li>开启 Gzip 压缩</li>
+<li>将 CSS 放到顶部，JavaScript 放到尾部（JavaScript 会阻塞页面）</li>
+<li>压缩图片以及使用 CSS Sprite</li>
+<li>使用 CDN 加速，适当进行文件缓存</li>
+<li>合理控制 cookie 大小（每次请求都会包含 cookie）</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;答 &lt;a href=&quot;https://zhuanlan.zhihu.com/p/25701897&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;中级前端工程师面试 我想问的几个问题&lt;/a&gt; 中的几个问题，感谢 &lt;a href=&quot;https://www.zhihu.com/people/simplyy/answers&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;@SimplyY
+&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;我最大的优势以及为什么选择前端&quot;&gt;&lt;a href=&quot;#我最大的优势以及为什么选择前端&quot; class=&quot;headerlink&quot; title=&quot;我最大的优势以及为什么选择前端&quot;&gt;&lt;/a&gt;我最大的优势以及为什么选择前端&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;我最大的优势是自学能力与理解能力强，并且不给自己套上『我是前端程序员』的枷锁，对于所有技术保持好奇心，不畏惧舒适圈外的事物并敢于尝试。&lt;/li&gt;
+&lt;li&gt;选择前端的理由是，前端能够迅速的把想法实现，可选技术栈广泛（Web，移动端，桌面客户端），也是前端的优点之一。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
+    
+      <category term="Front-end" scheme="http://www.ahonn.me/tags/Front-end/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>XMLHttpRequest 学习笔记</title>
+    <link href="http://www.ahonn.me/2017/03/02/XMLHttpRequest-study-notes/"/>
+    <id>http://www.ahonn.me/2017/03/02/XMLHttpRequest-study-notes/</id>
+    <published>2017-03-02T10:35:39.000Z</published>
+    <updated>2017-05-03T14:34:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>AJAX即“Asynchronous JavaScript and XML”（异步的JavaScript与XML技术），指的是一套综合了多项技术的浏览器端网页开发技术。</p>
+</blockquote>
+<p>Ajax 技术的核心是 <code>XMLHttpRequest</code> 对象，起初 IE 首先引入这个特性，后面其他浏览器供应商也提供了相同的实现。</p>
+<h2 id="XMLHttpRequest-对象"><a href="#XMLHttpRequest-对象" class="headerlink" title="XMLHttpRequest 对象"></a>XMLHttpRequest 对象</h2><p>XMLHttpRequest 是一个API, 它为客户端提供了在客户端和服务器之间传输数据的功能。它提供了一个通过 URL 来获取数据的简单方式，并且不会使整个页面刷新。</p>
+<a id="more"></a>
+<h3 id="主要方法"><a href="#主要方法" class="headerlink" title="主要方法"></a>主要方法</h3><ul>
+<li><p>open() 启动请求以备发送，参数包括请求方式，请求地址，是否异步</p>
+</li>
+<li><p>send() 发送请求，必要参数可发送请求主体数据，无数据时传入 null</p>
+</li>
+<li><p>abort() 发起异步请求时，终止请求</p>
+</li>
+<li><p>setRequestHeader() 设置请求头部信息</p>
+</li>
+<li><p>getRequestHeader() 获取请求头部信息</p>
+</li>
+<li><p>getAllRequestHeader() 获取全部请求头部信息，以字符串的形式返回</p>
+</li>
+</ul>
+<h3 id="主要属性"><a href="#主要属性" class="headerlink" title="主要属性"></a>主要属性</h3><ul>
+<li><p>status 响应的 HTTP 状态码</p>
+</li>
+<li><p>statusText 响应的 HTTP 状态说明</p>
+</li>
+<li><p>responseText 作为响应主体返回的文本</p>
+</li>
+<li><p>responseXML 响应数据中的 XML DOM 文档</p>
+</li>
+<li><p>readyState 请求/响应过程的当前活动阶段</p>
+<ul>
+<li><p>0 未初始化，没有使用 <code>open()</code></p>
+</li>
+<li><p>1 启动，调用 <code>open()</code> 但未调用 <code>send()</code></p>
+</li>
+<li><p>2 发送，已经调用 <code>send()</code>，但未接收到响应数据</p>
+</li>
+<li><p>3 接收，接收到部分响应数据</p>
+</li>
+<li><p>4 完成，接收到全部响应数据</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="readystatechange-事件"><a href="#readystatechange-事件" class="headerlink" title="readystatechange 事件"></a>readystatechange 事件</h3><p>当 readyState 属性值改变时触发 readystatechange 事件。通过判断 readystate 属性的值，在完成请求响应整个过程之后执行某些操作。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;AJAX即“Asynchronous JavaScript and XML”（异步的JavaScript与XML技术），指的是一套综合了多项技术的浏览器端网页开发技术。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Ajax 技术的核心是 &lt;code&gt;XMLHttpRequest&lt;/code&gt; 对象，起初 IE 首先引入这个特性，后面其他浏览器供应商也提供了相同的实现。&lt;/p&gt;
+&lt;h2 id=&quot;XMLHttpRequest-对象&quot;&gt;&lt;a href=&quot;#XMLHttpRequest-对象&quot; class=&quot;headerlink&quot; title=&quot;XMLHttpRequest 对象&quot;&gt;&lt;/a&gt;XMLHttpRequest 对象&lt;/h2&gt;&lt;p&gt;XMLHttpRequest 是一个API, 它为客户端提供了在客户端和服务器之间传输数据的功能。它提供了一个通过 URL 来获取数据的简单方式，并且不会使整个页面刷新。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
+    
+      <category term="Ajax" scheme="http://www.ahonn.me/tags/Ajax/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vim 折腾记</title>
+    <link href="http://www.ahonn.me/2017/02/19/notes-of-vim/"/>
+    <id>http://www.ahonn.me/2017/02/19/notes-of-vim/</id>
+    <published>2017-02-19T14:37:54.000Z</published>
+    <updated>2017-05-03T14:34:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>昨天在微信读书上面看到了池建强的《MacTalk 人生元编程》，然后花了差不多一天看完，其中有篇有关于 Vim 的文章提起了我对这个编辑器的再一次兴趣（对的，我对它感兴趣很多次了，每次都懒..）。</p>
+<p>一直懒得去慢慢配置它，又不想用别人的配置。自己用的编辑器还是想自己折腾，然后今天就趁着我对这个还有点热度赶紧折腾起来。</p>
+<h2 id="MacVim"><a href="#MacVim" class="headerlink" title="MacVim"></a>MacVim</h2><p>其实在命令行里面直接写代码还有有些不习惯的，所以选了 MacVim 这个 GUI 版本。这样又可以与其他编辑器一样单独打开，想小改代码的时候又可以直接打开命令行搞。</p>
+<p>在 MacTalk 的文章里面有提到 Vim 中文版本的<a href="http://sourceforge.net/projects/vimcdoc/files/latest/download" target="_blank" rel="external">帮助文档</a>，遂下载之。果然还是中文的比较浅显易懂。</p>
+<p>以前看别人的 <code>.vimrc</code> 配置，里面有些编辑器的基本配置，也不知道是哪里查的。原来这些配置可以在编辑器中输入 <code>:help options</code> 进行查看。</p>
+<a id="more"></a>
+<h3 id="缩进"><a href="#缩进" class="headerlink" title="缩进"></a>缩进</h3><p>关于缩进的配置，主要设置了 <code>autoindent</code>, <code>smartindent</code> 和 <code>expandtab</code> 这三个选项。</p>
+<ul>
+<li><code>autoindent</code> 选项根据上一行决定新行的缩进</li>
+<li><code>smartindent</code> 选项智能自动缩进</li>
+<li><code>expandtab</code> 选项将 tab 转换为空格</li>
+</ul>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">set</span> autoindent</div><div class="line"><span class="keyword">set</span> smartindent</div><div class="line"><span class="keyword">set</span> expandtab</div></pre></td></tr></table></figure>
+<h3 id="行号"><a href="#行号" class="headerlink" title="行号"></a>行号</h3><p>显示行号是硬需求，但是与其他编辑器不同，在 vim 上还有相对行号。</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">set</span> <span class="keyword">number</span></div><div class="line"><span class="keyword">set</span> relativenumber</div></pre></td></tr></table></figure>
+<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><p>显而易见，手动安装 vim 插件是很麻烦很麻烦的。与 sublime text 之类的类似，vim 同样有类似的插件管理器 <a href="https://github.com/VundleVim/Vundle.vim" target="_blank" rel="external">Vundle</a>。</p>
+<p>创建文件夹 <code>~/.vim</code> 和配置文件 <code>~/.vimrc</code>，并安装 Vundle:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle</div></pre></td></tr></table></figure>
+<p>为了方便管理再新建一个 <code>.vimrc.bundles</code> 来单独存放插件列表：<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">set</span> nocompatible    <span class="comment">" be iMproved, required</span></div><div class="line"><span class="keyword">filetype</span> off        <span class="comment">" requried</span></div><div class="line"><span class="keyword">set</span> rtp+=~/.<span class="keyword">vim</span>/bundle/vundle/</div><div class="line"></div><div class="line"><span class="keyword">call</span> vundle#begin()</div><div class="line"></div><div class="line"><span class="comment">" Let Vundle manage Vundle</span></div><div class="line">Bundle <span class="string">'gmarik/vundle'</span></div><div class="line"></div><div class="line"><span class="comment">" .... 其他插件</span></div><div class="line"></div><div class="line"><span class="keyword">call</span> vundle#end()</div><div class="line"><span class="comment">" required</span></div><div class="line"><span class="keyword">filetype</span> plugin <span class="built_in">indent</span> <span class="keyword">on</span></div></pre></td></tr></table></figure></p>
+<p>以后添加插件的时候只需要在这个文件里面添加一行：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Bundle <span class="string">'xxx'</span></div></pre></td></tr></table></figure>
+<p>安装插件输入 <code>:BundleInstall</code> 命令即可，卸载插件时删除对应的配置并运行 <code>:BundleClean</code> 删除插件。</p>
+<h3 id="括号补全"><a href="#括号补全" class="headerlink" title="括号补全"></a>括号补全</h3><p>第一次用的时候，输入 <code>(</code> 居然没有自己蹦出来另外一个 <code>)</code>。这不科学，讲道理这个是一定要的。</p>
+<p>发现很多人用的是 <a href="https://github.com/Raimondi/delimitMate" target="_blank" rel="external">delimitMate</a> ，添加 <code>Bundle &#39;delimitMate&#39;</code> 到 <code>.vimrc.bundles</code>，运行 <code>BundleInstall</code>。</p>
+<p>安装完直接就可以自动补全括号了。</p>
+<h3 id="Emmet"><a href="#Emmet" class="headerlink" title="Emmet"></a>Emmet</h3><p>很多浏览器都支持 Emmet 插件，vim 同样也有。但这个 Emmet 是第三方的，叫 <a href="https://github.com/mattn/emmet-vim/" target="_blank" rel="external">Emmet.vim</a>。</p>
+<p>安装完之后主要是设置一下出发的快捷键，默认的快捷键是 <code>Ctrl + y</code>。<br>我把快捷键修改成 <code>Ctrl + e</code> 比较顺手。</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">" Emmet.vim</span></div><div class="line"><span class="keyword">let</span> <span class="variable">g:user_emmet_expandabbr_key</span> = <span class="string">'&lt;c-e&gt;'</span></div></pre></td></tr></table></figure>
+<h3 id="目录树"><a href="#目录树" class="headerlink" title="目录树"></a>目录树</h3><p>目录树就基本上也就是使用 <a href="https://github.com/scrooloose/nerdtree" target="_blank" rel="external">NERDTree</a>。</p>
+<p>开启目录树的快捷键修改为 <code>Ctrl + b</code>，然后当 vim 只剩目录树显示的时候自动退出。<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">" NERDTree </span></div><div class="line"><span class="keyword">map</span> <span class="symbol">&lt;c-b&gt;</span> :NERDTreeToggle<span class="symbol">&lt;CR&gt;</span></div><div class="line"><span class="keyword">autocmd</span> vimenter * NERDTree</div><div class="line"><span class="keyword">autocmd</span> bufenter * <span class="keyword">if</span> (<span class="built_in">winnr</span>(<span class="string">"$"</span>) == <span class="number">1</span> &amp;&amp; <span class="built_in">exists</span>(<span class="string">"b:NERDTreeType"</span>) &amp;&amp;<span class="variable">b:NERDTreeType</span> == <span class="string">"primary"</span>) | q | <span class="keyword">endif</span></div></pre></td></tr></table></figure></p>
+<h3 id="代码补全"><a href="#代码补全" class="headerlink" title="代码补全"></a>代码补全</h3><p>补全用的就是大名鼎鼎的 <a href="https://github.com/Valloric/YouCompleteMe" target="_blank" rel="external">YouCompleteMe</a> 了。</p>
+<p>关于这个插件网上有很多插件，我就不啰嗦了。这里主要是抄的百度 EFE 的配置：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">" YouCompleteMe</span></div><div class="line"><span class="comment">" http://efe.baidu.com/blog/vim-javascript-completion/#youcompleteme</span></div><div class="line"><span class="keyword">let</span> <span class="variable">g:ycm_min_num_of_chars_for_completion</span> = <span class="number">3</span> </div><div class="line"><span class="keyword">let</span> <span class="variable">g:ycm_autoclose_preview_window_after_completion</span>=<span class="number">1</span></div><div class="line"><span class="keyword">let</span> <span class="variable">g:ycm_complete_in_comments</span> = <span class="number">1</span></div><div class="line"><span class="keyword">let</span> <span class="variable">g:ycm_key_list_select_completion</span> = [<span class="string">'&lt;c-n&gt;'</span>, <span class="string">'&lt;Down&gt;'</span>]</div><div class="line"><span class="keyword">let</span> <span class="variable">g:ycm_key_list_previous_completion</span> = [<span class="string">'&lt;c-p&gt;'</span>, <span class="string">'&lt;Up&gt;'</span>]</div><div class="line"><span class="comment">" Use tab</span></div><div class="line"><span class="function"><span class="keyword">function</span>! <span class="title">TabFunction</span> <span class="params">()</span></span></div><div class="line">    <span class="keyword">let</span> <span class="built_in">line</span> = <span class="built_in">getline</span>(<span class="string">'.'</span>)</div><div class="line">    <span class="keyword">let</span> substr = <span class="built_in">strpart</span>(<span class="built_in">line</span>, -<span class="number">1</span>, <span class="keyword">col</span>(<span class="string">'.'</span>)+<span class="number">1</span>)</div><div class="line">    <span class="keyword">let</span> substr = <span class="built_in">matchstr</span>(substr, <span class="string">"[^ \t]*$"</span>)</div><div class="line">    <span class="keyword">if</span> <span class="built_in">strlen</span>(substr) == <span class="number">0</span></div><div class="line">        <span class="keyword">return</span> <span class="string">"\&lt;tab&gt;"</span></div><div class="line">    <span class="keyword">endif</span></div><div class="line">    <span class="keyword">return</span> <span class="built_in">pumvisible</span>() ? <span class="string">"\&lt;c-n&gt;"</span> : <span class="string">"\&lt;c-x&gt;\&lt;c-o&gt;"</span></div><div class="line"><span class="keyword">endfunction</span></div><div class="line"><span class="keyword">inoremap</span> <span class="symbol">&lt;tab&gt;</span> <span class="symbol">&lt;c-r&gt;</span>=TabFunction()<span class="symbol">&lt;cr&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> <span class="variable">g:ycm_semantic_triggers</span> = &#123;</div><div class="line">    \   <span class="string">'css'</span>: [ <span class="string">'re!^\s&#123;2&#125;'</span>, <span class="string">'re!:\s+'</span>],</div><div class="line">    \   <span class="string">'html'</span>: [ <span class="string">'&lt;/'</span> ],</div><div class="line">    \ &#125;</div></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>折腾了一下午，终于算是搞定了。其实过程还是蛮好玩的，有机会还想写写插件玩玩。抛弃 VS Code，开始 Vim 之旅感。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;昨天在微信读书上面看到了池建强的《MacTalk 人生元编程》，然后花了差不多一天看完，其中有篇有关于 Vim 的文章提起了我对这个编辑器的再一次兴趣（对的，我对它感兴趣很多次了，每次都懒..）。&lt;/p&gt;
+&lt;p&gt;一直懒得去慢慢配置它，又不想用别人的配置。自己用的编辑器还是想自己折腾，然后今天就趁着我对这个还有点热度赶紧折腾起来。&lt;/p&gt;
+&lt;h2 id=&quot;MacVim&quot;&gt;&lt;a href=&quot;#MacVim&quot; class=&quot;headerlink&quot; title=&quot;MacVim&quot;&gt;&lt;/a&gt;MacVim&lt;/h2&gt;&lt;p&gt;其实在命令行里面直接写代码还有有些不习惯的，所以选了 MacVim 这个 GUI 版本。这样又可以与其他编辑器一样单独打开，想小改代码的时候又可以直接打开命令行搞。&lt;/p&gt;
+&lt;p&gt;在 MacTalk 的文章里面有提到 Vim 中文版本的&lt;a href=&quot;http://sourceforge.net/projects/vimcdoc/files/latest/download&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;帮助文档&lt;/a&gt;，遂下载之。果然还是中文的比较浅显易懂。&lt;/p&gt;
+&lt;p&gt;以前看别人的 &lt;code&gt;.vimrc&lt;/code&gt; 配置，里面有些编辑器的基本配置，也不知道是哪里查的。原来这些配置可以在编辑器中输入 &lt;code&gt;:help options&lt;/code&gt; 进行查看。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Vim" scheme="http://www.ahonn.me/tags/Vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript 继承的那些事</title>
+    <link href="http://www.ahonn.me/2017/01/24/something-about-javaScript-inherit/"/>
+    <id>http://www.ahonn.me/2017/01/24/something-about-javaScript-inherit/</id>
+    <published>2017-01-24T15:15:02.000Z</published>
+    <updated>2017-05-03T14:34:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>众所周知，JavaScript 的继承是实现继承，而没有 Java 中的接口继承。这是因为 JavaScript 中函数没有签名，而实现继承依靠的是原型链来实现的。</p>
+<h2 id="原型链继承"><a href="#原型链继承" class="headerlink" title="原型链继承"></a>原型链继承</h2><p>JavaScript 中通过修改对象原型指向的对象来实现继承，即是将一个对象的原型指向要继承的对象实例，从而实现继承对象的属性及方法。</p>
+<a id="more"></a>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperType</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.type = <span class="string">'super'</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">SuperType.prototype.getType() &#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">this</span>.type;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubType</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.type = <span class="string">'sub'</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">SubType.prototype = <span class="keyword">new</span> SuperType();</div><div class="line"></div><div class="line"><span class="keyword">var</span> sub = <span class="keyword">new</span> SubType();</div><div class="line"><span class="built_in">console</span>.log(sub.getType()); <span class="comment">// "sub"</span></div></pre></td></tr></table></figure>
+<h3 id="原型链继承的不足"><a href="#原型链继承的不足" class="headerlink" title="原型链继承的不足"></a>原型链继承的不足</h3><p>实际上，上面的代码还缺少一句代码，我们将 SubType 的原型指向了 SuperType 的实例，即<code>SubType.prototype.constructor</code> 会返回 <code>SuperType</code> 而不是 <code>SubType</code>，使用 <code>instanceof</code> 操作符返回的将是 <code>SuperType</code>。所以需要将 <code>SubType.prototype.constructor</code> 重新指向 <code>SubType</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ...</span></div><div class="line">SubType.prototype = <span class="keyword">new</span> SuperType();</div><div class="line">SubType.prototype.constructor = SubType;</div><div class="line"><span class="comment">// ...</span></div></pre></td></tr></table></figure>
+<p>但即使是这样，原型链继承依然有两点问题：原型中的实例引用类型属性会在所有对象实例中共享，无法想 Java 的继承一样向父类的构造函数中传递参数。</p>
+<h2 id="其他继承方式"><a href="#其他继承方式" class="headerlink" title="其他继承方式"></a>其他继承方式</h2><p>由于原型链继承存在一些不足，为了解决这些不足，JavaScript 中还有其他的几种继承的方式。</p>
+<h3 id="借用构造函数"><a href="#借用构造函数" class="headerlink" title="借用构造函数"></a>借用构造函数</h3><p>因为原型链无法传递参数到父类的构造函数中，因此出现了这种叫做借用构造函数的技术。顾名思义，即是借用父类的构造函数在子类中进行调用。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperType</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubType</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  SuperType.call(<span class="keyword">this</span>); <span class="comment">// &lt;- 执行父类构造函数</span></div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>借用构造函数虽然解决了构造函数传参的问题，但是当父类拥有方法时每个子类的实例都会拥有独立的方法，这个问题与单独使用构造函数模式定义类型的时候相同。</p>
+<h3 id="组合继承"><a href="#组合继承" class="headerlink" title="组合继承"></a>组合继承</h3><p>类比使用构造函数模式定义类型时的解决方法（组合构造函数模式与原型模式），继承时的解决方法也类似。即组合原型链继承和借用构造函数，属性由借用构造函数的方式继承，方法由原型链继承。</p>
+<p>实际上也就是在原型链继承的代码中添加在子类的构造函数中调用父类构造函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperType</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.type = <span class="string">'super'</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">SuperType.prototype.getType() &#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">this</span>.type;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubType</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  SuperType.call(<span class="keyword">this</span>);</div><div class="line">  <span class="keyword">this</span>.type = <span class="string">'sub'</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">SubType.prototype = <span class="keyword">new</span> SuperType();</div><div class="line">SubType.prototype.constructor = SubType;</div></pre></td></tr></table></figure>
+<h3 id="寄生组合式继承"><a href="#寄生组合式继承" class="headerlink" title="寄生组合式继承"></a>寄生组合式继承</h3><p>组合继承是常用的继承方式，但是同样的也是有不足之处：调用了两次父类的构造函数，一次在子类构造函数中调用父类构造函数，一次在实例父类对象赋值给子类的原型。</p>
+<p>寄生组合式继承在指定子类的原型的时候不必调用父类的构造函数，而是直接使用 <code>Object.create()</code> 创建父类原型的副本。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperType</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubType</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  SuperType.call(<span class="keyword">this</span>);</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">SubType.prototype = <span class="built_in">Object</span>.create(SuperType.prototype); <span class="comment">// 直接使用父类原型创建副本</span></div><div class="line">SubType.prototype.constructor = SubType;</div></pre></td></tr></table></figure>
+<h2 id="ES6-中的继承"><a href="#ES6-中的继承" class="headerlink" title="ES6 中的继承"></a>ES6 中的继承</h2><p>ES6 引入了 <code>class</code> 关键子，可以像其他语言中一样使用 <code>extends</code> 关键字来继承。虽然能够使用 <code>extends</code> 实现继承，但实际上内部还是基于原型。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">SubType</span> <span class="keyword">extends</span> <span class="title">SuperType</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>() &#123;</div><div class="line">    <span class="keyword">super</span>();</div><div class="line">    <span class="comment">// ...</span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;众所周知，JavaScript 的继承是实现继承，而没有 Java 中的接口继承。这是因为 JavaScript 中函数没有签名，而实现继承依靠的是原型链来实现的。&lt;/p&gt;
+&lt;h2 id=&quot;原型链继承&quot;&gt;&lt;a href=&quot;#原型链继承&quot; class=&quot;headerlink&quot; title=&quot;原型链继承&quot;&gt;&lt;/a&gt;原型链继承&lt;/h2&gt;&lt;p&gt;JavaScript 中通过修改对象原型指向的对象来实现继承，即是将一个对象的原型指向要继承的对象实例，从而实现继承对象的属性及方法。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从零开始制作 Hexo 主题</title>
+    <link href="http://www.ahonn.me/2016/12/15/create-a-hexo-theme-from-scratch/"/>
+    <id>http://www.ahonn.me/2016/12/15/create-a-hexo-theme-from-scratch/</id>
+    <published>2016-12-15T09:43:47.000Z</published>
+    <updated>2017-05-03T14:34:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>本文将会从零开始开发一个简单的博客主题。样式主要参考 <a href="https://hexo.io/themes/" target="_blank" rel="external">Hexo theme</a> 中的 <a href="https://github.com/lotabout/hexo-theme-noise" target="_blank" rel="external">Noise</a> 主题。 </p>
+<p>开始之前你需要了解：</p>
+<ul>
+<li>模板引擎</li>
+<li>CSS预处理器</li>
+<li>Hexo 文档</li>
+</ul>
+<p>本文使用的模板引擎为 <a href="http://www.embeddedjs.com/" target="_blank" rel="external">ejs</a>，使用的 CSS 预处理器为 <a href="http://stylus-lang.com/" target="_blank" rel="external">stylus</a>。这也是 hexo 项目预装了的 render 插件，如果想使用其他模板引擎或者其他 CSS 预处理器，可以安装相对应的 render 插件。例如我的 <a href="https://github.com/ahonn/hexo-theme-even" target="_blank" rel="external">Even</a> 主题使用的是 Swig 与 SCSS。</p>
+<p>本文的代码： <a href="https://github.com/ahonn/theme-example" target="_blank" rel="external">theme-example</a> 。</p>
+<a id="more"></a>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><p>主题目录结构以自带的 <a href="https://github.com/hexojs/hexo-theme-landscape" target="_blank" rel="external">landscape</a> 主题为例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── languages  语言文件，用于国际化</div><div class="line">├── layout     页面模板文件</div><div class="line">├── scripts    Hexo 脚本</div><div class="line">└── source     主题资源文件，包括页面样式，脚本，字体等</div></pre></td></tr></table></figure>
+<p>我们在 <code>themes</code> 中新建 <code>theme-example</code> 文件夹，然后在 <code>theme-demo</code> 中按照 landscape 主题的目录结构新建 <code>languages</code>，<code>layout</code>，<code>scripts</code> 与 <code>source</code> 文件夹。</p>
+<h2 id="创建布局模板"><a href="#创建布局模板" class="headerlink" title="创建布局模板"></a>创建布局模板</h2><p>在 <code>layout</code> 中创建 <code>index.ejs</code> 文件，首页将会使用该布局模板生成 HTML 文件。</p>
+<p><code>layout/index.ejs</code>:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"content-type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=utf-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"</span> <span class="attr">name</span>=<span class="string">"viewport"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello Word<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>修改站点配置文件中的主题配置，使用我们刚刚创建的 <code>theme-example</code> 主题：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Extensions</span></div><div class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></div><div class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></div><div class="line"><span class="attr">theme:</span> <span class="string">theme-example</span></div></pre></td></tr></table></figure>
+<p>运行 <code>hexo server --debug</code> 以 debug 模式开启 Hexo 本地服务器预览，访问 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>。</p>
+<p><img src="http://ww2.sinaimg.cn/large/006tNc79gw1farp8irho3j30dq058t8s.jpg" alt="Hello World"></p>
+<h2 id="添加页面导航"><a href="#添加页面导航" class="headerlink" title="添加页面导航"></a>添加页面导航</h2><p>现在我们需要在页面中添加导航，由于导航不单单会在首页出现，所以我们在 <code>layout</code> 中创建共用的布局文件 <code>layout.ejs</code>， 同时创建 <code>_partial/head.ejs</code> 保存 HTML 的 head 以及创建 <code>_partial/header.ejs</code> 文件，编写页面导航部分。</p>
+<p><code>layout/layout.ejs</code>:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">head</span>') %&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">header</span>') %&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">main</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">%-</span> <span class="attr">body</span> %&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">main</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><code>layout.ejs</code> 文件通过 <code>partial()</code> 函数来包含其他文件，使得我们能够更好的组织代码。详见 <a href="https://hexo.io/docs/templates.html#Partials" target="_blank" rel="external">Templates | Hexo</a>。</p>
+<p><code>layout/_partial/head.ejs</code>:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"content-type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=utf-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"</span> <span class="attr">name</span>=<span class="string">"viewport"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.title</span> %&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>这里使用了 <code>config</code> 变量，该变量包含的是站点配置（即站点根目录下 <code>_config.yml</code> 中的配置）。除此之外，Hexo 还提供了许多变量可在模板中使用，详见 <a href="https://hexo.io/docs/variables.html" target="_blank" rel="external">Variables | Hexo</a>。</p>
+<p><code>layout/_partial/header.ejs</code>:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">header</span> <span class="attr">class</span>=<span class="string">"header"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"blog-title"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for() %&gt;"</span> <span class="attr">class</span>=<span class="string">"logo"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.title</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">"navbar"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"menu"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"menu-item"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/"</span> <span class="attr">class</span>=<span class="string">"menu-item-link"</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"menu-item"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/archives"</span> <span class="attr">class</span>=<span class="string">"menu-item-link"</span>&gt;</span>Archive<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">header</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>接着我们清空 <code>index.ejs</code> 中的内容，并添加 <code>&lt;h2&gt;Hello World&lt;/h2&gt;</code>。在 <code>layout</code> 目录下的 <code>index.ejs</code> 会自动继承 <code>layout.ejs</code>，并将其中的内容填入 <code>&lt;%- body %&gt;</code> 的位置。我们将得到一个有导航菜单的 Hello World 页面。</p>
+<p><img src="http://ww3.sinaimg.cn/large/006tNc79gw1farv6wgpe1j308t05tjrk.jpg" alt=""></p>
+<h2 id="添加主题配置文件"><a href="#添加主题配置文件" class="headerlink" title="添加主题配置文件"></a>添加主题配置文件</h2><p>实际上我们需要让导航菜单根据我们的需要显示不同的项，上面这种写法不方便修改。所以我们会在主题的配置文件中添加导航菜单的配置。在 <code>thmem-demo</code> 下新建主题的配置文件 <code>_config.yml</code>，在其中添加需要配置的字段。然后可以通过 <code>theme</code> 这个变量来拿到该配置文件中的配置。</p>
+<p><code>theme-demo/_config.yml</code>:</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">menu:</span></div><div class="line"><span class="attr">  Home:</span> <span class="string">/</span></div><div class="line"><span class="attr">  Archives:</span> <span class="string">/archives</span></div></pre></td></tr></table></figure>
+<p>这样我们就可以在 <code>header.ejs</code> 中使用 <code>theme.menu</code> 获取到导航菜单的设置。将 <code>header.ejs</code> 修改为：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">header</span> <span class="attr">class</span>=<span class="string">"header"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"blog-title"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for() %&gt;"</span> <span class="attr">class</span>=<span class="string">"logo"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.title</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">"navbar"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"menu"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">%</span> <span class="attr">for</span> (<span class="attr">name</span> <span class="attr">in</span> <span class="attr">theme.menu</span>) &#123; %&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"menu-item"</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for(theme.menu[name]) %&gt;"</span> <span class="attr">class</span>=<span class="string">"menu-item-link"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">name</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">header</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>当需要在导航中添加链接的时候就可以在配置文件中直接添加，例如添加 Github 的链接：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attr">menu:</span></div><div class="line"><span class="attr">  Home:</span> <span class="string">/</span></div><div class="line"><span class="attr">  Archives:</span> <span class="string">/archives</span></div><div class="line"><span class="attr">  Github:</span> <span class="attr">https://github.com/ahonn</span></div></pre></td></tr></table></figure>
+<p>除此之外还可以添加其他需要的配置，例如 RSS，评论等等。</p>
+<h2 id="添加首页文章列表"><a href="#添加首页文章列表" class="headerlink" title="添加首页文章列表"></a>添加首页文章列表</h2><p>接着我们完善首页的模板，使其能够显示文章列表。前面已经说过 Hexo 提供了各种有用的变量，在这里将会使用到 <code>page</code> 这个变量。<code>page</code> 会根据不同的页面拥有不同的属性。具体有什么属性，可以获取到哪些数据可以查看<a href="https://hexo.io/docs/variables.html#Page-Variables" target="_blank" rel="external">这里</a>。</p>
+<p>那么这里我们会使用 <code>page</code> 变量的 <code>posts</code> 属性拿到文章数据的集合。编辑 <code>index.ejs</code> 文件：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">"posts"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">%</span> <span class="attr">page.posts.each</span>(<span class="attr">function</span> (<span class="attr">post</span>) &#123; %&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">article</span> <span class="attr">class</span>=<span class="string">"post"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-title"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"post-title-link"</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for(post.path) %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">post.title</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-content"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">%-</span> <span class="attr">post.content</span> %&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-meta"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-time"</span>&gt;</span><span class="tag">&lt;<span class="name">%-</span> <span class="attr">date</span>(<span class="attr">post.date</span>, "<span class="attr">YYYY-MM-DD</span>") %&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">article</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">%</span> &#125;) %&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>从 <code>page.posts</code> 中获取单篇文章的数据，并获取文章的标题，内容等数据填充到模板中。处理文章创建时间的时候使用了 <code>date()</code> 函数，这是 Hexo 提供的时间处理的<a href="https://hexo.io/docs/helpers.html#date" target="_blank" rel="external">辅助函数</a>。本文中使用到的函数如无特别说明，即为 Hexo 的辅助函数。</p>
+<h3 id="文章摘录"><a href="#文章摘录" class="headerlink" title="文章摘录"></a>文章摘录</h3><p>由于首页显示文章内容时使用的是 <code>post.content</code>，即文章的全部内容。所以首页会显示每一篇文章的内容，实际上我们并不想在首页显示那么多内容，只想显示文章的摘录。</p>
+<p>Hexo 提供了 <code>excerpt</code> 属性来获取文章的摘录部分，不过这里需要在文章中添加一个 <code>&lt;!-- more --&gt;</code> 标记。添加了这个标记之后，<code>post.excerpt</code> 将会获取到标记之前的内容。如果没有这个标记，那么 <code>post.excerpt</code> 会是空的。所以我们可以把首页文章内容部分的 <code>post.content</code> 替换成 <code>post.excerpt</code>。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-content"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">%-</span> <span class="attr">post.excerpt</span> %&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="添加页面样式"><a href="#添加页面样式" class="headerlink" title="添加页面样式"></a>添加页面样式</h2><p>到目前为止，我们完成了首页的页面结构，但是并没有添加样式，所以看起来很丑。我们在 <code>source</code> 文件中创建一个 <code>css</code> 文件夹来存放样式文件。</p>
+<p>由于 Hexo 在新建项目的时候会安装 <code>hexo-renderer-stylus</code> 这个插件，所以我们无需其他步骤，只需要将样式文件放到 <code>css</code> 文件夹中。Hexo 在生成页面的时候会将 <code>source</code> 中的所有文件复制到生成的 <code>public</code> 文件中，并且在此之前会编译 styl 为 css 文件。</p>
+<p>在 <code>css</code> 文件夹中创建 <code>style.styl</code>，编写一些基础的样式，并把所有样式 <code>import</code> 到这个文件。所以最终编译之后只会有 <code>style.css</code> 一个文件。创建 <code>_partial/header.styl</code> 与 <code>_partial/post.styl</code> 存放页面导航以及文章的样式，并且在 <code>style.styl</code> 中 <code>import</code> 这两个文件。 </p>
+<p><code>_partial/header.styl</code>:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.header</span> &#123;</div><div class="line">  <span class="attribute">margin-top</span>: <span class="number">2em</span></div><div class="line">  <span class="attribute">display</span>: flex</div><div class="line">  <span class="attribute">align-items</span>: baseline</div><div class="line">  <span class="attribute">justify-content</span>: space-between</div><div class="line"></div><div class="line">  <span class="selector-class">.blog-title</span> <span class="selector-class">.logo</span> &#123;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#AAA</span>;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">2em</span>;</div><div class="line">    <span class="attribute">font-family</span>: <span class="string">"Comic Sans MS"</span>,cursive,LiSu,sans-serif;</div><div class="line">    <span class="attribute">text-decoration</span>: none;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="selector-class">.menu</span> &#123;</div><div class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</div><div class="line"></div><div class="line">    <span class="selector-class">.menu-item</span> &#123;</div><div class="line">      <span class="attribute">display</span>: inline-block;</div><div class="line">      <span class="attribute">margin-right</span>: <span class="number">10px</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="selector-class">.menu-item-link</span> &#123;</div><div class="line">      <span class="attribute">color</span>: <span class="number">#AAA</span>;</div><div class="line">      <span class="attribute">text-decoration</span>: none;</div><div class="line"></div><div class="line">      &amp;:hover &#123;</div><div class="line">        <span class="attribute">color</span>: <span class="number">#368CCB</span>;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>_partial/post.style</code>:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.post</span> &#123;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">1em</span> auto;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">30px</span> <span class="number">50px</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#fff</span>;</div><div class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ddd</span>;</div><div class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">2px</span> <span class="number">#ddd</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.posts</span>  &#123;</div><div class="line">  <span class="selector-class">.post</span>:first-child &#123;</div><div class="line">    <span class="attribute">margin-top</span>: <span class="number">0</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="selector-class">.post-title</span> &#123;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">1.5em</span>;</div><div class="line"></div><div class="line">    <span class="selector-class">.post-title-link</span> &#123;</div><div class="line">      <span class="attribute">color</span>: <span class="number">#368CCB</span>;</div><div class="line">      <span class="attribute">text-decoration</span>: none;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="selector-class">.post-content</span> &#123;</div><div class="line">    <span class="selector-tag">a</span> &#123;</div><div class="line">      <span class="attribute">color</span>: <span class="number">#368CCB</span>;</div><div class="line">      <span class="attribute">text-decoration</span>: none;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="selector-class">.post-meta</span> &#123;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#BABABA</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>style.styl</code>:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">body &#123;</div><div class="line">  background-color: #F2F2F2;</div><div class="line">  font-size: 1.25rem;</div><div class="line">  line-height: 1.5;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.container &#123;</div><div class="line">  max-width: 960px;</div><div class="line">  margin: 0 auto;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@import "_partial/header";</div><div class="line">@import "_partial/post";</div></pre></td></tr></table></figure>
+<p>最后，我们需要把样式添加到页面中，这里使用了另外一个辅助函数 <a href="https://hexo.io/docs/helpers.html#css" target="_blank" rel="external"><code>css()</code></a>:</p>
+<p><code>layout/_partial/head.ejs</code><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"content-type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=utf-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"</span> <span class="attr">name</span>=<span class="string">"viewport"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.title</span> %&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">%-</span> <span class="attr">css</span>('<span class="attr">css</span>/<span class="attr">style.css</span>') %&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>至此，我们会看到站点的首页是这个样子的：</p>
+<p><img src="http://ww3.sinaimg.cn/large/006tNc79gw1fasg7y42bqj314h0i6jv1.jpg" alt=""></p>
+<p><strong>注意，这里会报错。原因是生成文章页时没有找到对应的模版，所以使用了首页的模版，但文章页并没有 <code>page.posts</code> 这个属性（undefined 没有 each 方法）。新建 post.ejs 即可解决，或直接跳过直到完成文章页模版。</strong></p>
+<h2 id="添加分页"><a href="#添加分页" class="headerlink" title="添加分页"></a>添加分页</h2><p>在站点的 <code>source/_post/</code> 目录下存放的是我们的文章，现在我们把原本的 <code>hello-world.md</code> 复制黏贴 10+ 次，再查看站点首页。会发现，首页只显示了 10 篇文章。</p>
+<p>首页显示的文章数量我们可以通过站点配置文件中的 <code>per_page</code> 字段来修改，但是我们不可能把所有文章都放在一页，所以我们现在来添加文章列表的分页。</p>
+<p>新建 <code>_partial/paginator.ejs</code>:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">page.total</span> &gt;</span> 1)&#123; %&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">"page-nav"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">paginator</span>(&#123;</span></div><div class="line">      <span class="attr">prev_text:</span> "&amp;<span class="attr">laquo</span>; <span class="attr">Prev</span>",</div><div class="line">      <span class="attr">next_text:</span> "<span class="attr">Next</span> &amp;<span class="attr">raquo</span>;"</div><div class="line">    &#125;) %&gt;</div><div class="line">  <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div></pre></td></tr></table></figure>
+<p>在 <code>index.ejs</code> 中添加这个文件的内容：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">paginator</span>') %&gt;</span></div></pre></td></tr></table></figure>
+<p>这里我们使用到了另外的一个辅助函数 <a href="https://hexo.io/docs/helpers.html#paginator" target="_blank" rel="external"><code>paginator</code></a>，它能够帮助我们插入分页链接。</p>
+<h2 id="添加文章详情页"><a href="#添加文章详情页" class="headerlink" title="添加文章详情页"></a>添加文章详情页</h2><p>文章详情页对应的布局文件是 <code>post.ejs</code>，新建 <code>post.ejs</code>:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">article</span> <span class="attr">class</span>=<span class="string">"post"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-title"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">"title"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">page.title</span> %&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-meta"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-time"</span>&gt;</span><span class="tag">&lt;<span class="name">%-</span> <span class="attr">date</span>(<span class="attr">page.date</span>, "<span class="attr">YYYY-MM-DD</span>") %&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-content"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">page.content</span> %&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">article</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>由于这里是文章的模板，所以变量 <code>page</code> 表示的是文章的数据，而不是首页的文章数据集合。</p>
+<h2 id="添加归档页"><a href="#添加归档页" class="headerlink" title="添加归档页"></a>添加归档页</h2><p>创建归档页使用的模板文件 <code>archive.ejs</code>:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">"archive"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"post-archive"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%</span> <span class="attr">page.posts.each</span>(<span class="attr">function</span> (<span class="attr">post</span>) &#123; %&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"post-item"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-date"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">date</span>(<span class="attr">post.date</span>, "<span class="attr">YYYY-MM-DD</span>") %&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"post-title"</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for(post.path) %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">post.title</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%</span> &#125;) %&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">paginator</span>') %&gt;</span></div></pre></td></tr></table></figure>
+<p>其实结构跟首页差不多，只是不显示文章内容而已。添加归档页的样式：</p>
+<p><code>css/_partial/archive.styl</code>:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.archive</span> &#123;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">1em</span> auto;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">30px</span> <span class="number">50px</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#fff</span>;</div><div class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ddd</span>;</div><div class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">2px</span> <span class="number">#ddd</span>;</div><div class="line"></div><div class="line">  <span class="selector-class">.post-archive</span> &#123;</div><div class="line">    <span class="attribute">list-style</span>: none;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</div><div class="line"></div><div class="line">    <span class="selector-class">.post-item</span> &#123;</div><div class="line">      <span class="attribute">margin</span>: <span class="number">5px</span> <span class="number">0</span>;</div><div class="line"></div><div class="line">      <span class="selector-class">.post-date</span> &#123;</div><div class="line">        <span class="attribute">display</span>: inline-block;</div><div class="line">        <span class="attribute">margin-right</span>: <span class="number">10px</span>;</div><div class="line">        <span class="attribute">color</span>: <span class="number">#BABABA</span>;</div><div class="line">      &#125;</div><div class="line"></div><div class="line">      <span class="selector-class">.post-title</span> &#123;</div><div class="line">        <span class="attribute">color</span>: <span class="number">#368CCB</span>;</div><div class="line">        <span class="attribute">text-decoration</span>: none;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="国际化"><a href="#国际化" class="headerlink" title="国际化"></a>国际化</h2><p>还记得我们一开始创建的 <code>languages</code> 文件夹吗？没错，它是用来添加多种语言，用于 i18n 的。站点的语言设置为站点配置文件中的 <code>language</code>。</p>
+<p>当该字段为空时，默认使用的是 <code>languages/default.yml</code> 这个文件。那么现在我们来添加这个文件，我们决定主题的默认语言是英文：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="attr">Menu:</span></div><div class="line"><span class="attr">  Home:</span> <span class="string">Home</span></div><div class="line"><span class="attr">  Archives:</span> <span class="string">Archives</span></div><div class="line"><span class="attr">  Github:</span> <span class="string">Github</span></div><div class="line"></div><div class="line"><span class="attr">Paginator:</span></div><div class="line"><span class="attr">  Prev:</span> <span class="string">Prev</span></div><div class="line"><span class="attr">  Next:</span> <span class="string">Next</span></div></pre></td></tr></table></figure>
+<p>目前我们需要主题根据选择的语言自动修改的有上面这些，接着我们需要修改 <code>header.ejs</code> 与 <code>paginator.ejs</code> 这两个文件：</p>
+<p><code>_partial/header.ejs</code><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">header</span> <span class="attr">class</span>=<span class="string">"header"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"blog-title"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for() %&gt;"</span> <span class="attr">class</span>=<span class="string">"logo"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.title</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">"navbar"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"menu"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">%</span> <span class="attr">for</span> (<span class="attr">name</span> <span class="attr">in</span> <span class="attr">theme.menu</span>) &#123; %&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"menu-item"</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for(theme.menu[name]) %&gt;"</span> <span class="attr">class</span>=<span class="string">"menu-item-link"</span>&gt;</span><span class="tag">&lt;<span class="name">%-</span> <span class="attr">__</span>('<span class="attr">Menu.</span>' + <span class="attr">name</span>) %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">header</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><code>_partial/paginator.ejs</code>:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">page.total</span> &gt;</span> 1)&#123; %&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">"page-nav"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">paginator</span>(&#123;</span></div><div class="line">      <span class="attr">prev_text:</span> "&amp;<span class="attr">laquo</span>;" + <span class="attr">__</span>('<span class="attr">Paginator.Prev</span>'),</div><div class="line">      <span class="attr">next_text:</span> <span class="attr">__</span>('<span class="attr">Paginator.Next</span>') + "&amp;<span class="attr">raquo</span>;"</div><div class="line">    &#125;) %&gt;</div><div class="line">  <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div></pre></td></tr></table></figure></p>
+<p>修改之后其实与之前相比没有什么变化，起码看起来是。现在我们添加一个中文的文件：</p>
+<p><code>languages/zh-CN.yml</code><br><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="attr">Menu:</span></div><div class="line"><span class="attr">  Home:</span> <span class="string">首页</span></div><div class="line"><span class="attr">  Archives:</span> <span class="string">归档</span></div><div class="line"><span class="attr">  Github:</span> <span class="string">交友</span></div><div class="line"></div><div class="line"><span class="attr">Paginator:</span></div><div class="line"><span class="attr">  Prev:</span> <span class="string">上一页</span></div><div class="line"><span class="attr">  Next:</span> <span class="string">下一页</span></div></pre></td></tr></table></figure></p>
+<p>然后我们将站点配置文件中的 <code>language</code> 字段修改为 <code>zh-CN</code>（与 <code>zh-CN.yml</code> 文件名相同）。再次访问站点之后就会发现导航与分页部分的文字变成了中文。</p>
+<h2 id="最后总结"><a href="#最后总结" class="headerlink" title="最后总结"></a>最后总结</h2><p>如果你有耐心看我废话了这么多的话，恭喜你，你应该对怎么去写一个 Hexo 主题有了一定的了解。其实说白了，Hexo 就是把那些 Markdown 文件按照不同的布局模板，填上对应的数据生成 HTML 页面，复制 <code>source</code> 中的到生成的 <code>public</code> 文件夹中，中间过程会把需要编译的 stylus/less/sass 等文件编译。</p>
+<p>本文并没有提及有关页面 JavaScript 的部分，实际上与写 CSS 样式相同。在 <code>source/js</code> 中写 JavaScript 脚本，然后在模板中引入即可。</p>
+<p>感谢阅读，希望对你有所帮助。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h2&gt;&lt;p&gt;本文将会从零开始开发一个简单的博客主题。样式主要参考 &lt;a href=&quot;https://hexo.io/themes/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo theme&lt;/a&gt; 中的 &lt;a href=&quot;https://github.com/lotabout/hexo-theme-noise&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Noise&lt;/a&gt; 主题。 &lt;/p&gt;
+&lt;p&gt;开始之前你需要了解：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;模板引擎&lt;/li&gt;
+&lt;li&gt;CSS预处理器&lt;/li&gt;
+&lt;li&gt;Hexo 文档&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;本文使用的模板引擎为 &lt;a href=&quot;http://www.embeddedjs.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ejs&lt;/a&gt;，使用的 CSS 预处理器为 &lt;a href=&quot;http://stylus-lang.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;stylus&lt;/a&gt;。这也是 hexo 项目预装了的 render 插件，如果想使用其他模板引擎或者其他 CSS 预处理器，可以安装相对应的 render 插件。例如我的 &lt;a href=&quot;https://github.com/ahonn/hexo-theme-even&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Even&lt;/a&gt; 主题使用的是 Swig 与 SCSS。&lt;/p&gt;
+&lt;p&gt;本文的代码： &lt;a href=&quot;https://github.com/ahonn/theme-example&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;theme-example&lt;/a&gt; 。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="http://www.ahonn.me/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2016 年终总结</title>
+    <link href="http://www.ahonn.me/2016/12/13/2016-summary/"/>
+    <id>http://www.ahonn.me/2016/12/13/2016-summary/</id>
+    <published>2016-12-13T03:23:09.000Z</published>
+    <updated>2017-05-03T14:34:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>一转眼 2016 年就快要结束了，这一年对自己来说收获了很多。</p>
+<p>去年的总结，给自己定下了个 2016 年的计划。现在 2016 也差不多快结束了，我对自己执行的情况还是比较满意的。</p>
+<h2 id="关于-Github"><a href="#关于-Github" class="headerlink" title="关于 Github"></a>关于 Github</h2><p>去年年底参加了 Github 上的一个编程马拉松，一开始 commit 都是没有断过的，但是之后慢慢的总会有抓脑袋想 commit 的状况出现。不能说这样不好，只不过会让自己为了 commit 而 commit，本末倒置了。所以后面就不再管是否连续 commit 了，也把之前几个自己觉得不行的项目给删除了。贴一张今年 Github 上的 commit 图，虽然还是有很多质量不高的提交，但也算是今年对自己的付出的一点交代了。</p>
+<p><img src="http://ww3.sinaimg.cn/large/006tNc79gw1faoxzmckraj30kl05i0ui.jpg" alt=""></p>
+<a id="more"></a>
+<p>大多数的提交都贡献自 <a href="https://github.com/ahonn/hexo-theme-even" target="_blank" rel="external">hexo-theme-even</a> 这个项目。放假在家的时候突然想自己写个博客的主题，结果说干就干，就写起来了。到目前为止已经重构了两遍了，每一次都能够发现之前写的不好的地方。不过在这个过程中明白了一点，不能为了写代码而写代码，应该更加关注用户体验。之前写的时候完全是自己能用就好的，后来使用的人越来越多了，就需要关注一些之前自己不会关注到的点。</p>
+<p>更深刻的体会到，设计与规划应该占到的比重应该远远大于编码的比重。这就好比盖房子，一股脑的搬砖盖最后可能盖出来的是歪楼。</p>
+<h2 id="关于实习"><a href="#关于实习" class="headerlink" title="关于实习"></a>关于实习</h2><p>暑假的时候没有回家，找了一个技术相关的暑假实习。当然，所谓暑假实习就是打打下手咯。不过期间也参与了个很有意思的项目，不过因为是比较偏重后端的公司（使用的大多是 Ruby），所以前端部分都是自己折腾，没有学到什么东西。</p>
+<p>在实习期间也学到了非常多的东西，比如说怎么使用 git 进行团队协作，写页面的时候要注重用户体验，一个按钮或者一个文本的位置都需要慎重思考。由于公司比较小，感受不到比较浓厚的技术气氛。所以希望大三结束的这份实习能够找到自己所期望的那样技术气氛浓厚的公司来实习。</p>
+<h2 id="关于读书"><a href="#关于读书" class="headerlink" title="关于读书"></a>关于读书</h2><p>暑假实习的时候由于是一个人住，每天上下班都要在地铁上花费一个多钟的时间。所以在一开始的时候就用了京东白条预先买了个 Kindle，然后在实习的这段时间里看完了《乔布斯传》，《解忧杂货店》，《人性的弱点》以及《安静》。关于读书，想起了一个知乎上的一个回答：<a href="https://www.zhihu.com/question/22456239/answer/45671305" target="_blank" rel="external">读了很多书，但是都忘掉了，读书的意义在哪里？ - 尧大力的回答 - 知乎</a>，深以为然。读书对我的影响还是很大的，会改变对事物的看法。不是有句话说，读万卷书，行万里路。所以要多读书，以后有机会的话也要多出去走走。</p>
+<p>除了看这些书之外，也看了一些技术性的书籍。实习之前看了本《深入理解 bootstrap》，这个在我实习的时候用 bootstrap 的时候有很大帮助。还有一些 JavaScript 相关的书，高程三打算在大三实习之前再刷多一次。</p>
+<p>有点小遗憾的是，我依旧没有看完 SICP（Structure and Interpretation of Computer Programs<br>），看了前两章就没有看了。所以明年的计划里面会加上看完这本书。此外，双十一的时候也买了好几本技术类书籍，其实都是为了到时候面试而准备的，正好也是需要补补基础。其实更关键的一点是太穷只能买书了…</p>
+<h2 id="关于生活"><a href="#关于生活" class="headerlink" title="关于生活"></a>关于生活</h2><p>今年回家的时间比较少，前半年在学校，后半年在学校，中间实习在广州一个人住。第一次离家还是一个人生活，让我这样一个不会照顾自己的人也慢慢的学会了照顾自己。同时也明白了很多事情，一个人的时候要好好的，不能让父母担心。</p>
+<h2 id="关于来年"><a href="#关于来年" class="headerlink" title="关于来年"></a>关于来年</h2><p>2018 年就正式毕业了，也就是说在学校的时间不多了，希望自己能好好过完这最后的学生时光。</p>
+<p>无例外，今年的总结也要对新的一年列个计划。</p>
+<ul>
+<li>继续好好维护博客主题</li>
+<li>完成 leetcode 上的前 150 道题目</li>
+<li>读完买的那些书，包括不限于高程三，SICP</li>
+<li>写自己的简历网站</li>
+<li>多运动，久坐对身体不好</li>
+<li>有机会多出去走走</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一转眼 2016 年就快要结束了，这一年对自己来说收获了很多。&lt;/p&gt;
+&lt;p&gt;去年的总结，给自己定下了个 2016 年的计划。现在 2016 也差不多快结束了，我对自己执行的情况还是比较满意的。&lt;/p&gt;
+&lt;h2 id=&quot;关于-Github&quot;&gt;&lt;a href=&quot;#关于-Github&quot; class=&quot;headerlink&quot; title=&quot;关于 Github&quot;&gt;&lt;/a&gt;关于 Github&lt;/h2&gt;&lt;p&gt;去年年底参加了 Github 上的一个编程马拉松，一开始 commit 都是没有断过的，但是之后慢慢的总会有抓脑袋想 commit 的状况出现。不能说这样不好，只不过会让自己为了 commit 而 commit，本末倒置了。所以后面就不再管是否连续 commit 了，也把之前几个自己觉得不行的项目给删除了。贴一张今年 Github 上的 commit 图，虽然还是有很多质量不高的提交，但也算是今年对自己的付出的一点交代了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/006tNc79gw1faoxzmckraj30kl05i0ui.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="生活" scheme="http://www.ahonn.me/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="总结" scheme="http://www.ahonn.me/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript 创建对象的一些姿势</title>
+    <link href="http://www.ahonn.me/2016/11/30/some-ways-of-javascript-create-object/"/>
+    <id>http://www.ahonn.me/2016/11/30/some-ways-of-javascript-create-object/</id>
+    <published>2016-11-30T10:52:21.000Z</published>
+    <updated>2017-05-03T14:34:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h2><p>在函数中创建 Object 对象，并为对象添加属性。函数返回添加属性之后的对象。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createPerson</span>(<span class="params">name, age</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>()</div><div class="line">  o.name = name</div><div class="line">  o.age = age</div><div class="line">  o.sayName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name)</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> o</div><div class="line">&#125; </div><div class="line"></div><div class="line"><span class="keyword">var</span> p = createPerson(<span class="string">"ahonn"</span>, <span class="number">21</span>)</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>但工厂模式产生的对象依旧为 Object 类型，只是在对象上添加了一些属性。</p>
+<blockquote>
+<p>工厂模式虽然解决了创建多个相似对象的问题，但却没有解决对象识别的问题（即怎样知道一个对象的类型）</p>
+</blockquote>
+<h2 id="构造函数模式"><a href="#构造函数模式" class="headerlink" title="构造函数模式"></a>构造函数模式</h2><p>由于工厂模式创建的对象没有解决对象识别的问题，出现了另外一种新模式：构造函数模式。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age</span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.name = name</div><div class="line">  <span class="keyword">this</span>.age = age</div><div class="line">  <span class="keyword">this</span>.sayName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> Person(<span class="string">"ahonn"</span>, <span class="number">21</span>)</div></pre></td></tr></table></figure>
+<p>这里使用了 <code>new</code> 操作符，即是将 Person 函数通过构造函数的方式去调用来创建对象。</p>
+<p>构造函数会进行下面几个步骤：</p>
+<ul>
+<li>创建一个新对象</li>
+<li>将构造函数的 this 指向新对象</li>
+<li>通过 this 给对象添加属性</li>
+<li>返回新对象</li>
+</ul>
+<p>使用构造函数模式创建的对象可以通过 <code>constructor</code> 属性查看对象的类型。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(p.constructor) <span class="comment">// Person</span></div></pre></td></tr></table></figure>
+<h3 id="构造函数也是普通函数"><a href="#构造函数也是普通函数" class="headerlink" title="构造函数也是普通函数"></a>构造函数也是普通函数</h3><p>构造函数与普通的函数无异，也可以直接调用构造函数。但此时就不会创建新对象，函数中的 this 指向的是函数当前所在的作用域。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Person(<span class="string">"ahonn"</span>, <span class="number">21</span>)</div><div class="line"><span class="keyword">this</span>.sayName() <span class="comment">// ahonn</span></div></pre></td></tr></table></figure>
+<h2 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h2><p>通过构造函数模式创建的对象有一个问题，就是创建的对象各自拥有自己的方法，而实际上这些方法都是相同的。通过原型模式即可以将共同的属性方法放在 prototype 上。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line"></div><div class="line">Person.prototype.name = <span class="string">"ahonn"</span></div><div class="line">Person.prototype.age = <span class="number">21</span></div><div class="line">Person.prototype.sayName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.name)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> p1 = <span class="keyword">new</span> Person()</div><div class="line">p1.sayName() <span class="comment">// "ahonn"</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> p2 = <span class="keyword">new</span> Person()</div><div class="line">p2.sayName() <span class="comment">// "ahonn"</span></div></pre></td></tr></table></figure>
+<p>对象在 prototype 上的属性是共享的，即修改一个对象的某个属性，另一个对象对于的属性值也会改变。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">p1.name = <span class="string">"test"</span></div><div class="line">p1.sayName() <span class="comment">// test</span></div><div class="line"></div><div class="line">p2.sayName() <span class="comment">// test</span></div></pre></td></tr></table></figure>
+<h2 id="构造函数与原型模式"><a href="#构造函数与原型模式" class="headerlink" title="构造函数与原型模式"></a>构造函数与原型模式</h2><p>使用原型模式创建的对象共享 prototype 上的属性，那么当有些属性不想要对象之间共享的时候，就可以结合构造函数模式与原型模式来使用。这也是最常用的创建对象的方式。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age</span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.name = name</div><div class="line">  <span class="keyword">this</span>.age = age</div><div class="line">&#125;</div><div class="line"></div><div class="line">Person.prototype.sayName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.name)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span>  p1 = <span class="keyword">new</span> Person(<span class="string">"ahonn"</span>, <span class="number">21</span>)</div><div class="line">p1.sayName() <span class="comment">// "ahonn"</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> p2 = <span class="keyword">new</span> Person(<span class="string">"test"</span>, <span class="number">12</span>)</div><div class="line">p2.sayName() <span class="comment">// "test"</span></div></pre></td></tr></table></figure>
+<h2 id="ES6-类"><a href="#ES6-类" class="headerlink" title="ES6 类"></a>ES6 类</h2><p>在 ES6 中有类似于 Java 创建对象的方式，即通过类来创建对象。ES6 中提供了 <code>class</code> 关键字，来声明一个类型，并如上面构造函数模式的方式一样使用 <code>new</code> 来声明对象。虽然可以使用类似 Java 中的 <code>class</code> 来声明，但实际上只是给构造函数与原型模式加上了语法糖，使得代码看起来更加易读。</p>
+<p>还是 Person 类的例子<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>(name, age) &#123;</div><div class="line">    <span class="keyword">this</span>.name = name</div><div class="line">    <span class="keyword">this</span>.age = age</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  sayName() &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> Person(<span class="string">"ahonn"</span>, <span class="number">21</span>)</div><div class="line">p.sayName() <span class="comment">// "ahonn"</span></div></pre></td></tr></table></figure></p>
+<p>通过 <code>class</code> 关键字声明 Person 类，<code>constructor</code> 函数即为 Person 类的构造函数，类属性的初始化也在其中。需要在各个对象中共享的方法也写在 <code>class</code> 中，避免了原来定义在 <code>prototype</code> 上时的撕裂感。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;工厂模式&quot;&gt;&lt;a href=&quot;#工厂模式&quot; class=&quot;headerlink&quot; title=&quot;工厂模式&quot;&gt;&lt;/a&gt;工厂模式&lt;/h2&gt;&lt;p&gt;在函数中创建 Object 对象，并为对象添加属性。函数返回添加属性之后的对象。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;createPerson&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;name, age&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; o = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;()&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  o.name = name&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  o.age = age&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  o.sayName = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.name)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; o&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125; &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; p = createPerson(&lt;span class=&quot;string&quot;&gt;&quot;ahonn&quot;&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;21&lt;/span&gt;)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript 数据类型判断</title>
+    <link href="http://www.ahonn.me/2016/11/21/javascript-data-type-judgment/"/>
+    <id>http://www.ahonn.me/2016/11/21/javascript-data-type-judgment/</id>
+    <published>2016-11-21T07:07:49.000Z</published>
+    <updated>2017-05-03T14:34:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近开始读之前没有读完的 underscore 的源码，刚把 Object 部分读完。对 JavaScript 中类型判断部分的总结。</p>
+<h2 id="Object-prototype-toString"><a href="#Object-prototype-toString" class="headerlink" title="Object.prototype.toString()"></a>Object.prototype.toString()</h2><p>在进行类型判断时，使用到最多的当属 <code>Object.prototype.toString()</code>。</p>
+<p><code>toString()</code> 方法返回一个代表该对象的字符串。每个对象都会继承 Object 上的 <code>toString</code> 方法，如果该方法没有被同名方法覆盖的话。使用 <code>toString()</code> 方法将会返回字符串 <code>&quot;[object type]&quot;</code>。其中 type 根据对象的类型的不同而不同。</p>
+<p>关于 <code>Object.prototype.toString()</code> 的详细描述可以查看：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString" target="_blank" rel="external">Object.prototype.toString() - JavaScript | MDN</a></p>
+<a id="more"></a>
+<h2 id="使用-toString-判断类型"><a href="#使用-toString-判断类型" class="headerlink" title="使用 toString() 判断类型"></a>使用 toString() 判断类型</h2><p>由于 <code>toString()</code> 会返回带有类型信息的字符串，所以通常可以使用它来进行数据类型的判断。</p>
+<p>underscore 中对一些数据类型的判断实现：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">_.each([<span class="string">'Arguments'</span>, <span class="string">'Function'</span>, <span class="string">'String'</span>, <span class="string">'Number'</span>, <span class="string">'Date'</span>, <span class="string">'RegExp'</span>, <span class="string">'Error'</span>, <span class="string">'Symbol'</span>, <span class="string">'Map'</span>, <span class="string">'WeakMap'</span>, <span class="string">'Set'</span>, <span class="string">'WeakSet'</span>], <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">  _[<span class="string">'is'</span> + name] = <span class="function"><span class="keyword">function</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> toString.call(obj) === <span class="string">'[object '</span> + name + <span class="string">']'</span>;</div><div class="line">  &#125;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>通过 <code>toString()</code> 函数的返回值判断类型，这里不使用 <code>typeof</code> 判断的原因是字面量与对象的返回值不同。</p>
+<p>例如字符串字面量 <code>&quot;1&quot;</code> 通过 <code>typeof</code> 操作符返回的是 <code>&quot;string&quot;</code>，而字符串对象 <code>new String(&#39;1&#39;)</code> 通过 <code>typeof</code> 操作符返回的却是 <code>&quot;object&quot;</code>。所以通过 <code>Object.prototype.toString()</code> 来进行判断最为妥当。</p>
+<h2 id="判断-NaN，null，undefined"><a href="#判断-NaN，null，undefined" class="headerlink" title="判断 NaN，null，undefined"></a>判断 NaN，null，undefined</h2><h3 id="NaN"><a href="#NaN" class="headerlink" title="NaN"></a>NaN</h3><p>在 JavaScript 的 Number 类型中有这样一个特殊的存在，那就是 <code>NaN</code>。<code>NaN</code> 的意思是 Not-A-Number，即不是一个数字。当对无法转换为数字的变量进行数字转换时就会得到 <code>NaN</code>。<code>Nan</code> 还有一个特殊的性质，就是 <code>NaN === NaN</code> 返回的是 false。</p>
+<p>所以对 NaN 的判断的实现如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">_.isNaN = <span class="function"><span class="keyword">function</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> _.isNumber(obj) &amp;&amp; <span class="built_in">isNaN</span>(obj);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>先判断是否为 Number 类型，排除隐式类型转换造成的误判。再使用 isNaN 函数判断是否为 NaN。</p>
+<h3 id="null"><a href="#null" class="headerlink" title="null"></a>null</h3><p>在 JavaScript 中有 <code>==</code> 与 <code>===</code> 两个相等操作符，后者为严格比较。<code>null == undefined</code> 的返回值是 true，所以不能使用这个来判断是否为 null。而 <code>null === undefined</code> 返回的是 false，因此使用严格相等哎判断是否为 null。而</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">_.isNull = <span class="function"><span class="keyword">function</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> obj === <span class="literal">null</span>;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h3 id="undefined"><a href="#undefined" class="headerlink" title="undefined"></a>undefined</h3><p>判断变量是否为 <code>undefined</code>，很自然会想到使用 <code>foo === undefined</code> 的方式来判断。但是这样做是不安全的，在旧的浏览器版本上 <code>undefined</code> 是可以被重写的。这时使用上面那样判断会出现这种状况：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="literal">undefined</span> = <span class="string">'foo'</span>;</div><div class="line"><span class="keyword">var</span> foo = <span class="string">'foo'</span>;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(foo === <span class="literal">undefined</span>); <span class="comment">// true</span></div></pre></td></tr></table></figure>
+<p>所以这种判断方式不被推荐，即使新版本的浏览器上无法重写 undefined。更推荐的方式是使用 <code>void 0</code> 来判断。<br>关于 <code>void 0</code> 与 <code>undefined</code> 可以参考我在知乎上的回答：<a href="https://www.zhihu.com/question/52645620/answer/131470539" target="_blank" rel="external">（void 0）在javascript中表示什么，和undefined有什么区别？</a></p>
+<p>推荐的 undefined 判断实现：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">_.isUndefined = <span class="function"><span class="keyword">function</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> obj === <span class="keyword">void</span> <span class="number">0</span>;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h2 id="判断-Object"><a href="#判断-Object" class="headerlink" title="判断 Object"></a>判断 Object</h2><p>在 underscore 中对对象类型的判断是通过 <code>typeof</code> 来实现的：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">_.isObject = <span class="function"><span class="keyword">function</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> type = <span class="keyword">typeof</span> obj;</div><div class="line">  <span class="keyword">return</span> type === <span class="string">'function'</span> || type === <span class="string">'object'</span> &amp;&amp; !!obj;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p><code>typeof</code> 操作符在变量为 <code>null</code> 或者是对象时返回 <code>&quot;object&quot;</code>，在变量为函数对象时返回 <code>function</code>。</p>
+<p>我们需要的是判断变量是否为对象，那么就需要排除 <code>null</code> 的情况，即将变量进行两次取反操作，将变量转换为 <code>Boolean</code> 类型。由于 <code>null</code> 会转换为 <code>false</code>，那么这样就可以排除 <code>null</code> 的干扰。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近开始读之前没有读完的 underscore 的源码，刚把 Object 部分读完。对 JavaScript 中类型判断部分的总结。&lt;/p&gt;
+&lt;h2 id=&quot;Object-prototype-toString&quot;&gt;&lt;a href=&quot;#Object-prototype-toString&quot; class=&quot;headerlink&quot; title=&quot;Object.prototype.toString()&quot;&gt;&lt;/a&gt;Object.prototype.toString()&lt;/h2&gt;&lt;p&gt;在进行类型判断时，使用到最多的当属 &lt;code&gt;Object.prototype.toString()&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;toString()&lt;/code&gt; 方法返回一个代表该对象的字符串。每个对象都会继承 Object 上的 &lt;code&gt;toString&lt;/code&gt; 方法，如果该方法没有被同名方法覆盖的话。使用 &lt;code&gt;toString()&lt;/code&gt; 方法将会返回字符串 &lt;code&gt;&amp;quot;[object type]&amp;quot;&lt;/code&gt;。其中 type 根据对象的类型的不同而不同。&lt;/p&gt;
+&lt;p&gt;关于 &lt;code&gt;Object.prototype.toString()&lt;/code&gt; 的详细描述可以查看：&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Object.prototype.toString() - JavaScript | MDN&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
+    
+      <category term="Underscore" scheme="http://www.ahonn.me/tags/Underscore/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>「微信小程序」入坑总结</title>
+    <link href="http://www.ahonn.me/2016/11/14/wechat-app-summary/"/>
+    <id>http://www.ahonn.me/2016/11/14/wechat-app-summary/</id>
+    <published>2016-11-14T14:03:46.000Z</published>
+    <updated>2017-05-03T14:34:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>前段时间去了广州参加了关于「微信小程序」的技术沙龙，整场下来收获颇多。实际上微信小程序刚刚发布出来的时候就关注，弄了破解了的开发工具，跑了个官方的 Demo。</p>
+<p>听完回来之后就想着挖个相关的坑，正好看到手机上的 「ONE · 一个」。上网找到了 ONE 的接口，打算搞一个仿照 ONE 官方 APP 的小程序，最后就有了 <a href="https://github.com/ahonn/weapp-one" target="_blank" rel="external">weapp-one</a> 这个项目。</p>
+<h2 id="关于小程序"><a href="#关于小程序" class="headerlink" title="关于小程序"></a>关于小程序</h2><p>微信小程序不是 Web 也不是 Native，尝试之后给我的感觉有点像是 weex。因为之前尝试 weex 的时候是下载一个 APP，然后通过应用内扫码来运行对应的应用。这一点上小程序类似。</p>
+<p>在沙龙上有位分享嘉宾有提到，小程序实际上是在 Webview 之上再加上一层原生的组件。例如底部的 tabbar 以及顶部的 navbar 就是原生的。还有小程序的 map 组件，是调用原生的 map 组件。</p>
+<a id="more"></a>
+<h2 id="请求限制"><a href="#请求限制" class="headerlink" title="请求限制"></a>请求限制</h2><p>一开始就遇到了问题，ONE 官方的接口是 http 的，而且是 8000 这个端口。微信小程序对发送的请求有限制，必须是 https（在本地开发可以用 http），而且不能带端口号。</p>
+<p>所以我就使用了比较暴力的方法，把开发工具中对应用来限制的代码给注释掉了，反正只是用来体验一下小程序开发，所以就无所谓了。</p>
+<h2 id="添加页面"><a href="#添加页面" class="headerlink" title="添加页面"></a>添加页面</h2><p>在小程序中添加页面都需要将路径添加到 <code>app.json</code> 中的 <code>page</code> 项中，否则会找不到页面。与 Vue 类似，每个小程序页面包含 <code>page.js</code>，<code>page.wxml</code>，<code>page.wxss</code>，分别对应脚本，模板以及样式。</p>
+<p>还可以添加一个 <code>page.json</code> 对页面进行单独配置，比如配置 <code>navigationBarTitleText</code> 来改变导航上的文字显示，诸如此类的对页面的窗口表现配置。</p>
+<h2 id="奇怪的组件"><a href="#奇怪的组件" class="headerlink" title="奇怪的组件"></a>奇怪的组件</h2><p><strong>view、text</strong><br>在 wxml 里面写的是类似 HTML 的标签，标准的 HTML 标签是无法使用的。只能使用微信小程序官方的组件，组件对应有一些属性或事件可以调用。有类似于 <code>&lt;div&gt;</code> 的 <code>&lt;view&gt;</code> 组件，基本上页面上的组件都会被 <code>&lt;view&gt;</code> 包裹住。<br>然后文字方面是使用 <code>&lt;text&gt;</code>，虽然直接显示文字也没什么问题。不过我还是把所有的文字都加上了 <code>&lt;text&gt;</code> 标签。</p>
+<p><strong>image</strong><br>说起组件，微信小程序里最让我不爽的就是 <code>&lt;image&gt;</code> 这个组件了。给这个组件一个图片地址之后，默认的样式不是图片的大小，而是固定的 300px * 225px。与 HTML 中的 <code>&lt;img&gt;</code> 完全不同，用起来有点不舒服。<br><code>&lt;image&gt;</code> 组件还提供了不同显示方式的 mode，不过用起来还是觉得怪怪的。</p>
+<p><strong>audio</strong><br>音频播放的话有 <code>&lt;audio&gt;</code> 这个组件，但是这个组件的样式好像是固定的，类似于在网页也加上网易云音乐的外链那样。不过幸好有音频播放相关的 api 可以用，这样就可以当用户触发某些操作的时候播放音频，即可实现播放按钮点击后播放音频。</p>
+<p>微信小程序在播放音频的时候，开发工具上会出现对应的音乐栏，可以对播放的音频进行播放/暂停。猜猜在真机上使用时，会在通知栏出现音频控制。上面会显示音频的作者以及歌曲名称。但是在实际使用中有一点比较尴尬，使用调用 api 的方式播放音频没有设置音频作者的选项。详情可以见 <a href="https://mp.weixin.qq.com/debug/wxadoc/dev/api/media-background-audio.html?t=20161107#wxplaybackgroundaudioobject" target="_blank" rel="external">音乐播放控制 · 小程序</a></p>
+<p><strong>video</strong><br>相较与 HTML5 中的 <code>&lt;video&gt;</code> 标签，微信小程序中的 <code>&lt;video&gt;</code> 组件缺失了很多东西，例如 <code>loop</code> 与 <code>poster</code>。也就是说无法在用户点击播放按钮前显示特定的图像，只能是显示视频最开头。<br><code>&lt;video&gt;</code> 组件同样有默认的尺寸 300px * 225px，但没有 <code>&lt;image&gt;</code> 组件中的显示模式的设置。未全屏状态下，在不同的分辨率上，上下或者左右可能会存在黑边。</p>
+<h2 id="特殊的-rpx"><a href="#特殊的-rpx" class="headerlink" title="特殊的 rpx"></a>特殊的 rpx</h2><p>微信小程序中有特有的一个尺寸单位 —— rpx，1rpx 表示屏幕宽度的 1/750 大小，也就是说，100% 宽度就是 750rpx。还有一个会被忽略的尺寸单位 —— rem，与 Web 中的 rem 不同，1rem 表示屏幕宽度的 1/20 大小。</p>
+<p>在高度上使用 rpx 的话，也会根据屏幕的宽度的大小而改变。我更倾向与宽度使用 rpx 而高度使用 rem，不过其实比较喜欢用 px 来写样式，这可能算是一个不好的习惯。</p>
+<h2 id="实现滑至最右切换页面"><a href="#实现滑至最右切换页面" class="headerlink" title="实现滑至最右切换页面"></a>实现滑至最右切换页面</h2><p>在仿照 ONE 写微信小程序的时候遇到了一个问题，使用滑块视图组件 <code>&lt;swiper&gt;</code> 去显示每日图文，一共10个图文，当滑动至最右时切换到选择往期列表的页面。如下图所示：</p>
+<p><img src="http://ww2.sinaimg.cn/large/006tNc79jw1f9s2qs5aimg30930g21kx.gif" alt=""></p>
+<p>但是 <code>&lt;swiper&gt;</code> 组件并没有提供对应的事件，使用就自己实现了一个。主要是使用滑块视图每一次切换视图时都会触发一个 <code>bindchange</code> 事件，还有设置滑块视图显示位置的 <code>current</code> 属性。</p>
+<p>在 <code>&lt;swiper&gt;</code> 组件中添加一个空的 <code>&lt;swiper-item&gt;</code> 子组件，当滑动到这个空的子组件的时候使用 <code>wx.navigateTo</code> 这个 api 去切换到往期列表这个页面。同时将滑块视图的显示位置设置到倒数第二个，即最后一个非空的子组件。</p>
+<p>这样就实现了滑动至最右切换页面的功能，同时在点击返回的时候显示的也是滑块视图中的最后一个有内容的子组件。具体实现代码如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">Page(&#123;</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">current</span>: <span class="number">0</span></div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// ......</span></div><div class="line">  <span class="comment">// more code</span></div><div class="line">  handleChange: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</div><div class="line">    <span class="keyword">let</span> current = e.detail.current</div><div class="line">    <span class="keyword">let</span> length = <span class="keyword">this</span>.data.vols.length</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (current === length) &#123;</div><div class="line">      <span class="keyword">this</span>.setData(&#123;</div><div class="line">        <span class="attr">current</span>: length</div><div class="line">      &#125;)</div><div class="line">      wx.navigateTo(&#123;</div><div class="line">        <span class="attr">url</span>: <span class="string">'../history/history?page=index'</span>,</div><div class="line">        <span class="attr">success</span>: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">          <span class="keyword">this</span>.setData(&#123;</div><div class="line">            <span class="attr">current</span>: length - <span class="number">1</span></div><div class="line">          &#125;)</div><div class="line">        &#125;</div><div class="line">      &#125;)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>这里使用了两次 <code>this.setData</code> 是因为在第二次执行上面的滑动切换页面再返回的时候，显示的子组件并不是最后一个非空的子组件，而是最后的那个空子组件。大概原因是因为第二次执行这个操作的时候，<code>current</code> 并没有更新。<br>所以解决的方案是在每次修改 <code>current</code> 之前修改一次它的值，使得后面修改 <code>current</code> 值时会触发视图的更新。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前段时间去了广州参加了关于「微信小程序」的技术沙龙，整场下来收获颇多。实际上微信小程序刚刚发布出来的时候就关注，弄了破解了的开发工具，跑了个官方的 Demo。&lt;/p&gt;
+&lt;p&gt;听完回来之后就想着挖个相关的坑，正好看到手机上的 「ONE · 一个」。上网找到了 ONE 的接口，打算搞一个仿照 ONE 官方 APP 的小程序，最后就有了 &lt;a href=&quot;https://github.com/ahonn/weapp-one&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;weapp-one&lt;/a&gt; 这个项目。&lt;/p&gt;
+&lt;h2 id=&quot;关于小程序&quot;&gt;&lt;a href=&quot;#关于小程序&quot; class=&quot;headerlink&quot; title=&quot;关于小程序&quot;&gt;&lt;/a&gt;关于小程序&lt;/h2&gt;&lt;p&gt;微信小程序不是 Web 也不是 Native，尝试之后给我的感觉有点像是 weex。因为之前尝试 weex 的时候是下载一个 APP，然后通过应用内扫码来运行对应的应用。这一点上小程序类似。&lt;/p&gt;
+&lt;p&gt;在沙龙上有位分享嘉宾有提到，小程序实际上是在 Webview 之上再加上一层原生的组件。例如底部的 tabbar 以及顶部的 navbar 就是原生的。还有小程序的 map 组件，是调用原生的 map 组件。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
+    
+      <category term="Wechat" scheme="http://www.ahonn.me/tags/Wechat/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React 路由跳转后回到页面顶部</title>
+    <link href="http://www.ahonn.me/2016/10/11/after-the-react-routing-scroll-to-the-top-of-the-page/"/>
+    <id>http://www.ahonn.me/2016/10/11/after-the-react-routing-scroll-to-the-top-of-the-page/</id>
+    <published>2016-10-10T17:13:19.000Z</published>
+    <updated>2017-05-03T14:34:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在 React 组件间进行页面跳转后，发现页面的位置并不在页面顶部，而是在页面跳转前的位置。就是说浏览器的滚动条并没有回到顶部的位置。</p>
+<p>经过搜索之后找到了解决方案：<a href="http://stackoverflow.com/questions/33188994/scroll-to-the-top-of-the-page-after-render-in-react-js" target="_blank" rel="external">Scroll to the top of the page after render in react.js</a></p>
+<p>可以使用下面这种解决，但是这种方式不是一种很好的解决方法。而且 <code>scrollIntoView()</code> 方法并不回到页面的顶部，应该使用 <code>scrollTop = 0</code> 的方式。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">componentDidUpdate = <span class="function"><span class="params">()</span> =&gt;</span> &#123; ReactDom.findDOMNode(<span class="keyword">this</span>).scrollIntoView(); &#125;</div></pre></td></tr></table></figure>
+<p>所以得到的解决方案是：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">componentDidUpdate() &#123;</div><div class="line">  ReactDOM.findDOMNode(<span class="keyword">this</span>).scrollTop = <span class="number">0</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>但是我使用这个之后，ESlint 报了个错：<code>no-find-dom-node</code>。<br>查看 <code>eslint-plugin-react</code> 的<a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-find-dom-node.md" target="_blank" rel="external">文档</a>可以看到 Facebook 不推荐使用 <code>findDOMNode</code>，推荐使用 <code>refs</code> 获取 DOM 节点。</p>
+<p>所以推荐的使用方法是：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">  componentDidMount() &#123;</div><div class="line">    <span class="keyword">this</span>.node.scrollIntoView();</div><div class="line">  &#125;</div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">return</span> &lt;div ref=&#123;node =&gt; this.node = node&#125; /&gt;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在 React 组件间进行页面跳转后，发现页面的位置并不在页面顶部，而是在页面跳转前的位置。就是说浏览器的滚动条并没有回到顶部的位置。&lt;/p&gt;
+&lt;p&gt;经过搜索之后找到了解决方案：&lt;a href=&quot;http://stackoverflow.com/questions/33188994/scroll-to-the-top-of-the-page-after-render-in-react-js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Scroll to the top of the page after render in react.js&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可以使用下面这种解决，但是这种方式不是一种很好的解决方法。而且 &lt;code&gt;scrollIntoView()&lt;/code&gt; 方法并不回到页面的顶部，应该使用 &lt;code&gt;scrollTop = 0&lt;/code&gt; 的方式。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;componentDidUpdate = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; =&amp;gt;&lt;/span&gt; &amp;#123; ReactDom.findDOMNode(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;).scrollIntoView(); &amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;所以得到的解决方案是：&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;componentDidUpdate() &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  ReactDOM.findDOMNode(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;).scrollTop = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
+    
+      <category term="React" scheme="http://www.ahonn.me/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React 生命周期函数小结</title>
+    <link href="http://www.ahonn.me/2016/10/02/react-lifecycle-methods/"/>
+    <id>http://www.ahonn.me/2016/10/02/react-lifecycle-methods/</id>
+    <published>2016-10-01T17:10:17.000Z</published>
+    <updated>2017-05-03T14:34:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>生命周期函数是指，在组件生命周期上的特定点上执行的各个函数。<br>React 的组件声明周期函数分为三种：挂载，更新以及卸载。</p>
+<h2 id="挂载"><a href="#挂载" class="headerlink" title="挂载"></a>挂载</h2><p>组件挂载的生命周期函数都在初始化渲染前后被调用。</p>
+<h3 id="componentWillMount"><a href="#componentWillMount" class="headerlink" title="componentWillMount"></a>componentWillMount</h3><p>只调用一次，在客户端与服务端都执行。在初始化渲染之前被调用。</p>
+<a id="more"></a>
+<h3 id="componentDidMount"><a href="#componentDidMount" class="headerlink" title="componentDidMount"></a>componentDidMount</h3><p>只调用一次，在客户端执行，不在服务端执行。在初始化渲染之后被调用。<br>使用 <code>setTimeout</code> 或 <code>setInterval</code>, Ajax 请求等这些操作，均在这个方法内。</p>
+<h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><p>所有组件更新的生命周期函数都不会在初始化渲染被调用。</p>
+<h3 id="componentWillReceiveProps"><a href="#componentWillReceiveProps" class="headerlink" title="componentWillReceiveProps"></a>componentWillReceiveProps</h3><p>当组件收到新的 <code>props</code> 时被调用。不会在初始化渲染被调用。<br>在这个函数里调用 <code>this.setState()</code>不会触发任何额外的渲染。（PS: 就是在这里被坑了 T-T）</p>
+<blockquote>
+<p> 如果需要实现一个对 state 变化相应的操作，使用 <a href="#componentWillUpdate">componentWillUpdate</a></p>
+</blockquote>
+<h3 id="shouldComponentUpdate"><a href="#shouldComponentUpdate" class="headerlink" title="shouldComponentUpdate"></a>shouldComponentUpdate</h3><p>当新的 <code>props</code> 或者 <code>state</code> 被收到，在渲染前被调用。不会在初始化渲染时被调用。<br>如果 <code>shouldComponentUpdate</code> 返回 <code>false</code>，<code>render()</code> 会在下次 <code>state</code> 变化前被完全跳过。<a href="#componentWillUpdate">componentWillUpdate</a>  和 <a href="#componentDidUpdate">componentDidUpdate</a>  将不会被调用。</p>
+<h3 id="componentWillUpdate"><a href="#componentWillUpdate" class="headerlink" title="componentWillUpdate"></a>componentWillUpdate</h3><p>当新的 <code>props</code> 或者 <code>state</code> 被收到，在渲染前被立即调用。不会在初始化渲染被调用。<br><strong>不能在这个方法里使用 <code>this.setState()</code>。</strong></p>
+<h3 id="componentDidUpdate"><a href="#componentDidUpdate" class="headerlink" title="componentDidUpdate"></a>componentDidUpdate</h3><p>在组件的更新被更新到 DOM 后立即被调用。不会在初始化渲染被调用。</p>
+<h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><h3 id="componentWillUnmount"><a href="#componentWillUnmount" class="headerlink" title="componentWillUnmount"></a>componentWillUnmount</h3><p>在组件卸载前被调用，主要用来执行一些组件的清理工作。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;生命周期函数是指，在组件生命周期上的特定点上执行的各个函数。&lt;br&gt;React 的组件声明周期函数分为三种：挂载，更新以及卸载。&lt;/p&gt;
+&lt;h2 id=&quot;挂载&quot;&gt;&lt;a href=&quot;#挂载&quot; class=&quot;headerlink&quot; title=&quot;挂载&quot;&gt;&lt;/a&gt;挂载&lt;/h2&gt;&lt;p&gt;组件挂载的生命周期函数都在初始化渲染前后被调用。&lt;/p&gt;
+&lt;h3 id=&quot;componentWillMount&quot;&gt;&lt;a href=&quot;#componentWillMount&quot; class=&quot;headerlink&quot; title=&quot;componentWillMount&quot;&gt;&lt;/a&gt;componentWillMount&lt;/h3&gt;&lt;p&gt;只调用一次，在客户端与服务端都执行。在初始化渲染之前被调用。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
+    
+      <category term="React" scheme="http://www.ahonn.me/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>正则表达式备忘录</title>
+    <link href="http://www.ahonn.me/2016/09/13/the-memo-of-javascript-regexp/"/>
+    <id>http://www.ahonn.me/2016/09/13/the-memo-of-javascript-regexp/</id>
+    <published>2016-09-12T16:39:22.000Z</published>
+    <updated>2017-05-03T14:34:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>JavaScript 创建正则表达式有两种方式：</p>
+<ul>
+<li>使用正则表达式字面量：<code>var re = /abc/;</code></li>
+<li>调用 RegExp 对象的构造函数：<code>var re = new RegExp(&quot;abc&quot;);</code></li>
+</ul>
+<h2 id="什么时候使用构造函数？"><a href="#什么时候使用构造函数？" class="headerlink" title="什么时候使用构造函数？"></a>什么时候使用构造函数？</h2><p>当正则表达式的模式会变发生改变，或者需要从其他地方得到时（例如用户输入），适合使用构造函数的方式。</p>
+<a id="more"></a>
+<h2 id="匹配字符表"><a href="#匹配字符表" class="headerlink" title="匹配字符表"></a>匹配字符表</h2><ul>
+<li><code>\</code>：将其后的特殊字符转义为字面量</li>
+<li><code>^</code>：匹配输入的开始</li>
+<li><code>$</code>：匹配输入的结束</li>
+<li><code>*</code>：匹配前一个表达式0次或者多次，等价于 {0,}</li>
+<li><code>+</code>：匹配前一个表达式1次或多次，等价于 {1,}</li>
+<li><code>?</code>：匹配前一个表达式0次或者1次，等价于 {0,1}</li>
+<li><code>.</code>：匹配除了换行符（\n）之外的任何单个字符</li>
+<li><code>(x)</code>：匹配 ‘x’ 并记住匹配项</li>
+<li><code>(?:x)</code>：匹配 ‘x’ 但不记住匹配项</li>
+<li><code>x(?=y)</code>: 匹配 ‘x’ 并且 ‘x’ 后面跟着 ‘y’，也叫作正向肯定查找</li>
+<li><code>x(?!y)</code>：匹配 ‘x’ 并且 ‘x’ 后面不跟着 ‘y’，也叫作正向否定查找</li>
+<li><code>x | y</code>：匹配 ‘x’ 或者 ‘y’</li>
+<li><code>{n}</code>：匹配前一个字符 n 次</li>
+<li><code>{n, m}</code>：匹配前一个字符最少 n 次</li>
+<li><code>[xyz]</code>：匹配括号中的任意一个字符，可以使用 <code>-</code> 指定范围</li>
+<li><code>[^xyz]</code>: 匹配任何不在括号中的字符</li>
+<li><code>\b</code>：匹配一个词的边界</li>
+<li><code>\B</code>：匹配非单词边界</li>
+<li><code>\d</code>：匹配一个数字</li>
+<li><code>\D</code>：匹配一个非数字字符，等价于 [^0-9]</li>
+<li><code>\f</code>：匹配一个换页符</li>
+<li><code>\n</code>：匹配一个换行符</li>
+<li><code>\r</code>: 匹配一个回车符</li>
+<li><code>\s</code>：匹配一个空白字符</li>
+<li><code>\S</code>：匹配一个非空白字符</li>
+<li><code>\t</code>：匹配一个水平制表符</li>
+<li><code>\v</code>: 匹配一个垂直制表符</li>
+<li><code>\w</code>：匹配一个单字字符，等价于 [A-Za-z0-9_]</li>
+<li><code>\W</code>：匹配一个非单字字符，等价于 [^A-Za-z0-9_]</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;JavaScript 创建正则表达式有两种方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用正则表达式字面量：&lt;code&gt;var re = /abc/;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;调用 RegExp 对象的构造函数：&lt;code&gt;var re = new RegExp(&amp;quot;abc&amp;quot;);&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;什么时候使用构造函数？&quot;&gt;&lt;a href=&quot;#什么时候使用构造函数？&quot; class=&quot;headerlink&quot; title=&quot;什么时候使用构造函数？&quot;&gt;&lt;/a&gt;什么时候使用构造函数？&lt;/h2&gt;&lt;p&gt;当正则表达式的模式会变发生改变，或者需要从其他地方得到时（例如用户输入），适合使用构造函数的方式。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
+    
+      <category term="RegExp" scheme="http://www.ahonn.me/tags/RegExp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript 最佳实践：提升代码质量的建议和技巧</title>
+    <link href="http://www.ahonn.me/2016/08/31/javascript-best-practices/"/>
+    <id>http://www.ahonn.me/2016/08/31/javascript-best-practices/</id>
+    <published>2016-08-31T14:57:34.000Z</published>
+    <updated>2017-05-03T14:34:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>翻译自：<a href="https://www.codementor.io/javascript/tutorial/javascript-best-practices" target="_blank" rel="external">JavaScript Best Practices: Tips &amp; Tricks to Level Up Your Code</a><br>没有严格的按照原文翻译，删减修改了部分内容。</p>
+</blockquote>
+<p>在这个教程中，会列出一些重要的 JavaScript 的最佳实践，学习这些并不会很困难。</p>
+<h2 id="避免污染全局作用域"><a href="#避免污染全局作用域" class="headerlink" title="避免污染全局作用域"></a>避免污染全局作用域</h2><p>声明变量是很有趣的，有时候你会在你不知情的情况下声明了全局变量。在现在的浏览器中，全局变量将会存储在 <code>window</code> 变量中。在全局作用域中的变量可能在不经意间被覆盖。</p>
+<a id="more"></a>
+<p>假设你现在有一个 HTML 文件，其中包括一个 <code>&lt;script&gt;</code> 标签，包含如下内容：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="number">42</span>;</div><div class="line"><span class="built_in">console</span>.log(foo);</div></pre></td></tr></table></figure>
+<p>显然这会在控制台中输出 42。但是，由于这些代码不是在函数中执行的，而是处于全局作用域中，因此 foo 将会被附加到 <code>window</code> 上。也就是说 <code>window.foo</code> 的值同样也是 42。</p>
+<p>这样做是危险的，因为这样会覆盖现有的全局变量。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">print</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// do something</span></div><div class="line">&#125;</div><div class="line">print();</div></pre></td></tr></table></figure>
+<p>当执行 <code>window.print</code> 或者 <code>print</code> 时，因为我们重写了 <code>print</code> 函数，所以原来的打印函数不起作用了，也就不会弹出打印框了。</p>
+<p>解决办法很简单：使用立即执行函数（IIFE）。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Declare an anonymous function</span></div><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">   <span class="keyword">var</span> foo = <span class="number">42</span>;</div><div class="line">   <span class="built_in">console</span>.log(<span class="built_in">window</span>.foo);</div><div class="line">   <span class="comment">// → undefined</span></div><div class="line">   <span class="built_in">console</span>.log(foo);</div><div class="line">   <span class="comment">// → 42</span></div><div class="line">&#125;)();</div><div class="line"><span class="comment">//^ and call it immediately</span></div></pre></td></tr></table></figure>
+<p>或者，可以将 <code>window</code> 等全局变量作为参数传递给函数（这可能提高性能）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">global, doc</span>) </span>&#123;</div><div class="line">  global.setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">     doc.body.innerHTML = <span class="string">"Hello!"</span>;</div><div class="line">  &#125;, <span class="number">1000</span>);</div><div class="line">&#125;)(<span class="built_in">window</span>, <span class="built_in">document</span>);</div></pre></td></tr></table></figure>
+<p>所以，我们可以使用上述的两种方式，避免不知情的情况下创建全局变量。</p>
+<h2 id="使用-“use-strict”"><a href="#使用-“use-strict”" class="headerlink" title="使用 “use strict”"></a>使用 “use strict”</h2><p>严格使用 <code>&quot;use strict&quot;</code>，这只不过是在你的代码中添加字符串，但它的作用非常大。</p>
+<p>比如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// This is bad, since you do create a global without having anyone to tell you</span></div><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">   a = <span class="number">42</span>;</div><div class="line">   <span class="built_in">console</span>.log(a);</div><div class="line">   <span class="comment">// → 42</span></div><div class="line">&#125;)();</div><div class="line"><span class="built_in">console</span>.log(a);</div><div class="line"><span class="comment">// → 42</span></div></pre></td></tr></table></figure>
+<p>上述代码，如果使用 <code>&quot;use strict&quot;</code>，你将会得到一些错误信息：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">   "use strict"</span>;</div><div class="line">   a = <span class="number">42</span>;</div><div class="line">   <span class="comment">// Error: Uncaught ReferenceError: a is not defined</span></div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<p>你可能会很奇怪，为什么不把 <code>&quot;use strict&quot;</code> 放到函数之外？实际上你可以将它放到函数外，但是这样的话他就在全局环境中应用了。这有可能影响来自其他库的代码。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用 ==="></a>使用 ===</h2><p>如果你比较 a 和 b 时使用 <code>==</code>，在 JavaScript 中你会发现这是一种奇怪的方式。如果你有一个字符串和一个数字，像是下面这样。他们将是相等的，即返回 true：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">"42"</span> == <span class="number">42</span></div><div class="line"><span class="comment">// → true</span></div></pre></td></tr></table></figure>
+<p>这是一种不严格的比较，在进行数据验证时，最好使用 <code>===</code>。这将会严格的比较 a 与 b 是否相等：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">"42"</span> === <span class="number">42</span></div><div class="line"><span class="comment">// → false</span></div></pre></td></tr></table></figure>
+<h2 id="使用神奇的-amp-amp-和"><a href="#使用神奇的-amp-amp-和" class="headerlink" title="使用神奇的 &amp;&amp; 和 ||"></a>使用神奇的 &amp;&amp; 和 ||</h2><p>根据的你的需要，可以使用逻辑运算符使得代码更加简短。例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="string">""</span> || <span class="string">"foo"</span></div><div class="line"><span class="comment">// → "foo"</span></div><div class="line"></div><div class="line"><span class="literal">undefined</span> || <span class="number">42</span></div><div class="line"><span class="comment">// → 42</span></div><div class="line"></div><div class="line"><span class="comment">// Note that if you want to handle 0 there, you need</span></div><div class="line"><span class="comment">// to check if a number was provided:</span></div><div class="line"><span class="keyword">var</span> a = <span class="number">0</span>;</div><div class="line">a || <span class="number">42</span></div><div class="line"><span class="comment">// → 42</span></div><div class="line"></div><div class="line"><span class="comment">// This is a ternary operator—works like an inline if-else statement</span></div><div class="line"><span class="keyword">var</span> b = <span class="keyword">typeof</span> a === <span class="string">"number"</span> ? a : <span class="number">42</span>;</div><div class="line"><span class="comment">// → 0</span></div></pre></td></tr></table></figure>
+<p>可以这样简单的实现 if 的检查：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">expr &amp;&amp; doSomething();</div><div class="line"></div><div class="line"><span class="comment">// Instead of:</span></div><div class="line"><span class="keyword">if</span> (expr) &#123;</div><div class="line">   doSomething();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果你需要返回结果，你还可以这样做：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">doSomething</span> (<span class="params"></span>) </span>&#123;</div><div class="line">   <span class="keyword">return</span> &#123; <span class="attr">foo</span>: <span class="string">"bar"</span> &#125;;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> expr = <span class="literal">true</span>;</div><div class="line"><span class="keyword">var</span> res = expr &amp;&amp; doSomething();</div><div class="line">res &amp;&amp; <span class="built_in">console</span>.log(res);</div><div class="line"><span class="comment">// → &#123; foo: "bar" &#125;</span></div></pre></td></tr></table></figure>
+<p>这里你可以不同意我的观点，但这是比较理想的情况。如果你不想要这样丑化你的代码，使得代码隐晦。这是那些 JavaScript 压缩工具会做的事情，你可以使用它们。</p>
+<p>虽然代码比较短，但是这依然是具有可读性的。</p>
+<h2 id="转换类型"><a href="#转换类型" class="headerlink" title="转换类型"></a>转换类型</h2><p>有很多种方式去进行类型转换，要怎么转换取决于你。这里有一些常用的方法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// From anything to a number</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> foo = <span class="string">"42"</span>;</div><div class="line"><span class="keyword">var</span> myNumber = +foo; <span class="comment">// shortcut for Number(foo)</span></div><div class="line"><span class="comment">// → 42</span></div><div class="line"></div><div class="line"><span class="comment">// Tip: you can convert it directly into a negative number</span></div><div class="line"><span class="keyword">var</span> negativeFoo = -foo; <span class="comment">// or -Number(foo)</span></div><div class="line"><span class="comment">// → -42</span></div><div class="line"></div><div class="line"><span class="comment">// From object to array</span></div><div class="line"><span class="comment">// Tip: `arguments` is an object and in general you want to use it as array</span></div><div class="line"><span class="keyword">var</span> args = &#123; <span class="number">0</span>: <span class="string">"foo"</span>, <span class="number">1</span>: <span class="string">"bar"</span>, <span class="attr">length</span>: <span class="number">2</span> &#125;;</div><div class="line"><span class="built_in">Array</span>.prototype.slice.call(args)</div><div class="line"><span class="comment">// → [ 'foo', 'bar' ]</span></div><div class="line"></div><div class="line"><span class="comment">// Anything to boolean</span></div><div class="line"><span class="comment">/// Non non p is a boolean p</span></div><div class="line"><span class="keyword">var</span> t = <span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> f = <span class="number">0</span>;</div><div class="line">!!t</div><div class="line"><span class="comment">// → true</span></div><div class="line">!!f</div><div class="line"><span class="comment">// → false</span></div><div class="line"></div><div class="line"><span class="comment">/// And non-p is a boolean non-p</span></div><div class="line">!t</div><div class="line"><span class="comment">// → false</span></div><div class="line">!f</div><div class="line"><span class="comment">// → true</span></div><div class="line"></div><div class="line"><span class="comment">// Anything to string</span></div><div class="line"><span class="keyword">var</span> foo = <span class="number">42</span>;</div><div class="line"><span class="string">""</span> + foo <span class="comment">// shortcut for String(foo)</span></div><div class="line"><span class="comment">// → "42"</span></div><div class="line"></div><div class="line">foo = &#123; <span class="attr">hello</span>: <span class="string">"world"</span> &#125;;</div><div class="line"><span class="built_in">JSON</span>.stringify(foo);</div><div class="line"><span class="comment">// → '&#123; "hello":"world" &#125;'</span></div><div class="line"></div><div class="line"><span class="built_in">JSON</span>.stringify(foo, <span class="literal">null</span>, <span class="number">4</span>); <span class="comment">// beautify the things</span></div><div class="line"><span class="comment">// →</span></div><div class="line"><span class="comment">// '&#123;</span></div><div class="line"><span class="comment">//    "hello": "world"</span></div><div class="line"><span class="comment">// &#125;'</span></div><div class="line"></div><div class="line"><span class="comment">// Note you cannot JSON.stringify circular structures</span></div><div class="line"><span class="built_in">JSON</span>.stringify(<span class="built_in">window</span>);</div><div class="line"><span class="comment">// ⚠ TypeError: JSON.stringify cannot serialize cyclic structures.</span></div></pre></td></tr></table></figure>
+<h2 id="代码风格"><a href="#代码风格" class="headerlink" title="代码风格"></a>代码风格</h2><p>对新项目，保持项目中的所有代码的风格相同。对于现有项目，使用现有项目的代码风格，除非你真的想去改变它。</p>
+<p><strong>制定你的代码风格，并始终遵循它</strong></p>
+<p>这里还有一些推荐的现有代码风格：</p>
+<ul>
+<li><a href="https://google.github.io/styleguide/javascriptguide.xml" target="_blank" rel="external">Google JavaScript Style Guide</a></li>
+<li><a href="https://github.com/airbnb/javascript" target="_blank" rel="external">airbnb/javascript</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;翻译自：&lt;a href=&quot;https://www.codementor.io/javascript/tutorial/javascript-best-practices&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;JavaScript Best Practices: Tips &amp;amp; Tricks to Level Up Your Code&lt;/a&gt;&lt;br&gt;没有严格的按照原文翻译，删减修改了部分内容。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在这个教程中，会列出一些重要的 JavaScript 的最佳实践，学习这些并不会很困难。&lt;/p&gt;
+&lt;h2 id=&quot;避免污染全局作用域&quot;&gt;&lt;a href=&quot;#避免污染全局作用域&quot; class=&quot;headerlink&quot; title=&quot;避免污染全局作用域&quot;&gt;&lt;/a&gt;避免污染全局作用域&lt;/h2&gt;&lt;p&gt;声明变量是很有趣的，有时候你会在你不知情的情况下声明了全局变量。在现在的浏览器中，全局变量将会存储在 &lt;code&gt;window&lt;/code&gt; 变量中。在全局作用域中的变量可能在不经意间被覆盖。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何减少浏览器回流</title>
+    <link href="http://www.ahonn.me/2016/08/02/javascript-reduce-the-browser-reflow/"/>
+    <id>http://www.ahonn.me/2016/08/02/javascript-reduce-the-browser-reflow/</id>
+    <published>2016-08-02T14:46:33.000Z</published>
+    <updated>2017-05-03T14:34:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是浏览器回流"><a href="#什么是浏览器回流" class="headerlink" title="什么是浏览器回流"></a>什么是浏览器回流</h2><p>浏览器在显示网页时，需要计算每一个元素应该放置的位置，这个计算过程就称为浏览器回流（browser reflow）。回流会重新计算页面的布局，在回流中会重新计算元素的尺寸与位置，并且也会触发对子元素的回流。</p>
+<p>触发浏览器回流的操作：</p>
+<ul>
+<li>在 DOM 中插入，移除或者更新元素</li>
+<li>修改页面上的内容</li>
+<li>移动 DOM 元素</li>
+<li>修改元素 CSS 样式</li>
+<li>修改元素的类名</li>
+<li>调整窗口的大小</li>
+</ul>
+<a id="more"></a>
+<p>基本上跟元素相关的操作都会触发浏览器回流。浏览器的回流需要耗时，尽量减少浏览器的回流，那么就可以提高整个网页的效率。</p>
+<h2 id="创建单一元素"><a href="#创建单一元素" class="headerlink" title="创建单一元素"></a>创建单一元素</h2><p>当我们需要创建一个新元素插入到页面中，并且设置元素的属性。我们会这样做：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addElement</span>(<span class="params">parent, elementText</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> element = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>);</div><div class="line">  parent.appendChild(element);</div><div class="line">  element.innerHTML = anchorText;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这样写会产生2次浏览器回流，新创建的元素在插入页面中之后又进行了属性的修改。更好的写法是把插入到页面的操作放到最后，这样给元素设置属性的操作就是在内存中进行的。这样就只有元素插入到页面时产生的一次回流。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addElement</span>(<span class="params">parent, elementText</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> element = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>);</div><div class="line">  element.innerHTML = anchorText;</div><div class="line">  parent.appendChild(element);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="创建多个元素"><a href="#创建多个元素" class="headerlink" title="创建多个元素"></a>创建多个元素</h2><p>在实际的使用中，更多的情况是创建多个元素，并插入到页面中。按照创建单一元素插入到页面时的写法，我们会这样写：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addElements</span>(<span class="params">parent, elementText</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> element;</div><div class="line"></div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</div><div class="line">    element = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>);</div><div class="line">    element.innerHTML = anchorText;</div><div class="line">    parent.appendChild(element);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>可以看出，这样写会产生10次回流，每一次插入元素都会产生一次。这时候我们需要用到 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment" target="_blank" rel="external">DocumentFragment</a>，DocumentFragment 有占位符的作用，可以暂时存放那些插入文档元素。</p>
+<p>当把一个 DocumentFragment 插入文档树时，插入的不是 DocumentFragment 自身，而是它的所有子孙节点。可以用 <code>Document.createDocumentFragment()</code> 方法创建新的空 DocumentFragment 节点。</p>
+<p>通过 DocumentFragment 可以让上面的操作值产生一次浏览器回流：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addElements</span>(<span class="params">parent, elementText</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> element,</div><div class="line">      fragment = <span class="built_in">document</span>.createDocumentFragment();</div><div class="line"></div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</div><div class="line">    element = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>);</div><div class="line">    element.innerHTML = anchorText;</div><div class="line">    fragment.appendChild(element);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  parent.appendChild(fragment);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="修改元素样式"><a href="#修改元素样式" class="headerlink" title="修改元素样式"></a>修改元素样式</h2><p>在 JavaScript 中修改元素的样式也是经常会做的操作。修改元素的多个样式时会这样：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeStyle</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">  element.style.fontSize   = <span class="string">"14px"</span>;</div><div class="line">  element.style.fontWeight = <span class="string">"600"</span>;</div><div class="line">  element.style.color      = <span class="string">"#fff"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>实际上，每一次对元素的样式的变更都会产生一次回流。好的做法是创建一个 class 包含这些样式。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.changeStyle</span> &#123;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">14px</span>;</div><div class="line">  <span class="attribute">font-weight</span>: <span class="number">600</span>;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeStyle</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">  element.className = <span class="string">'changeStyle'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>减少浏览器回流的方式，就是将一切能够在内存完成的完成之后再应用到页面中，对元素样式的操作尽量通过添加修改 CSS 类来实现。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;什么是浏览器回流&quot;&gt;&lt;a href=&quot;#什么是浏览器回流&quot; class=&quot;headerlink&quot; title=&quot;什么是浏览器回流&quot;&gt;&lt;/a&gt;什么是浏览器回流&lt;/h2&gt;&lt;p&gt;浏览器在显示网页时，需要计算每一个元素应该放置的位置，这个计算过程就称为浏览器回流（browser reflow）。回流会重新计算页面的布局，在回流中会重新计算元素的尺寸与位置，并且也会触发对子元素的回流。&lt;/p&gt;
+&lt;p&gt;触发浏览器回流的操作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在 DOM 中插入，移除或者更新元素&lt;/li&gt;
+&lt;li&gt;修改页面上的内容&lt;/li&gt;
+&lt;li&gt;移动 DOM 元素&lt;/li&gt;
+&lt;li&gt;修改元素 CSS 样式&lt;/li&gt;
+&lt;li&gt;修改元素的类名&lt;/li&gt;
+&lt;li&gt;调整窗口的大小&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数组乱序的正确姿势</title>
+    <link href="http://www.ahonn.me/2016/07/25/the-right-way-to-array-of-random-sequence/"/>
+    <id>http://www.ahonn.me/2016/07/25/the-right-way-to-array-of-random-sequence/</id>
+    <published>2016-07-25T02:53:19.000Z</published>
+    <updated>2017-05-03T14:34:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在 <code>underscore</code> 中有一个函数，其作用是将数组乱序排序，实现如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Shuffle a collection, using the modern version of the</span></div><div class="line"><span class="comment">// [Fisher-Yates shuffle](http://en.wikipedia.org/wiki/Fisher–Yates_shuffle).</span></div><div class="line"><span class="comment">// `shuffle` 函数。</span></div><div class="line">_.shuffle = <span class="function"><span class="keyword">function</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> set = isArrayLike(obj) ? obj : _.values(obj);</div><div class="line">  <span class="keyword">var</span> length = set.length;</div><div class="line">  <span class="keyword">var</span> shuffled = <span class="built_in">Array</span>(length);</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> index = <span class="number">0</span>, rand; index &lt; length; index++) &#123;</div><div class="line">    rand = _.random(<span class="number">0</span>, index);</div><div class="line">    <span class="keyword">if</span> (rand !== index) shuffled[index] = shuffled[rand];</div><div class="line">    shuffled[rand] = set[index];</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> shuffled;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>其中使用的数组乱序的算法是 <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle" target="_blank" rel="external">Fisher–Yates shuffle</a>。这是一个 O(n) 复杂度的随机排列数组元素的经典算法。</p>
+<p>每次循环从前面的 <code>index</code> 个元素中随机选择一个元素 <code>shuffle[rand]</code>。将这个元素与第 <code>index</code> 个元素进行交换，直到 <code>index == length</code> 为止。这样对元素进行随机交换，对于每个结果所获得概率是均匀的。<code>_.shuffle</code> 方法是返回一个新的乱序数组，所以需要一个新的数组来存储。</p>
+<p>对原有数组进行乱序：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">shuffle</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> length = arr.length;</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> index = <span class="number">0</span>, rand; index &lt; length; index ++) &#123;</div><div class="line">    rand = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (length - <span class="number">1</span>));</div><div class="line"></div><div class="line">    <span class="keyword">var</span> temp = arr[rand];</div><div class="line">    arr[rand] = arr[index];</div><div class="line">    arr[index] = temp;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>More</strong></p>
+<ul>
+<li><a href="https://github.com/hanzichi/underscore-analysis/issues/15" target="_blank" rel="external">JavaScript 数组乱序</a></li>
+<li><a href="https://www.h5jun.com/post/array-shuffle.html" target="_blank" rel="external">数组的完全随机排列</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在 &lt;code&gt;underscore&lt;/code&gt; 中有一个函数，其作用是将数组乱序排序，实现如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// Shuffle a collection, using the modern version of the&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// [Fisher-Yates shuffle](http://en.wikipedia.org/wiki/Fisher–Yates_shuffle).&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// `shuffle` 函数。&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;_.shuffle = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;obj&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; set = isArrayLike(obj) ? obj : _.values(obj);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; length = set.length;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; shuffled = &lt;span class=&quot;built_in&quot;&gt;Array&lt;/span&gt;(length);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; index = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, rand; index &amp;lt; length; index++) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    rand = _.random(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, index);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (rand !== index) shuffled[index] = shuffled[rand];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    shuffled[rand] = set[index];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; shuffled;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
+    
+      <category term="Underscore" scheme="http://www.ahonn.me/tags/Underscore/"/>
+    
+      <category term="算法" scheme="http://www.ahonn.me/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浪矢杂货店</title>
+    <link href="http://www.ahonn.me/2016/07/24/langshi-grocery-store/"/>
+    <id>http://www.ahonn.me/2016/07/24/langshi-grocery-store/</id>
+    <published>2016-07-24T11:45:35.000Z</published>
+    <updated>2017-05-03T14:34:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>解忧杂货店，零零散散的在地铁上看完了这本之前一直听到却没有去看的小说。其实几天前想写这篇读书笔记的，一直被拖延至今。</p>
+<p>爱情公寓中有一集曾小贤说了这样一句话。当面对两个选择时，抛硬币总能奏效，并不是因为它总能给出对的答案，而是在你把它抛在空中的那一秒里，你突然知道你希望它是什么。就像是那些向浪矢杂货店投递烦恼信件一样，其实真正来向浪矢爷爷咨询的人大多心里已经有了答案。只是自己没有发现，当杂货店回信中的建议并不像所期望的回答的时候，咨询者就发现自己想要的那个答案。<br><a id="more"></a></p>
+<blockquote>
+<p>我咨询多年，终于了解到一件事。通常咨询者心里已经有了答案，找人咨询的目的，只是为了确认这个答案是正确的。所以，有些咨询者在看了我的回信后，会再写信给我，可能是我的回答和他原本想的不一样。</p>
+</blockquote>
+<p>我想，面对选择的时候抛硬币大部分时候都会奏效。有时候抛起硬币，掉落下来，整一个过程脑袋一片空白，完全不知道希望它是什么。但其实那一片空白中一闪而过的那个念头就是我们想要的，只是没有发现。</p>
+<p>虽然的确能够作出选择，但是有时在作出了选择过后，我却总会想着当时如果作出另外的一个选择的话会是什么样的呢。</p>
+<p>围绕着浪矢杂货店，人与人之间错综复杂的羁绊构成了整本书的故事线，就像是蝴蝶效应一般。每个人不经意间的选择和行为，都像投入水面的石子一样，造成了持续不断的涟漪，这些涟漪不断扩大，渐渐形成了牢不可破的羁绊，过去未来终于交汇。就像是浪矢杂货店对烦恼咨询者的回信一样，或许选择了另外一种建议，故事是不是又会不一样呢？我想，即使作出了不同的选择，那个牢不可破的羁绊依然还会那样存在吧。</p>
+<p>书中有句话特别适合现在的我，<strong>“虽然走起来并不是一帆风顺，但我觉得那是因为我活着，才会感受到这些痛楚，所以克服了重重困难。”</strong>所以只要是活着总是难免会感受到痛楚，所以才要克服这些困难，这样才是活着。有些经历总是必须的，不然活着就像死了一样不是吗？</p>
+<blockquote>
+<p>如果说，来找我咨询烦恼的人是迷途的羔羊，通常他们手上都有地图，却没有看地图，或是不知道自己目前的位置。<br>但我相信你不属于任何一种情况，你画的地图是一张白纸，所以，即使想决定目的地，也不知道路在哪里。<br>地图是白纸当然很伤脑筋，任何人都会不知所措。<br>但是不妨换一个角度思考，正因为是白纸，所以可以画任何地图，一切都掌握在你自己手上。你很自由，充满了无限可能。这是很棒的事，我衷心祈祷你可以相信自己，无悔地燃烧自己。</p>
+</blockquote>
+<p>这是书中对于白纸的回信，这个回答对于所有人都算是解答吧。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;解忧杂货店，零零散散的在地铁上看完了这本之前一直听到却没有去看的小说。其实几天前想写这篇读书笔记的，一直被拖延至今。&lt;/p&gt;
+&lt;p&gt;爱情公寓中有一集曾小贤说了这样一句话。当面对两个选择时，抛硬币总能奏效，并不是因为它总能给出对的答案，而是在你把它抛在空中的那一秒里，你突然知道你希望它是什么。就像是那些向浪矢杂货店投递烦恼信件一样，其实真正来向浪矢爷爷咨询的人大多心里已经有了答案。只是自己没有发现，当杂货店回信中的建议并不像所期望的回答的时候，咨询者就发现自己想要的那个答案。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="生活" scheme="http://www.ahonn.me/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="读书笔记" scheme="http://www.ahonn.me/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue 中使用 highlight.js</title>
+    <link href="http://www.ahonn.me/2016/07/13/getting-highlightjs-to-work-with-vue.js/"/>
+    <id>http://www.ahonn.me/2016/07/13/getting-highlightjs-to-work-with-vue.js/</id>
+    <published>2016-07-13T04:08:30.000Z</published>
+    <updated>2017-05-03T14:34:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天遇到一个问题：在使用 vue 的练手项目中，渲染的 HTML 里 <code>&lt;code&gt;</code> 标签中的代码没有代码高亮。</p>
+<p>遂想到用 highlight.js 来解决，按照平常那样在 HTML 文件中引入 <code>js</code> 和 <code>css</code> 文件，然后在<code>&lt;header&gt;</code> 中加上一句 <code>&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;</code>。但是却没有效果。</p>
+<p>在 Vue.js 的论坛上找到了解决方案 <a href="https://forum.vuejs.org/topic/3514/getting-highlightjs-to-work-with-vue-router" target="_blank" rel="external">Getting highlightjs to work with vue-router</a>。highlight.js 没有效果是因为使用了 <code>vue-route</code>，在 route 改变时，页面将会重新渲染并且会移除事件，这里就把 highlight 的事件给移除了。<br><a id="more"></a></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>所以得到的解决方案是，使用 Vue.js 的自定义指令，定义一个叫做 <code>v-highlight</code> 的指令来使得 <code>&lt;pre&gt;&lt;code&gt; .. &lt;/code&gt;&lt;/pre&gt;</code> 中的代码高亮。</p>
+<p>定义自定义指令：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Hljs <span class="keyword">from</span> <span class="string">'highlight.js'</span></div><div class="line"></div><div class="line">Vue.directive(<span class="string">'highlightjs'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> blocks = <span class="keyword">this</span>.el.querySelectorAll(<span class="string">'pre code'</span>);</div><div class="line">  <span class="built_in">Array</span>.prototype.forEach.call(blocks, Hljs.highlightBlock);</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>这里 import 了 highlight.js，所以需要 <code>npm install highlight.js</code>。导入之后使用 <code>Vue.directive()</code> 定义 <code>v-highlightjs</code> 指令，获取使用该指令的 document 中的 <code>pre  code</code> 部分，并使用 highlight.js 的 <code>highlightBlock</code> 使其高亮。</p>
+<h2 id="How-to-use"><a href="#How-to-use" class="headerlink" title="How to use"></a>How to use</h2><p>之后在需要高亮的地方，使用 <code>v-highlightjs</code> 指令即可用使得其中的 <code>&lt;pre&gt;&lt;code&gt; .. &lt;/code&gt;&lt;/pre&gt;</code> 部分高亮。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-html</span>=<span class="string">"your_content"</span> <span class="attr">v-highlightjs</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天遇到一个问题：在使用 vue 的练手项目中，渲染的 HTML 里 &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; 标签中的代码没有代码高亮。&lt;/p&gt;
+&lt;p&gt;遂想到用 highlight.js 来解决，按照平常那样在 HTML 文件中引入 &lt;code&gt;js&lt;/code&gt; 和 &lt;code&gt;css&lt;/code&gt; 文件，然后在&lt;code&gt;&amp;lt;header&amp;gt;&lt;/code&gt; 中加上一句 &lt;code&gt;&amp;lt;script&amp;gt;hljs.initHighlightingOnLoad();&amp;lt;/script&amp;gt;&lt;/code&gt;。但是却没有效果。&lt;/p&gt;
+&lt;p&gt;在 Vue.js 的论坛上找到了解决方案 &lt;a href=&quot;https://forum.vuejs.org/topic/3514/getting-highlightjs-to-work-with-vue-router&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Getting highlightjs to work with vue-router&lt;/a&gt;。highlight.js 没有效果是因为使用了 &lt;code&gt;vue-route&lt;/code&gt;，在 route 改变时，页面将会重新渲染并且会移除事件，这里就把 highlight 的事件给移除了。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Vue" scheme="http://www.ahonn.me/tags/Vue/"/>
+    
+  </entry>
+  
+</feed>
