@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ahonn.me/"/>
-  <updated>2017-05-03T14:34:21.000Z</updated>
+  <updated>2017-05-04T02:27:13.000Z</updated>
   <id>http://www.ahonn.me/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.ahonn.me/2017/03/27/use-neovim/"/>
     <id>http://www.ahonn.me/2017/03/27/use-neovim/</id>
     <published>2017-03-27T03:10:06.000Z</published>
-    <updated>2017-05-03T14:34:21.000Z</updated>
+    <updated>2017-05-04T02:27:13.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://ww2.sinaimg.cn/large/006tNc79gy1fe1885ws5rj315w0n4n12.jpg" alt=""></p>
 <p>很久之前就听说过 neovim，但一直没有怎么了解过。昨天下午折腾了一下，彻底转投 neovim 了。</p>
@@ -64,7 +64,7 @@
     <link href="http://www.ahonn.me/2017/03/16/alibaba-summer-internship-interview-summary/"/>
     <id>http://www.ahonn.me/2017/03/16/alibaba-summer-internship-interview-summary/</id>
     <published>2017-03-16T07:15:24.000Z</published>
-    <updated>2017-05-03T14:34:21.000Z</updated>
+    <updated>2017-05-04T02:27:13.000Z</updated>
     
     <content type="html"><![CDATA[<p>2月末的时候，通过 <a href="https://simplyy.space/" target="_blank" rel="external">simplyY</a> 内推了阿里巴巴暑期实习的前端开发岗，在此表示感谢。<br>接着3月1号收到了内推的通知邮件，完善信息后很快就接到了一面的电话（3月3号）。</p>
 <h2 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h2><p>面试了大概20分钟左右，整体内容还是比较偏基础。一开始是正常流程的自我介绍，说是三分钟自我介绍，但是我语速比较快的不到两分钟的介绍完了。(刚好是临近中午，原本打算吃饭的，要是去吃饭的话就得在路上面了…）</p>
@@ -141,7 +141,7 @@
     <link href="http://www.ahonn.me/2017/03/15/don-t-let-me-down/"/>
     <id>http://www.ahonn.me/2017/03/15/don-t-let-me-down/</id>
     <published>2017-03-15T08:40:08.000Z</published>
-    <updated>2017-05-03T14:34:21.000Z</updated>
+    <updated>2017-05-04T02:27:13.000Z</updated>
     
     <content type="html"><![CDATA[<p>单人 Acapella 版本的『 Don’t Let Me Down 』, 分享～</p>
 <blockquote>
@@ -172,7 +172,7 @@
     <link href="http://www.ahonn.me/2017/03/11/answer-front-end-questions/"/>
     <id>http://www.ahonn.me/2017/03/11/answer-front-end-questions/</id>
     <published>2017-03-11T09:13:46.000Z</published>
-    <updated>2017-05-03T14:34:21.000Z</updated>
+    <updated>2017-05-04T02:27:13.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>答 <a href="https://zhuanlan.zhihu.com/p/25701897" target="_blank" rel="external">中级前端工程师面试 我想问的几个问题</a> 中的几个问题，感谢 <a href="https://www.zhihu.com/people/simplyy/answers" target="_blank" rel="external">@SimplyY
@@ -246,7 +246,7 @@
     <link href="http://www.ahonn.me/2017/03/02/XMLHttpRequest-study-notes/"/>
     <id>http://www.ahonn.me/2017/03/02/XMLHttpRequest-study-notes/</id>
     <published>2017-03-02T10:35:39.000Z</published>
-    <updated>2017-05-03T14:34:21.000Z</updated>
+    <updated>2017-05-04T02:27:13.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>AJAX即“Asynchronous JavaScript and XML”（异步的JavaScript与XML技术），指的是一套综合了多项技术的浏览器端网页开发技术。</p>
@@ -317,7 +317,7 @@
     <link href="http://www.ahonn.me/2017/02/19/notes-of-vim/"/>
     <id>http://www.ahonn.me/2017/02/19/notes-of-vim/</id>
     <published>2017-02-19T14:37:54.000Z</published>
-    <updated>2017-05-03T14:34:21.000Z</updated>
+    <updated>2017-05-04T02:27:13.000Z</updated>
     
     <content type="html"><![CDATA[<p>昨天在微信读书上面看到了池建强的《MacTalk 人生元编程》，然后花了差不多一天看完，其中有篇有关于 Vim 的文章提起了我对这个编辑器的再一次兴趣（对的，我对它感兴趣很多次了，每次都懒..）。</p>
 <p>一直懒得去慢慢配置它，又不想用别人的配置。自己用的编辑器还是想自己折腾，然后今天就趁着我对这个还有点热度赶紧折腾起来。</p>
@@ -375,7 +375,7 @@
     <link href="http://www.ahonn.me/2017/01/24/something-about-javaScript-inherit/"/>
     <id>http://www.ahonn.me/2017/01/24/something-about-javaScript-inherit/</id>
     <published>2017-01-24T15:15:02.000Z</published>
-    <updated>2017-05-03T14:34:21.000Z</updated>
+    <updated>2017-05-04T02:27:13.000Z</updated>
     
     <content type="html"><![CDATA[<p>众所周知，JavaScript 的继承是实现继承，而没有 Java 中的接口继承。这是因为 JavaScript 中函数没有签名，而实现继承依靠的是原型链来实现的。</p>
 <h2 id="原型链继承"><a href="#原型链继承" class="headerlink" title="原型链继承"></a>原型链继承</h2><p>JavaScript 中通过修改对象原型指向的对象来实现继承，即是将一个对象的原型指向要继承的对象实例，从而实现继承对象的属性及方法。</p>
@@ -414,7 +414,7 @@
     <link href="http://www.ahonn.me/2016/12/15/create-a-hexo-theme-from-scratch/"/>
     <id>http://www.ahonn.me/2016/12/15/create-a-hexo-theme-from-scratch/</id>
     <published>2016-12-15T09:43:47.000Z</published>
-    <updated>2017-05-03T14:34:21.000Z</updated>
+    <updated>2017-05-04T02:27:13.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>本文将会从零开始开发一个简单的博客主题。样式主要参考 <a href="https://hexo.io/themes/" target="_blank" rel="external">Hexo theme</a> 中的 <a href="https://github.com/lotabout/hexo-theme-noise" target="_blank" rel="external">Noise</a> 主题。 </p>
 <p>开始之前你需要了解：</p>
@@ -525,7 +525,7 @@
     <link href="http://www.ahonn.me/2016/12/13/2016-summary/"/>
     <id>http://www.ahonn.me/2016/12/13/2016-summary/</id>
     <published>2016-12-13T03:23:09.000Z</published>
-    <updated>2017-05-03T14:34:21.000Z</updated>
+    <updated>2017-05-04T02:27:13.000Z</updated>
     
     <content type="html"><![CDATA[<p>一转眼 2016 年就快要结束了，这一年对自己来说收获了很多。</p>
 <p>去年的总结，给自己定下了个 2016 年的计划。现在 2016 也差不多快结束了，我对自己执行的情况还是比较满意的。</p>
@@ -573,7 +573,7 @@
     <link href="http://www.ahonn.me/2016/11/30/some-ways-of-javascript-create-object/"/>
     <id>http://www.ahonn.me/2016/11/30/some-ways-of-javascript-create-object/</id>
     <published>2016-11-30T10:52:21.000Z</published>
-    <updated>2017-05-03T14:34:21.000Z</updated>
+    <updated>2017-05-04T02:27:13.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h2><p>在函数中创建 Object 对象，并为对象添加属性。函数返回添加属性之后的对象。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createPerson</span>(<span class="params">name, age</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>()</div><div class="line">  o.name = name</div><div class="line">  o.age = age</div><div class="line">  o.sayName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name)</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> o</div><div class="line">&#125; </div><div class="line"></div><div class="line"><span class="keyword">var</span> p = createPerson(<span class="string">"ahonn"</span>, <span class="number">21</span>)</div></pre></td></tr></table></figure>
@@ -624,7 +624,7 @@
     <link href="http://www.ahonn.me/2016/11/21/javascript-data-type-judgment/"/>
     <id>http://www.ahonn.me/2016/11/21/javascript-data-type-judgment/</id>
     <published>2016-11-21T07:07:49.000Z</published>
-    <updated>2017-05-03T14:34:21.000Z</updated>
+    <updated>2017-05-04T02:27:13.000Z</updated>
     
     <content type="html"><![CDATA[<p>最近开始读之前没有读完的 underscore 的源码，刚把 Object 部分读完。对 JavaScript 中类型判断部分的总结。</p>
 <h2 id="Object-prototype-toString"><a href="#Object-prototype-toString" class="headerlink" title="Object.prototype.toString()"></a>Object.prototype.toString()</h2><p>在进行类型判断时，使用到最多的当属 <code>Object.prototype.toString()</code>。</p>
@@ -674,7 +674,7 @@
     <link href="http://www.ahonn.me/2016/11/14/wechat-app-summary/"/>
     <id>http://www.ahonn.me/2016/11/14/wechat-app-summary/</id>
     <published>2016-11-14T14:03:46.000Z</published>
-    <updated>2017-05-03T14:34:21.000Z</updated>
+    <updated>2017-05-04T02:27:13.000Z</updated>
     
     <content type="html"><![CDATA[<p>前段时间去了广州参加了关于「微信小程序」的技术沙龙，整场下来收获颇多。实际上微信小程序刚刚发布出来的时候就关注，弄了破解了的开发工具，跑了个官方的 Demo。</p>
 <p>听完回来之后就想着挖个相关的坑，正好看到手机上的 「ONE · 一个」。上网找到了 ONE 的接口，打算搞一个仿照 ONE 官方 APP 的小程序，最后就有了 <a href="https://github.com/ahonn/weapp-one" target="_blank" rel="external">weapp-one</a> 这个项目。</p>
@@ -722,7 +722,7 @@
     <link href="http://www.ahonn.me/2016/10/11/after-the-react-routing-scroll-to-the-top-of-the-page/"/>
     <id>http://www.ahonn.me/2016/10/11/after-the-react-routing-scroll-to-the-top-of-the-page/</id>
     <published>2016-10-10T17:13:19.000Z</published>
-    <updated>2017-05-03T14:34:21.000Z</updated>
+    <updated>2017-05-04T02:27:13.000Z</updated>
     
     <content type="html"><![CDATA[<p>在 React 组件间进行页面跳转后，发现页面的位置并不在页面顶部，而是在页面跳转前的位置。就是说浏览器的滚动条并没有回到顶部的位置。</p>
 <p>经过搜索之后找到了解决方案：<a href="http://stackoverflow.com/questions/33188994/scroll-to-the-top-of-the-page-after-render-in-react-js" target="_blank" rel="external">Scroll to the top of the page after render in react.js</a></p>
@@ -758,7 +758,7 @@
     <link href="http://www.ahonn.me/2016/10/02/react-lifecycle-methods/"/>
     <id>http://www.ahonn.me/2016/10/02/react-lifecycle-methods/</id>
     <published>2016-10-01T17:10:17.000Z</published>
-    <updated>2017-05-03T14:34:21.000Z</updated>
+    <updated>2017-05-04T02:27:13.000Z</updated>
     
     <content type="html"><![CDATA[<p>生命周期函数是指，在组件生命周期上的特定点上执行的各个函数。<br>React 的组件声明周期函数分为三种：挂载，更新以及卸载。</p>
 <h2 id="挂载"><a href="#挂载" class="headerlink" title="挂载"></a>挂载</h2><p>组件挂载的生命周期函数都在初始化渲染前后被调用。</p>
@@ -796,7 +796,7 @@
     <link href="http://www.ahonn.me/2016/09/13/the-memo-of-javascript-regexp/"/>
     <id>http://www.ahonn.me/2016/09/13/the-memo-of-javascript-regexp/</id>
     <published>2016-09-12T16:39:22.000Z</published>
-    <updated>2017-05-03T14:34:21.000Z</updated>
+    <updated>2017-05-04T02:27:13.000Z</updated>
     
     <content type="html"><![CDATA[<p>JavaScript 创建正则表达式有两种方式：</p>
 <ul>
@@ -861,7 +861,7 @@
     <link href="http://www.ahonn.me/2016/08/31/javascript-best-practices/"/>
     <id>http://www.ahonn.me/2016/08/31/javascript-best-practices/</id>
     <published>2016-08-31T14:57:34.000Z</published>
-    <updated>2017-05-03T14:34:21.000Z</updated>
+    <updated>2017-05-04T02:27:13.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>翻译自：<a href="https://www.codementor.io/javascript/tutorial/javascript-best-practices" target="_blank" rel="external">JavaScript Best Practices: Tips &amp; Tricks to Level Up Your Code</a><br>没有严格的按照原文翻译，删减修改了部分内容。</p>
@@ -929,7 +929,7 @@
     <link href="http://www.ahonn.me/2016/08/02/javascript-reduce-the-browser-reflow/"/>
     <id>http://www.ahonn.me/2016/08/02/javascript-reduce-the-browser-reflow/</id>
     <published>2016-08-02T14:46:33.000Z</published>
-    <updated>2017-05-03T14:34:21.000Z</updated>
+    <updated>2017-05-04T02:27:13.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="什么是浏览器回流"><a href="#什么是浏览器回流" class="headerlink" title="什么是浏览器回流"></a>什么是浏览器回流</h2><p>浏览器在显示网页时，需要计算每一个元素应该放置的位置，这个计算过程就称为浏览器回流（browser reflow）。回流会重新计算页面的布局，在回流中会重新计算元素的尺寸与位置，并且也会触发对子元素的回流。</p>
 <p>触发浏览器回流的操作：</p>
@@ -986,7 +986,7 @@
     <link href="http://www.ahonn.me/2016/07/25/the-right-way-to-array-of-random-sequence/"/>
     <id>http://www.ahonn.me/2016/07/25/the-right-way-to-array-of-random-sequence/</id>
     <published>2016-07-25T02:53:19.000Z</published>
-    <updated>2017-05-03T14:34:21.000Z</updated>
+    <updated>2017-05-04T02:27:13.000Z</updated>
     
     <content type="html"><![CDATA[<p>在 <code>underscore</code> 中有一个函数，其作用是将数组乱序排序，实现如下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Shuffle a collection, using the modern version of the</span></div><div class="line"><span class="comment">// [Fisher-Yates shuffle](http://en.wikipedia.org/wiki/Fisher–Yates_shuffle).</span></div><div class="line"><span class="comment">// `shuffle` 函数。</span></div><div class="line">_.shuffle = <span class="function"><span class="keyword">function</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> set = isArrayLike(obj) ? obj : _.values(obj);</div><div class="line">  <span class="keyword">var</span> length = set.length;</div><div class="line">  <span class="keyword">var</span> shuffled = <span class="built_in">Array</span>(length);</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> index = <span class="number">0</span>, rand; index &lt; length; index++) &#123;</div><div class="line">    rand = _.random(<span class="number">0</span>, index);</div><div class="line">    <span class="keyword">if</span> (rand !== index) shuffled[index] = shuffled[rand];</div><div class="line">    shuffled[rand] = set[index];</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> shuffled;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
@@ -1023,7 +1023,7 @@
     <link href="http://www.ahonn.me/2016/07/24/langshi-grocery-store/"/>
     <id>http://www.ahonn.me/2016/07/24/langshi-grocery-store/</id>
     <published>2016-07-24T11:45:35.000Z</published>
-    <updated>2017-05-03T14:34:21.000Z</updated>
+    <updated>2017-05-04T02:27:13.000Z</updated>
     
     <content type="html"><![CDATA[<p>解忧杂货店，零零散散的在地铁上看完了这本之前一直听到却没有去看的小说。其实几天前想写这篇读书笔记的，一直被拖延至今。</p>
 <p>爱情公寓中有一集曾小贤说了这样一句话。当面对两个选择时，抛硬币总能奏效，并不是因为它总能给出对的答案，而是在你把它抛在空中的那一秒里，你突然知道你希望它是什么。就像是那些向浪矢杂货店投递烦恼信件一样，其实真正来向浪矢爷爷咨询的人大多心里已经有了答案。只是自己没有发现，当杂货店回信中的建议并不像所期望的回答的时候，咨询者就发现自己想要的那个答案。<br><a id="more"></a></p>
@@ -1059,7 +1059,7 @@
     <link href="http://www.ahonn.me/2016/07/13/getting-highlightjs-to-work-with-vue.js/"/>
     <id>http://www.ahonn.me/2016/07/13/getting-highlightjs-to-work-with-vue.js/</id>
     <published>2016-07-13T04:08:30.000Z</published>
-    <updated>2017-05-03T14:34:21.000Z</updated>
+    <updated>2017-05-04T02:27:13.000Z</updated>
     
     <content type="html"><![CDATA[<p>今天遇到一个问题：在使用 vue 的练手项目中，渲染的 HTML 里 <code>&lt;code&gt;</code> 标签中的代码没有代码高亮。</p>
 <p>遂想到用 highlight.js 来解决，按照平常那样在 HTML 文件中引入 <code>js</code> 和 <code>css</code> 文件，然后在<code>&lt;header&gt;</code> 中加上一句 <code>&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;</code>。但是却没有效果。</p>
