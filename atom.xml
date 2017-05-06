@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ahonn.me/"/>
-  <updated>2017-05-04T02:27:13.000Z</updated>
+  <updated>2017-05-06T03:58:25.000Z</updated>
   <id>http://www.ahonn.me/</id>
   
   <author>
@@ -16,20 +16,19 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>转投 neovim</title>
+    <title>转投 Neovim</title>
     <link href="http://www.ahonn.me/2017/03/27/use-neovim/"/>
     <id>http://www.ahonn.me/2017/03/27/use-neovim/</id>
     <published>2017-03-27T03:10:06.000Z</published>
-    <updated>2017-05-04T02:27:13.000Z</updated>
+    <updated>2017-05-06T03:58:25.000Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://ww2.sinaimg.cn/large/006tNc79gy1fe1885ws5rj315w0n4n12.jpg" alt=""></p>
-<p>很久之前就听说过 neovim，但一直没有怎么了解过。昨天下午折腾了一下，彻底转投 neovim 了。</p>
-<p>虽然说这两货的差别目前还不是很大，但是 neovim 实现了嵌入式终端模拟器，Excited! 各种 REPL 插件统统都可以卸载了！</p>
+    <content type="html"><![CDATA[<p>很久之前就听说过 Neovim，但一直没有怎么了解过。昨天下午折腾了一下，彻底转投 Neovim 了。</p>
+<p>虽然说这两货的差别目前还不是很大，但是 Neovim 实现了嵌入式终端模拟器，Excited! 各种 REPL 插件统统都可以卸载了！</p>
 <a id="more"></a>
-<h2 id="迁移配置文件"><a href="#迁移配置文件" class="headerlink" title="迁移配置文件"></a>迁移配置文件</h2><p>neovim 配置完全兼容原来的 <code>.vimrc</code>，只需要：</p>
+<h2 id="迁移配置文件"><a href="#迁移配置文件" class="headerlink" title="迁移配置文件"></a>迁移配置文件</h2><p>Neovim 配置完全兼容原来的 <code>.vimrc</code>，只需要：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir -p <span class="variable">$&#123;XDG_CONFIG_HOME:=$HOME/.config&#125;</span></div><div class="line">ln <span class="_">-s</span> ~/.vim <span class="variable">$XDG_CONFIG_HOME</span>/nvim</div><div class="line">ln <span class="_">-s</span> ~/.vimrc <span class="variable">$XDG_CONFIG_HOME</span>/nvim/init.vim</div></pre></td></tr></table></figure>
 <h2 id="使用-ale-代替-syntastic"><a href="#使用-ale-代替-syntastic" class="headerlink" title="使用 ale 代替 syntastic"></a>使用 ale 代替 syntastic</h2><p>老早就觉得 <code>syntastic</code> 同步检查代码好难用，这下换成 <code>ale</code> 舒服多了。有之前使用 atom 时自带的代码检查的感觉。</p>
-<p>(Vim 8 好像也已经提供了异步 API，但是我等到换成 neovim 才知道..)</p>
+<p>(Vim 8 好像也已经提供了异步 API，但是我等到换成 Neovim 才知道..)</p>
 <h2 id="把-Leader-改成空格"><a href="#把-Leader-改成空格" class="headerlink" title="把 Leader 改成空格"></a>把 Leader 改成空格</h2><p>其实是看了 <a href="https://zhuanlan.zhihu.com/p/25905625" target="_blank" rel="external">Vim 高效率配置导论</a> 这篇文章之后试着改的，改完发现空格比起原先的 <code>,</code> 好用多了。让大拇指动了起来。</p>
 <p>然后切换 buffter 的快捷键就映射成了 <code>&lt;Space&gt; + n/m</code>，简直不要太顺手。</p>
 <h2 id="使用-Spacegray-主题"><a href="#使用-Spacegray-主题" class="headerlink" title="使用 Spacegray 主题"></a>使用 Spacegray 主题</h2><p>之前使用的 <code>molokai</code> 看久了有点视觉疲劳，发现之前在用 <code>sublime text</code> 时使用的 <code>Spacegray</code> 也有 Vim 版本，果断换之。（折腾高亮主题是永恒的.. ）</p>
@@ -46,9 +45,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://ww2.sinaimg.cn/large/006tNc79gy1fe1885ws5rj315w0n4n12.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;很久之前就听说过 neovim，但一直没有怎么了解过。昨天下午折腾了一下，彻底转投 neovim 了。&lt;/p&gt;
-&lt;p&gt;虽然说这两货的差别目前还不是很大，但是 neovim 实现了嵌入式终端模拟器，Excited! 各种 REPL 插件统统都可以卸载了！&lt;/p&gt;
+      &lt;p&gt;很久之前就听说过 Neovim，但一直没有怎么了解过。昨天下午折腾了一下，彻底转投 Neovim 了。&lt;/p&gt;
+&lt;p&gt;虽然说这两货的差别目前还不是很大，但是 Neovim 实现了嵌入式终端模拟器，Excited! 各种 REPL 插件统统都可以卸载了！&lt;/p&gt;
     
     </summary>
     
@@ -57,6 +55,8 @@
     
       <category term="Vim" scheme="http://www.ahonn.me/tags/Vim/"/>
     
+      <category term="折腾" scheme="http://www.ahonn.me/tags/%E6%8A%98%E8%85%BE/"/>
+    
   </entry>
   
   <entry>
@@ -64,7 +64,7 @@
     <link href="http://www.ahonn.me/2017/03/16/alibaba-summer-internship-interview-summary/"/>
     <id>http://www.ahonn.me/2017/03/16/alibaba-summer-internship-interview-summary/</id>
     <published>2017-03-16T07:15:24.000Z</published>
-    <updated>2017-05-04T02:27:13.000Z</updated>
+    <updated>2017-05-06T03:58:39.000Z</updated>
     
     <content type="html"><![CDATA[<p>2月末的时候，通过 <a href="https://simplyy.space/" target="_blank" rel="external">simplyY</a> 内推了阿里巴巴暑期实习的前端开发岗，在此表示感谢。<br>接着3月1号收到了内推的通知邮件，完善信息后很快就接到了一面的电话（3月3号）。</p>
 <h2 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h2><p>面试了大概20分钟左右，整体内容还是比较偏基础。一开始是正常流程的自我介绍，说是三分钟自我介绍，但是我语速比较快的不到两分钟的介绍完了。(刚好是临近中午，原本打算吃饭的，要是去吃饭的话就得在路上面了…）</p>
@@ -129,41 +129,14 @@
     
     </summary>
     
+      <category term="技术" scheme="http://www.ahonn.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="总结" scheme="http://www.ahonn.me/tags/%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="前端" scheme="http://www.ahonn.me/tags/%E5%89%8D%E7%AB%AF/"/>
     
       <category term="面试" scheme="http://www.ahonn.me/tags/%E9%9D%A2%E8%AF%95/"/>
     
-  </entry>
-  
-  <entry>
-    <title>Don&#39;t Let Me Down</title>
-    <link href="http://www.ahonn.me/2017/03/15/don-t-let-me-down/"/>
-    <id>http://www.ahonn.me/2017/03/15/don-t-let-me-down/</id>
-    <published>2017-03-15T08:40:08.000Z</published>
-    <updated>2017-05-04T02:27:13.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>单人 Acapella 版本的『 Don’t Let Me Down 』, 分享～</p>
-<blockquote>
-<p>无法翻墙上油管的话可以查看：<a href="http://music.163.com/#/mv?id=5347652" target="_blank" rel="external">Don’t Let Me Down (Remix)</a></p>
-</blockquote>
-<a id="more"></a>
-<div class="video-container"><iframe src="//www.youtube.com/embed/2juA5xNObGk" frameborder="0" allowfullscreen></iframe></div>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;单人 Acapella 版本的『 Don’t Let Me Down 』, 分享～&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;无法翻墙上油管的话可以查看：&lt;a href=&quot;http://music.163.com/#/mv?id=5347652&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Don’t Let Me Down (Remix)&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="Music" scheme="http://www.ahonn.me/tags/Music/"/>
-    
-      <category term="Acapella" scheme="http://www.ahonn.me/tags/Acapella/"/>
+      <category term="实习" scheme="http://www.ahonn.me/tags/%E5%AE%9E%E4%B9%A0/"/>
     
   </entry>
   
@@ -172,7 +145,7 @@
     <link href="http://www.ahonn.me/2017/03/11/answer-front-end-questions/"/>
     <id>http://www.ahonn.me/2017/03/11/answer-front-end-questions/</id>
     <published>2017-03-11T09:13:46.000Z</published>
-    <updated>2017-05-04T02:27:13.000Z</updated>
+    <updated>2017-05-06T03:59:33.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>答 <a href="https://zhuanlan.zhihu.com/p/25701897" target="_blank" rel="external">中级前端工程师面试 我想问的几个问题</a> 中的几个问题，感谢 <a href="https://www.zhihu.com/people/simplyy/answers" target="_blank" rel="external">@SimplyY
@@ -234,19 +207,21 @@
     
     </summary>
     
+      <category term="技术" scheme="http://www.ahonn.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
     
       <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
     
-      <category term="Front-end" scheme="http://www.ahonn.me/tags/Front-end/"/>
+      <category term="前端" scheme="http://www.ahonn.me/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>XMLHttpRequest 学习笔记</title>
-    <link href="http://www.ahonn.me/2017/03/02/XMLHttpRequest-study-notes/"/>
-    <id>http://www.ahonn.me/2017/03/02/XMLHttpRequest-study-notes/</id>
+    <link href="http://www.ahonn.me/2017/03/02/xmlhttprequest-study-notes/"/>
+    <id>http://www.ahonn.me/2017/03/02/xmlhttprequest-study-notes/</id>
     <published>2017-03-02T10:35:39.000Z</published>
-    <updated>2017-05-04T02:27:13.000Z</updated>
+    <updated>2017-05-06T04:00:04.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>AJAX即“Asynchronous JavaScript and XML”（异步的JavaScript与XML技术），指的是一套综合了多项技术的浏览器端网页开发技术。</p>
@@ -305,10 +280,12 @@
     
     </summary>
     
+      <category term="技术" scheme="http://www.ahonn.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
     
       <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
     
-      <category term="Ajax" scheme="http://www.ahonn.me/tags/Ajax/"/>
+      <category term="前端" scheme="http://www.ahonn.me/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -317,7 +294,7 @@
     <link href="http://www.ahonn.me/2017/02/19/notes-of-vim/"/>
     <id>http://www.ahonn.me/2017/02/19/notes-of-vim/</id>
     <published>2017-02-19T14:37:54.000Z</published>
-    <updated>2017-05-04T02:27:13.000Z</updated>
+    <updated>2017-05-06T05:26:15.000Z</updated>
     
     <content type="html"><![CDATA[<p>昨天在微信读书上面看到了池建强的《MacTalk 人生元编程》，然后花了差不多一天看完，其中有篇有关于 Vim 的文章提起了我对这个编辑器的再一次兴趣（对的，我对它感兴趣很多次了，每次都懒..）。</p>
 <p>一直懒得去慢慢配置它，又不想用别人的配置。自己用的编辑器还是想自己折腾，然后今天就趁着我对这个还有点热度赶紧折腾起来。</p>
@@ -331,27 +308,28 @@
 <li><code>smartindent</code> 选项智能自动缩进</li>
 <li><code>expandtab</code> 选项将 tab 转换为空格</li>
 </ul>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">set</span> autoindent</div><div class="line"><span class="keyword">set</span> smartindent</div><div class="line"><span class="keyword">set</span> expandtab</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">set autoindent</div><div class="line">set smartindent</div><div class="line">set expandtab</div></pre></td></tr></table></figure>
 <h3 id="行号"><a href="#行号" class="headerlink" title="行号"></a>行号</h3><p>显示行号是硬需求，但是与其他编辑器不同，在 vim 上还有相对行号。</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">set</span> <span class="keyword">number</span></div><div class="line"><span class="keyword">set</span> relativenumber</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">set number</div><div class="line">set relativenumber</div></pre></td></tr></table></figure>
 <h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><p>显而易见，手动安装 vim 插件是很麻烦很麻烦的。与 sublime text 之类的类似，vim 同样有类似的插件管理器 <a href="https://github.com/VundleVim/Vundle.vim" target="_blank" rel="external">Vundle</a>。</p>
 <p>创建文件夹 <code>~/.vim</code> 和配置文件 <code>~/.vimrc</code>，并安装 Vundle:</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle</div></pre></td></tr></table></figure>
-<p>为了方便管理再新建一个 <code>.vimrc.bundles</code> 来单独存放插件列表：<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">set</span> nocompatible    <span class="comment">" be iMproved, required</span></div><div class="line"><span class="keyword">filetype</span> off        <span class="comment">" requried</span></div><div class="line"><span class="keyword">set</span> rtp+=~/.<span class="keyword">vim</span>/bundle/vundle/</div><div class="line"></div><div class="line"><span class="keyword">call</span> vundle#begin()</div><div class="line"></div><div class="line"><span class="comment">" Let Vundle manage Vundle</span></div><div class="line">Bundle <span class="string">'gmarik/vundle'</span></div><div class="line"></div><div class="line"><span class="comment">" .... 其他插件</span></div><div class="line"></div><div class="line"><span class="keyword">call</span> vundle#end()</div><div class="line"><span class="comment">" required</span></div><div class="line"><span class="keyword">filetype</span> plugin <span class="built_in">indent</span> <span class="keyword">on</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle</div></pre></td></tr></table></figure>
+<p>为了方便管理再新建一个 <code>.vimrc.bundles</code> 来单独存放插件列表：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">set nocompatible    &quot; be iMproved, required</div><div class="line">filetype off        &quot; requried</div><div class="line">set rtp+=~/.vim/bundle/vundle/</div><div class="line"></div><div class="line">call vundle#begin()</div><div class="line"></div><div class="line">&quot; Let Vundle manage Vundle</div><div class="line">Bundle &apos;gmarik/vundle&apos;</div><div class="line"></div><div class="line">&quot; .... 其他插件</div><div class="line"></div><div class="line">call vundle#end()</div><div class="line">&quot; required</div><div class="line">filetype plugin indent on</div></pre></td></tr></table></figure>
 <p>以后添加插件的时候只需要在这个文件里面添加一行：</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Bundle <span class="string">'xxx'</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Bundle &apos;xxx&apos;</div></pre></td></tr></table></figure>
 <p>安装插件输入 <code>:BundleInstall</code> 命令即可，卸载插件时删除对应的配置并运行 <code>:BundleClean</code> 删除插件。</p>
 <h3 id="括号补全"><a href="#括号补全" class="headerlink" title="括号补全"></a>括号补全</h3><p>第一次用的时候，输入 <code>(</code> 居然没有自己蹦出来另外一个 <code>)</code>。这不科学，讲道理这个是一定要的。</p>
 <p>发现很多人用的是 <a href="https://github.com/Raimondi/delimitMate" target="_blank" rel="external">delimitMate</a> ，添加 <code>Bundle &#39;delimitMate&#39;</code> 到 <code>.vimrc.bundles</code>，运行 <code>BundleInstall</code>。</p>
 <p>安装完直接就可以自动补全括号了。</p>
 <h3 id="Emmet"><a href="#Emmet" class="headerlink" title="Emmet"></a>Emmet</h3><p>很多浏览器都支持 Emmet 插件，vim 同样也有。但这个 Emmet 是第三方的，叫 <a href="https://github.com/mattn/emmet-vim/" target="_blank" rel="external">Emmet.vim</a>。</p>
 <p>安装完之后主要是设置一下出发的快捷键，默认的快捷键是 <code>Ctrl + y</code>。<br>我把快捷键修改成 <code>Ctrl + e</code> 比较顺手。</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">" Emmet.vim</span></div><div class="line"><span class="keyword">let</span> <span class="variable">g:user_emmet_expandabbr_key</span> = <span class="string">'&lt;c-e&gt;'</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&quot; Emmet.vim</div><div class="line">let g:user_emmet_expandabbr_key = &apos;&lt;c-e&gt;&apos;</div></pre></td></tr></table></figure>
 <h3 id="目录树"><a href="#目录树" class="headerlink" title="目录树"></a>目录树</h3><p>目录树就基本上也就是使用 <a href="https://github.com/scrooloose/nerdtree" target="_blank" rel="external">NERDTree</a>。</p>
-<p>开启目录树的快捷键修改为 <code>Ctrl + b</code>，然后当 vim 只剩目录树显示的时候自动退出。<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">" NERDTree </span></div><div class="line"><span class="keyword">map</span> <span class="symbol">&lt;c-b&gt;</span> :NERDTreeToggle<span class="symbol">&lt;CR&gt;</span></div><div class="line"><span class="keyword">autocmd</span> vimenter * NERDTree</div><div class="line"><span class="keyword">autocmd</span> bufenter * <span class="keyword">if</span> (<span class="built_in">winnr</span>(<span class="string">"$"</span>) == <span class="number">1</span> &amp;&amp; <span class="built_in">exists</span>(<span class="string">"b:NERDTreeType"</span>) &amp;&amp;<span class="variable">b:NERDTreeType</span> == <span class="string">"primary"</span>) | q | <span class="keyword">endif</span></div></pre></td></tr></table></figure></p>
+<p>开启目录树的快捷键修改为 <code>Ctrl + b</code>，然后当 vim 只剩目录树显示的时候自动退出。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&quot; NERDTree </div><div class="line">map &lt;c-b&gt; :NERDTreeToggle&lt;CR&gt;</div><div class="line">autocmd vimenter * NERDTree</div><div class="line">autocmd bufenter * if (winnr(&quot;$&quot;) == 1 &amp;&amp; exists(&quot;b:NERDTreeType&quot;) &amp;&amp;b:NERDTreeType == &quot;primary&quot;) | q | endif</div></pre></td></tr></table></figure></p>
 <h3 id="代码补全"><a href="#代码补全" class="headerlink" title="代码补全"></a>代码补全</h3><p>补全用的就是大名鼎鼎的 <a href="https://github.com/Valloric/YouCompleteMe" target="_blank" rel="external">YouCompleteMe</a> 了。</p>
 <p>关于这个插件网上有很多插件，我就不啰嗦了。这里主要是抄的百度 EFE 的配置：</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">" YouCompleteMe</span></div><div class="line"><span class="comment">" http://efe.baidu.com/blog/vim-javascript-completion/#youcompleteme</span></div><div class="line"><span class="keyword">let</span> <span class="variable">g:ycm_min_num_of_chars_for_completion</span> = <span class="number">3</span> </div><div class="line"><span class="keyword">let</span> <span class="variable">g:ycm_autoclose_preview_window_after_completion</span>=<span class="number">1</span></div><div class="line"><span class="keyword">let</span> <span class="variable">g:ycm_complete_in_comments</span> = <span class="number">1</span></div><div class="line"><span class="keyword">let</span> <span class="variable">g:ycm_key_list_select_completion</span> = [<span class="string">'&lt;c-n&gt;'</span>, <span class="string">'&lt;Down&gt;'</span>]</div><div class="line"><span class="keyword">let</span> <span class="variable">g:ycm_key_list_previous_completion</span> = [<span class="string">'&lt;c-p&gt;'</span>, <span class="string">'&lt;Up&gt;'</span>]</div><div class="line"><span class="comment">" Use tab</span></div><div class="line"><span class="function"><span class="keyword">function</span>! <span class="title">TabFunction</span> <span class="params">()</span></span></div><div class="line">    <span class="keyword">let</span> <span class="built_in">line</span> = <span class="built_in">getline</span>(<span class="string">'.'</span>)</div><div class="line">    <span class="keyword">let</span> substr = <span class="built_in">strpart</span>(<span class="built_in">line</span>, -<span class="number">1</span>, <span class="keyword">col</span>(<span class="string">'.'</span>)+<span class="number">1</span>)</div><div class="line">    <span class="keyword">let</span> substr = <span class="built_in">matchstr</span>(substr, <span class="string">"[^ \t]*$"</span>)</div><div class="line">    <span class="keyword">if</span> <span class="built_in">strlen</span>(substr) == <span class="number">0</span></div><div class="line">        <span class="keyword">return</span> <span class="string">"\&lt;tab&gt;"</span></div><div class="line">    <span class="keyword">endif</span></div><div class="line">    <span class="keyword">return</span> <span class="built_in">pumvisible</span>() ? <span class="string">"\&lt;c-n&gt;"</span> : <span class="string">"\&lt;c-x&gt;\&lt;c-o&gt;"</span></div><div class="line"><span class="keyword">endfunction</span></div><div class="line"><span class="keyword">inoremap</span> <span class="symbol">&lt;tab&gt;</span> <span class="symbol">&lt;c-r&gt;</span>=TabFunction()<span class="symbol">&lt;cr&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> <span class="variable">g:ycm_semantic_triggers</span> = &#123;</div><div class="line">    \   <span class="string">'css'</span>: [ <span class="string">'re!^\s&#123;2&#125;'</span>, <span class="string">'re!:\s+'</span>],</div><div class="line">    \   <span class="string">'html'</span>: [ <span class="string">'&lt;/'</span> ],</div><div class="line">    \ &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&quot; YouCompleteMe</div><div class="line">&quot; http://efe.baidu.com/blog/vim-javascript-completion/#youcompleteme</div><div class="line">let g:ycm_min_num_of_chars_for_completion = 3 </div><div class="line">let g:ycm_autoclose_preview_window_after_completion=1</div><div class="line">let g:ycm_complete_in_comments = 1</div><div class="line">let g:ycm_key_list_select_completion = [&apos;&lt;c-n&gt;&apos;, &apos;&lt;Down&gt;&apos;]</div><div class="line">let g:ycm_key_list_previous_completion = [&apos;&lt;c-p&gt;&apos;, &apos;&lt;Up&gt;&apos;]</div><div class="line">&quot; Use tab</div><div class="line">function! TabFunction ()</div><div class="line">    let line = getline(&apos;.&apos;)</div><div class="line">    let substr = strpart(line, -1, col(&apos;.&apos;)+1)</div><div class="line">    let substr = matchstr(substr, &quot;[^ \t]*$&quot;)</div><div class="line">    if strlen(substr) == 0</div><div class="line">        return &quot;\&lt;tab&gt;&quot;</div><div class="line">    endif</div><div class="line">    return pumvisible() ? &quot;\&lt;c-n&gt;&quot; : &quot;\&lt;c-x&gt;\&lt;c-o&gt;&quot;</div><div class="line">endfunction</div><div class="line">inoremap &lt;tab&gt; &lt;c-r&gt;=TabFunction()&lt;cr&gt;</div><div class="line"></div><div class="line">let g:ycm_semantic_triggers = &#123;</div><div class="line">    \   &apos;css&apos;: [ &apos;re!^\s&#123;2&#125;&apos;, &apos;re!:\s+&apos;],</div><div class="line">    \   &apos;html&apos;: [ &apos;&lt;/&apos; ],</div><div class="line">    \ &#125;</div></pre></td></tr></table></figure>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>折腾了一下午，终于算是搞定了。其实过程还是蛮好玩的，有机会还想写写插件玩玩。抛弃 VS Code，开始 Vim 之旅感。</p>
 ]]></content>
     
@@ -365,8 +343,12 @@
     
     </summary>
     
+      <category term="技术" scheme="http://www.ahonn.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
     
       <category term="Vim" scheme="http://www.ahonn.me/tags/Vim/"/>
+    
+      <category term="折腾" scheme="http://www.ahonn.me/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
@@ -375,7 +357,7 @@
     <link href="http://www.ahonn.me/2017/01/24/something-about-javaScript-inherit/"/>
     <id>http://www.ahonn.me/2017/01/24/something-about-javaScript-inherit/</id>
     <published>2017-01-24T15:15:02.000Z</published>
-    <updated>2017-05-04T02:27:13.000Z</updated>
+    <updated>2017-05-04T06:18:09.000Z</updated>
     
     <content type="html"><![CDATA[<p>众所周知，JavaScript 的继承是实现继承，而没有 Java 中的接口继承。这是因为 JavaScript 中函数没有签名，而实现继承依靠的是原型链来实现的。</p>
 <h2 id="原型链继承"><a href="#原型链继承" class="headerlink" title="原型链继承"></a>原型链继承</h2><p>JavaScript 中通过修改对象原型指向的对象来实现继承，即是将一个对象的原型指向要继承的对象实例，从而实现继承对象的属性及方法。</p>
@@ -404,8 +386,12 @@
     
     </summary>
     
+      <category term="技术" scheme="http://www.ahonn.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
     
       <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
+    
+      <category term="前端" scheme="http://www.ahonn.me/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -414,7 +400,7 @@
     <link href="http://www.ahonn.me/2016/12/15/create-a-hexo-theme-from-scratch/"/>
     <id>http://www.ahonn.me/2016/12/15/create-a-hexo-theme-from-scratch/</id>
     <published>2016-12-15T09:43:47.000Z</published>
-    <updated>2017-05-04T02:27:13.000Z</updated>
+    <updated>2017-05-05T16:54:29.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>本文将会从零开始开发一个简单的博客主题。样式主要参考 <a href="https://hexo.io/themes/" target="_blank" rel="external">Hexo theme</a> 中的 <a href="https://github.com/lotabout/hexo-theme-noise" target="_blank" rel="external">Noise</a> 主题。 </p>
 <p>开始之前你需要了解：</p>
@@ -430,7 +416,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── languages  语言文件，用于国际化</div><div class="line">├── layout     页面模板文件</div><div class="line">├── scripts    Hexo 脚本</div><div class="line">└── source     主题资源文件，包括页面样式，脚本，字体等</div></pre></td></tr></table></figure>
 <p>我们在 <code>themes</code> 中新建 <code>theme-example</code> 文件夹，然后在 <code>theme-demo</code> 中按照 landscape 主题的目录结构新建 <code>languages</code>，<code>layout</code>，<code>scripts</code> 与 <code>source</code> 文件夹。</p>
 <h2 id="创建布局模板"><a href="#创建布局模板" class="headerlink" title="创建布局模板"></a>创建布局模板</h2><p>在 <code>layout</code> 中创建 <code>index.ejs</code> 文件，首页将会使用该布局模板生成 HTML 文件。</p>
-<p><code>layout/index.ejs</code>:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"content-type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=utf-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"</span> <span class="attr">name</span>=<span class="string">"viewport"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello Word<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><code>layout/index.ejs</code>:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"content-type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=utf-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"</span> <span class="attr">name</span>=<span class="string">"viewport"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello Word<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>修改站点配置文件中的主题配置，使用我们刚刚创建的 <code>theme-example</code> 主题：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Extensions</span></div><div class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></div><div class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></div><div class="line"><span class="attr">theme:</span> <span class="string">theme-example</span></div></pre></td></tr></table></figure>
 <p>运行 <code>hexo server --debug</code> 以 debug 模式开启 Hexo 本地服务器预览，访问 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>。</p>
@@ -456,7 +443,7 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">"posts"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">%</span> <span class="attr">page.posts.each</span>(<span class="attr">function</span> (<span class="attr">post</span>) &#123; %&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">article</span> <span class="attr">class</span>=<span class="string">"post"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-title"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"post-title-link"</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for(post.path) %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">post.title</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-content"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">%-</span> <span class="attr">post.content</span> %&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-meta"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-time"</span>&gt;</span><span class="tag">&lt;<span class="name">%-</span> <span class="attr">date</span>(<span class="attr">post.date</span>, "<span class="attr">YYYY-MM-DD</span>") %&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">article</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">%</span> &#125;) %&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>从 <code>page.posts</code> 中获取单篇文章的数据，并获取文章的标题，内容等数据填充到模板中。处理文章创建时间的时候使用了 <code>date()</code> 函数，这是 Hexo 提供的时间处理的<a href="https://hexo.io/docs/helpers.html#date" target="_blank" rel="external">辅助函数</a>。本文中使用到的函数如无特别说明，即为 Hexo 的辅助函数。</p>
 <h3 id="文章摘录"><a href="#文章摘录" class="headerlink" title="文章摘录"></a>文章摘录</h3><p>由于首页显示文章内容时使用的是 <code>post.content</code>，即文章的全部内容。所以首页会显示每一篇文章的内容，实际上我们并不想在首页显示那么多内容，只想显示文章的摘录。</p>
-<p>Hexo 提供了 <code>excerpt</code> 属性来获取文章的摘录部分，不过这里需要在文章中添加一个 <code>&lt;!-- more --&gt;</code> 标记。添加了这个标记之后，<code>post.excerpt</code> 将会获取到标记之前的内容。如果没有这个标记，那么 <code>post.excerpt</code> 会是空的。所以我们可以把首页文章内容部分的 <code>post.content</code> 替换成 <code>post.excerpt</code>。</p>
+<p>Hexo 提供了 <code>excerpt</code> 属性来获取文章的摘录部分，不过这里需要在文章中添加一个 <code>&lt;!--more--&gt;</code> 标记。添加了这个标记之后，<code>post.excerpt</code> 将会获取到标记之前的内容。如果没有这个标记，那么 <code>post.excerpt</code> 会是空的。所以我们可以把首页文章内容部分的 <code>post.content</code> 替换成 <code>post.excerpt</code>。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-content"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">%-</span> <span class="attr">post.excerpt</span> %&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <h2 id="添加页面样式"><a href="#添加页面样式" class="headerlink" title="添加页面样式"></a>添加页面样式</h2><p>到目前为止，我们完成了首页的页面结构，但是并没有添加样式，所以看起来很丑。我们在 <code>source</code> 文件中创建一个 <code>css</code> 文件夹来存放样式文件。</p>
 <p>由于 Hexo 在新建项目的时候会安装 <code>hexo-renderer-stylus</code> 这个插件，所以我们无需其他步骤，只需要将样式文件放到 <code>css</code> 文件夹中。Hexo 在生成页面的时候会将 <code>source</code> 中的所有文件复制到生成的 <code>public</code> 文件中，并且在此之前会编译 styl 为 css 文件。</p>
@@ -515,8 +502,14 @@
     
     </summary>
     
+      <category term="技术" scheme="http://www.ahonn.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="前端" scheme="http://www.ahonn.me/tags/%E5%89%8D%E7%AB%AF/"/>
     
       <category term="Hexo" scheme="http://www.ahonn.me/tags/Hexo/"/>
+    
+      <category term="教程" scheme="http://www.ahonn.me/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
@@ -525,7 +518,7 @@
     <link href="http://www.ahonn.me/2016/12/13/2016-summary/"/>
     <id>http://www.ahonn.me/2016/12/13/2016-summary/</id>
     <published>2016-12-13T03:23:09.000Z</published>
-    <updated>2017-05-04T02:27:13.000Z</updated>
+    <updated>2017-05-04T06:18:09.000Z</updated>
     
     <content type="html"><![CDATA[<p>一转眼 2016 年就快要结束了，这一年对自己来说收获了很多。</p>
 <p>去年的总结，给自己定下了个 2016 年的计划。现在 2016 也差不多快结束了，我对自己执行的情况还是比较满意的。</p>
@@ -561,10 +554,10 @@
     
     </summary>
     
+      <category term="生活" scheme="http://www.ahonn.me/categories/%E7%94%9F%E6%B4%BB/"/>
     
-      <category term="生活" scheme="http://www.ahonn.me/tags/%E7%94%9F%E6%B4%BB/"/>
     
-      <category term="总结" scheme="http://www.ahonn.me/tags/%E6%80%BB%E7%BB%93/"/>
+      <category term="年终总结" scheme="http://www.ahonn.me/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
@@ -573,7 +566,7 @@
     <link href="http://www.ahonn.me/2016/11/30/some-ways-of-javascript-create-object/"/>
     <id>http://www.ahonn.me/2016/11/30/some-ways-of-javascript-create-object/</id>
     <published>2016-11-30T10:52:21.000Z</published>
-    <updated>2017-05-04T02:27:13.000Z</updated>
+    <updated>2017-05-04T06:18:09.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h2><p>在函数中创建 Object 对象，并为对象添加属性。函数返回添加属性之后的对象。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createPerson</span>(<span class="params">name, age</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>()</div><div class="line">  o.name = name</div><div class="line">  o.age = age</div><div class="line">  o.sayName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name)</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> o</div><div class="line">&#125; </div><div class="line"></div><div class="line"><span class="keyword">var</span> p = createPerson(<span class="string">"ahonn"</span>, <span class="number">21</span>)</div></pre></td></tr></table></figure>
@@ -614,8 +607,12 @@
     
     </summary>
     
+      <category term="技术" scheme="http://www.ahonn.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
     
       <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
+    
+      <category term="前端" scheme="http://www.ahonn.me/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -624,7 +621,7 @@
     <link href="http://www.ahonn.me/2016/11/21/javascript-data-type-judgment/"/>
     <id>http://www.ahonn.me/2016/11/21/javascript-data-type-judgment/</id>
     <published>2016-11-21T07:07:49.000Z</published>
-    <updated>2017-05-04T02:27:13.000Z</updated>
+    <updated>2017-05-04T06:18:09.000Z</updated>
     
     <content type="html"><![CDATA[<p>最近开始读之前没有读完的 underscore 的源码，刚把 Object 部分读完。对 JavaScript 中类型判断部分的总结。</p>
 <h2 id="Object-prototype-toString"><a href="#Object-prototype-toString" class="headerlink" title="Object.prototype.toString()"></a>Object.prototype.toString()</h2><p>在进行类型判断时，使用到最多的当属 <code>Object.prototype.toString()</code>。</p>
@@ -662,10 +659,12 @@
     
     </summary>
     
+      <category term="技术" scheme="http://www.ahonn.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
     
       <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
     
-      <category term="Underscore" scheme="http://www.ahonn.me/tags/Underscore/"/>
+      <category term="前端" scheme="http://www.ahonn.me/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -674,7 +673,7 @@
     <link href="http://www.ahonn.me/2016/11/14/wechat-app-summary/"/>
     <id>http://www.ahonn.me/2016/11/14/wechat-app-summary/</id>
     <published>2016-11-14T14:03:46.000Z</published>
-    <updated>2017-05-04T02:27:13.000Z</updated>
+    <updated>2017-05-04T06:18:09.000Z</updated>
     
     <content type="html"><![CDATA[<p>前段时间去了广州参加了关于「微信小程序」的技术沙龙，整场下来收获颇多。实际上微信小程序刚刚发布出来的时候就关注，弄了破解了的开发工具，跑了个官方的 Demo。</p>
 <p>听完回来之后就想着挖个相关的坑，正好看到手机上的 「ONE · 一个」。上网找到了 ONE 的接口，打算搞一个仿照 ONE 官方 APP 的小程序，最后就有了 <a href="https://github.com/ahonn/weapp-one" target="_blank" rel="external">weapp-one</a> 这个项目。</p>
@@ -710,6 +709,8 @@
     
     </summary>
     
+      <category term="技术" scheme="http://www.ahonn.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
     
       <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
     
@@ -722,7 +723,7 @@
     <link href="http://www.ahonn.me/2016/10/11/after-the-react-routing-scroll-to-the-top-of-the-page/"/>
     <id>http://www.ahonn.me/2016/10/11/after-the-react-routing-scroll-to-the-top-of-the-page/</id>
     <published>2016-10-10T17:13:19.000Z</published>
-    <updated>2017-05-04T02:27:13.000Z</updated>
+    <updated>2017-05-04T06:18:09.000Z</updated>
     
     <content type="html"><![CDATA[<p>在 React 组件间进行页面跳转后，发现页面的位置并不在页面顶部，而是在页面跳转前的位置。就是说浏览器的滚动条并没有回到顶部的位置。</p>
 <p>经过搜索之后找到了解决方案：<a href="http://stackoverflow.com/questions/33188994/scroll-to-the-top-of-the-page-after-render-in-react-js" target="_blank" rel="external">Scroll to the top of the page after render in react.js</a></p>
@@ -746,10 +747,14 @@
     
     </summary>
     
+      <category term="技术" scheme="http://www.ahonn.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="React" scheme="http://www.ahonn.me/tags/React/"/>
     
       <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
     
-      <category term="React" scheme="http://www.ahonn.me/tags/React/"/>
+      <category term="前端" scheme="http://www.ahonn.me/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -758,7 +763,7 @@
     <link href="http://www.ahonn.me/2016/10/02/react-lifecycle-methods/"/>
     <id>http://www.ahonn.me/2016/10/02/react-lifecycle-methods/</id>
     <published>2016-10-01T17:10:17.000Z</published>
-    <updated>2017-05-04T02:27:13.000Z</updated>
+    <updated>2017-05-04T06:18:09.000Z</updated>
     
     <content type="html"><![CDATA[<p>生命周期函数是指，在组件生命周期上的特定点上执行的各个函数。<br>React 的组件声明周期函数分为三种：挂载，更新以及卸载。</p>
 <h2 id="挂载"><a href="#挂载" class="headerlink" title="挂载"></a>挂载</h2><p>组件挂载的生命周期函数都在初始化渲染前后被调用。</p>
@@ -784,10 +789,14 @@
     
     </summary>
     
+      <category term="技术" scheme="http://www.ahonn.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="React" scheme="http://www.ahonn.me/tags/React/"/>
     
       <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
     
-      <category term="React" scheme="http://www.ahonn.me/tags/React/"/>
+      <category term="前端" scheme="http://www.ahonn.me/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -796,7 +805,7 @@
     <link href="http://www.ahonn.me/2016/09/13/the-memo-of-javascript-regexp/"/>
     <id>http://www.ahonn.me/2016/09/13/the-memo-of-javascript-regexp/</id>
     <published>2016-09-12T16:39:22.000Z</published>
-    <updated>2017-05-04T02:27:13.000Z</updated>
+    <updated>2017-05-04T06:18:09.000Z</updated>
     
     <content type="html"><![CDATA[<p>JavaScript 创建正则表达式有两种方式：</p>
 <ul>
@@ -849,8 +858,12 @@
     
     </summary>
     
+      <category term="技术" scheme="http://www.ahonn.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
     
       <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
+    
+      <category term="前端" scheme="http://www.ahonn.me/tags/%E5%89%8D%E7%AB%AF/"/>
     
       <category term="RegExp" scheme="http://www.ahonn.me/tags/RegExp/"/>
     
@@ -861,7 +874,7 @@
     <link href="http://www.ahonn.me/2016/08/31/javascript-best-practices/"/>
     <id>http://www.ahonn.me/2016/08/31/javascript-best-practices/</id>
     <published>2016-08-31T14:57:34.000Z</published>
-    <updated>2017-05-04T02:27:13.000Z</updated>
+    <updated>2017-05-04T06:18:09.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>翻译自：<a href="https://www.codementor.io/javascript/tutorial/javascript-best-practices" target="_blank" rel="external">JavaScript Best Practices: Tips &amp; Tricks to Level Up Your Code</a><br>没有严格的按照原文翻译，删减修改了部分内容。</p>
@@ -919,8 +932,12 @@
     
     </summary>
     
+      <category term="技术" scheme="http://www.ahonn.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
     
       <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
+    
+      <category term="前端" scheme="http://www.ahonn.me/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -929,7 +946,7 @@
     <link href="http://www.ahonn.me/2016/08/02/javascript-reduce-the-browser-reflow/"/>
     <id>http://www.ahonn.me/2016/08/02/javascript-reduce-the-browser-reflow/</id>
     <published>2016-08-02T14:46:33.000Z</published>
-    <updated>2017-05-04T02:27:13.000Z</updated>
+    <updated>2017-05-04T06:18:09.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="什么是浏览器回流"><a href="#什么是浏览器回流" class="headerlink" title="什么是浏览器回流"></a>什么是浏览器回流</h2><p>浏览器在显示网页时，需要计算每一个元素应该放置的位置，这个计算过程就称为浏览器回流（browser reflow）。回流会重新计算页面的布局，在回流中会重新计算元素的尺寸与位置，并且也会触发对子元素的回流。</p>
 <p>触发浏览器回流的操作：</p>
@@ -976,8 +993,12 @@
     
     </summary>
     
+      <category term="技术" scheme="http://www.ahonn.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
     
       <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
+    
+      <category term="前端" scheme="http://www.ahonn.me/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -986,7 +1007,7 @@
     <link href="http://www.ahonn.me/2016/07/25/the-right-way-to-array-of-random-sequence/"/>
     <id>http://www.ahonn.me/2016/07/25/the-right-way-to-array-of-random-sequence/</id>
     <published>2016-07-25T02:53:19.000Z</published>
-    <updated>2017-05-04T02:27:13.000Z</updated>
+    <updated>2017-05-04T06:18:09.000Z</updated>
     
     <content type="html"><![CDATA[<p>在 <code>underscore</code> 中有一个函数，其作用是将数组乱序排序，实现如下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Shuffle a collection, using the modern version of the</span></div><div class="line"><span class="comment">// [Fisher-Yates shuffle](http://en.wikipedia.org/wiki/Fisher–Yates_shuffle).</span></div><div class="line"><span class="comment">// `shuffle` 函数。</span></div><div class="line">_.shuffle = <span class="function"><span class="keyword">function</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> set = isArrayLike(obj) ? obj : _.values(obj);</div><div class="line">  <span class="keyword">var</span> length = set.length;</div><div class="line">  <span class="keyword">var</span> shuffled = <span class="built_in">Array</span>(length);</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> index = <span class="number">0</span>, rand; index &lt; length; index++) &#123;</div><div class="line">    rand = _.random(<span class="number">0</span>, index);</div><div class="line">    <span class="keyword">if</span> (rand !== index) shuffled[index] = shuffled[rand];</div><div class="line">    shuffled[rand] = set[index];</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> shuffled;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
@@ -1009,12 +1030,14 @@
     
     </summary>
     
+      <category term="技术" scheme="http://www.ahonn.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
     
       <category term="JavaScript" scheme="http://www.ahonn.me/tags/JavaScript/"/>
     
-      <category term="Underscore" scheme="http://www.ahonn.me/tags/Underscore/"/>
+      <category term="前端" scheme="http://www.ahonn.me/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="算法" scheme="http://www.ahonn.me/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="Underscore" scheme="http://www.ahonn.me/tags/Underscore/"/>
     
   </entry>
   
@@ -1023,7 +1046,7 @@
     <link href="http://www.ahonn.me/2016/07/24/langshi-grocery-store/"/>
     <id>http://www.ahonn.me/2016/07/24/langshi-grocery-store/</id>
     <published>2016-07-24T11:45:35.000Z</published>
-    <updated>2017-05-04T02:27:13.000Z</updated>
+    <updated>2017-05-04T06:18:09.000Z</updated>
     
     <content type="html"><![CDATA[<p>解忧杂货店，零零散散的在地铁上看完了这本之前一直听到却没有去看的小说。其实几天前想写这篇读书笔记的，一直被拖延至今。</p>
 <p>爱情公寓中有一集曾小贤说了这样一句话。当面对两个选择时，抛硬币总能奏效，并不是因为它总能给出对的答案，而是在你把它抛在空中的那一秒里，你突然知道你希望它是什么。就像是那些向浪矢杂货店投递烦恼信件一样，其实真正来向浪矢爷爷咨询的人大多心里已经有了答案。只是自己没有发现，当杂货店回信中的建议并不像所期望的回答的时候，咨询者就发现自己想要的那个答案。<br><a id="more"></a></p>
@@ -1047,8 +1070,8 @@
     
     </summary>
     
+      <category term="生活" scheme="http://www.ahonn.me/categories/%E7%94%9F%E6%B4%BB/"/>
     
-      <category term="生活" scheme="http://www.ahonn.me/tags/%E7%94%9F%E6%B4%BB/"/>
     
       <category term="读书笔记" scheme="http://www.ahonn.me/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
@@ -1059,7 +1082,7 @@
     <link href="http://www.ahonn.me/2016/07/13/getting-highlightjs-to-work-with-vue.js/"/>
     <id>http://www.ahonn.me/2016/07/13/getting-highlightjs-to-work-with-vue.js/</id>
     <published>2016-07-13T04:08:30.000Z</published>
-    <updated>2017-05-04T02:27:13.000Z</updated>
+    <updated>2017-05-04T06:18:09.000Z</updated>
     
     <content type="html"><![CDATA[<p>今天遇到一个问题：在使用 vue 的练手项目中，渲染的 HTML 里 <code>&lt;code&gt;</code> 标签中的代码没有代码高亮。</p>
 <p>遂想到用 highlight.js 来解决，按照平常那样在 HTML 文件中引入 <code>js</code> 和 <code>css</code> 文件，然后在<code>&lt;header&gt;</code> 中加上一句 <code>&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;</code>。但是却没有效果。</p>
@@ -1079,8 +1102,55 @@
     
     </summary>
     
+      <category term="技术" scheme="http://www.ahonn.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="前端" scheme="http://www.ahonn.me/tags/%E5%89%8D%E7%AB%AF/"/>
     
       <category term="Vue" scheme="http://www.ahonn.me/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS 实现垂直居中</title>
+    <link href="http://www.ahonn.me/2016/06/29/vertical-center-for-css/"/>
+    <id>http://www.ahonn.me/2016/06/29/vertical-center-for-css/</id>
+    <published>2016-06-29T15:14:02.000Z</published>
+    <updated>2017-05-04T06:18:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>我们有这样一个结构的 HTML：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"parent"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"children"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>如果我们要实现 <code>.children</code> 在 <code>.parent</code> 中垂直居中。</p>
+<p>通常第一印象会想起给父元素设置相对定位，给子元素设置绝对定位。这样子元素就相对于父元素定位，再通过 <code>top</code> 与 <code>left</code> 各偏移 50% 父元素宽度，使用 <code>margin-*</code> 来修正子元素的位置。<br><a id="more"></a></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span> &#123;</div><div class="line">  <span class="attribute">position</span>: relative;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.chilren</span> &#123;</div><div class="line">  <span class="attribute">width</span>: $width;</div><div class="line">  <span class="attribute">height</span>: $height;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">  <span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">  <span class="attribute">left</span>: <span class="number">50%</span>;</div><div class="line">  <span class="attribute">margin-top</span>: -$height/<span class="number">2</span>;</div><div class="line">  <span class="attribute">margin-left</span>: -$width/<span class="number">2</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>通过这种方式可以使得子元素在父元素中垂直居中。但是这种实现的方式需要知道子元素的宽高，以方便使用 <code>margin-*</code> 来修正之前的位置。</p>
+<p>当不知道子元素的宽高时，这种方法就无法实现正真的垂直居中。这个时候就可以使用 <code>transform: translate(-50%, -50%);</code> 来实现子元素自身的偏移。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span> &#123;</div><div class="line">  <span class="attribute">position</span>: relative;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.chilren</span> &#123;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">  <span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">  <span class="attribute">left</span>: <span class="number">50%</span>;</div><div class="line">  <span class="attribute">transform</span>: <span class="built_in">translate</span>(-50%, -50%);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>那么不使用定位是否能够使元素垂直居中呢？</p>
+<p>这时候我们来想想要使元素水平居中的时候，我们会怎么做？Ok，一般我们都会用 <code>margin: 0 auto</code>;那么我们就可以让 <code>margin-top: 50%</code>, 这样的效果就跟相对定位时的 <code>top: 50%</code> 的效果差不多。接着就可以使用之前使用过的 <code>transform</code> 属性来使得元素向上偏移自身高度的一半，也就是 <code>transform: translateY(-50%);</code>。</p>
+<p>这样就可以实现不使用定位来来使得元素垂直居中了。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.chilren</span> &#123;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">50%</span> auto <span class="number">0</span>;</div><div class="line">  <span class="attribute">transform</span>: <span class="built_in">translateY</span>(50%);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>除了上面的这些方法之外，还可以使用 Flexbox 布局来实现。</p>
+<p>只需要在父元素中使用 <code>display: flex;</code>，然后在子元素上使用 <code>margin: auto;</code> 就可以实现垂直居中了。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span> &#123;</div><div class="line">  <span class="attribute">display</span>: flex;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.chilren</span> &#123;</div><div class="line">  <span class="attribute">margin</span>: auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>另外还有几种实现垂直居中的方法，并不常见与常用，使用就不提了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我们有这样一个结构的 HTML：&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;parent&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;children&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果我们要实现 &lt;code&gt;.children&lt;/code&gt; 在 &lt;code&gt;.parent&lt;/code&gt; 中垂直居中。&lt;/p&gt;
+&lt;p&gt;通常第一印象会想起给父元素设置相对定位，给子元素设置绝对定位。这样子元素就相对于父元素定位，再通过 &lt;code&gt;top&lt;/code&gt; 与 &lt;code&gt;left&lt;/code&gt; 各偏移 50% 父元素宽度，使用 &lt;code&gt;margin-*&lt;/code&gt; 来修正子元素的位置。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.ahonn.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="前端" scheme="http://www.ahonn.me/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="CSS" scheme="http://www.ahonn.me/tags/CSS/"/>
     
   </entry>
   

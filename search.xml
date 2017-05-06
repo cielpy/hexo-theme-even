@@ -4,16 +4,15 @@
   
     
     <entry>
-      <title><![CDATA[转投 neovim]]></title>
+      <title><![CDATA[转投 Neovim]]></title>
       <url>http://www.ahonn.me/2017/03/27/use-neovim/</url>
-      <content type="html"><![CDATA[<p><img src="https://ww2.sinaimg.cn/large/006tNc79gy1fe1885ws5rj315w0n4n12.jpg" alt=""></p>
-<p>很久之前就听说过 neovim，但一直没有怎么了解过。昨天下午折腾了一下，彻底转投 neovim 了。</p>
-<p>虽然说这两货的差别目前还不是很大，但是 neovim 实现了嵌入式终端模拟器，Excited! 各种 REPL 插件统统都可以卸载了！</p>
+      <content type="html"><![CDATA[<p>很久之前就听说过 Neovim，但一直没有怎么了解过。昨天下午折腾了一下，彻底转投 Neovim 了。</p>
+<p>虽然说这两货的差别目前还不是很大，但是 Neovim 实现了嵌入式终端模拟器，Excited! 各种 REPL 插件统统都可以卸载了！</p>
 <a id="more"></a>
-<h2 id="迁移配置文件"><a href="#迁移配置文件" class="headerlink" title="迁移配置文件"></a>迁移配置文件</h2><p>neovim 配置完全兼容原来的 <code>.vimrc</code>，只需要：</p>
+<h2 id="迁移配置文件"><a href="#迁移配置文件" class="headerlink" title="迁移配置文件"></a>迁移配置文件</h2><p>Neovim 配置完全兼容原来的 <code>.vimrc</code>，只需要：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir -p <span class="variable">$&#123;XDG_CONFIG_HOME:=$HOME/.config&#125;</span></div><div class="line">ln <span class="_">-s</span> ~/.vim <span class="variable">$XDG_CONFIG_HOME</span>/nvim</div><div class="line">ln <span class="_">-s</span> ~/.vimrc <span class="variable">$XDG_CONFIG_HOME</span>/nvim/init.vim</div></pre></td></tr></table></figure>
 <h2 id="使用-ale-代替-syntastic"><a href="#使用-ale-代替-syntastic" class="headerlink" title="使用 ale 代替 syntastic"></a>使用 ale 代替 syntastic</h2><p>老早就觉得 <code>syntastic</code> 同步检查代码好难用，这下换成 <code>ale</code> 舒服多了。有之前使用 atom 时自带的代码检查的感觉。</p>
-<p>(Vim 8 好像也已经提供了异步 API，但是我等到换成 neovim 才知道..)</p>
+<p>(Vim 8 好像也已经提供了异步 API，但是我等到换成 Neovim 才知道..)</p>
 <h2 id="把-Leader-改成空格"><a href="#把-Leader-改成空格" class="headerlink" title="把 Leader 改成空格"></a>把 Leader 改成空格</h2><p>其实是看了 <a href="https://zhuanlan.zhihu.com/p/25905625" target="_blank" rel="external">Vim 高效率配置导论</a> 这篇文章之后试着改的，改完发现空格比起原先的 <code>,</code> 好用多了。让大拇指动了起来。</p>
 <p>然后切换 buffter 的快捷键就映射成了 <code>&lt;Space&gt; + n/m</code>，简直不要太顺手。</p>
 <h2 id="使用-Spacegray-主题"><a href="#使用-Spacegray-主题" class="headerlink" title="使用 Spacegray 主题"></a>使用 Spacegray 主题</h2><p>之前使用的 <code>molokai</code> 看久了有点视觉疲劳，发现之前在用 <code>sublime text</code> 时使用的 <code>Spacegray</code> 也有 Vim 版本，果断换之。（折腾高亮主题是永恒的.. ）</p>
@@ -38,6 +37,8 @@
         <tags>
             
             <tag> Vim </tag>
+            
+            <tag> 折腾 </tag>
             
         </tags>
         
@@ -100,34 +101,20 @@
 <p>最后，基础很重要，基础扎实是基本。但是如果想要有突出的表现还是需要更有深度的研究。需要经常思考总结，不仅仅是浮于表面，更要深入原理。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> 总结 </tag>
+            <tag> 前端 </tag>
             
             <tag> 面试 </tag>
             
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Don't Let Me Down]]></title>
-      <url>http://www.ahonn.me/2017/03/15/don-t-let-me-down/</url>
-      <content type="html"><![CDATA[<p>单人 Acapella 版本的『 Don’t Let Me Down 』, 分享～</p>
-<blockquote>
-<p>无法翻墙上油管的话可以查看：<a href="http://music.163.com/#/mv?id=5347652" target="_blank" rel="external">Don’t Let Me Down (Remix)</a></p>
-</blockquote>
-<a id="more"></a>
-<div class="video-container"><iframe src="//www.youtube.com/embed/2juA5xNObGk" frameborder="0" allowfullscreen></iframe></div>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> Music </tag>
-            
-            <tag> Acapella </tag>
+            <tag> 实习 </tag>
             
         </tags>
         
@@ -183,12 +170,18 @@
 </ul>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> JavaScript </tag>
             
-            <tag> Front-end </tag>
+            <tag> 前端 </tag>
             
         </tags>
         
@@ -196,7 +189,7 @@
     
     <entry>
       <title><![CDATA[XMLHttpRequest 学习笔记]]></title>
-      <url>http://www.ahonn.me/2017/03/02/XMLHttpRequest-study-notes/</url>
+      <url>http://www.ahonn.me/2017/03/02/xmlhttprequest-study-notes/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>AJAX即“Asynchronous JavaScript and XML”（异步的JavaScript与XML技术），指的是一套综合了多项技术的浏览器端网页开发技术。</p>
 </blockquote>
@@ -244,12 +237,18 @@
 <h3 id="readystatechange-事件"><a href="#readystatechange-事件" class="headerlink" title="readystatechange 事件"></a>readystatechange 事件</h3><p>当 readyState 属性值改变时触发 readystatechange 事件。通过判断 readystate 属性的值，在完成请求响应整个过程之后执行某些操作。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> JavaScript </tag>
             
-            <tag> Ajax </tag>
+            <tag> 前端 </tag>
             
         </tags>
         
@@ -270,34 +269,43 @@
 <li><code>smartindent</code> 选项智能自动缩进</li>
 <li><code>expandtab</code> 选项将 tab 转换为空格</li>
 </ul>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">set</span> autoindent</div><div class="line"><span class="keyword">set</span> smartindent</div><div class="line"><span class="keyword">set</span> expandtab</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">set autoindent</div><div class="line">set smartindent</div><div class="line">set expandtab</div></pre></td></tr></table></figure>
 <h3 id="行号"><a href="#行号" class="headerlink" title="行号"></a>行号</h3><p>显示行号是硬需求，但是与其他编辑器不同，在 vim 上还有相对行号。</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">set</span> <span class="keyword">number</span></div><div class="line"><span class="keyword">set</span> relativenumber</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">set number</div><div class="line">set relativenumber</div></pre></td></tr></table></figure>
 <h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><p>显而易见，手动安装 vim 插件是很麻烦很麻烦的。与 sublime text 之类的类似，vim 同样有类似的插件管理器 <a href="https://github.com/VundleVim/Vundle.vim" target="_blank" rel="external">Vundle</a>。</p>
 <p>创建文件夹 <code>~/.vim</code> 和配置文件 <code>~/.vimrc</code>，并安装 Vundle:</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle</div></pre></td></tr></table></figure>
-<p>为了方便管理再新建一个 <code>.vimrc.bundles</code> 来单独存放插件列表：<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">set</span> nocompatible    <span class="comment">" be iMproved, required</span></div><div class="line"><span class="keyword">filetype</span> off        <span class="comment">" requried</span></div><div class="line"><span class="keyword">set</span> rtp+=~/.<span class="keyword">vim</span>/bundle/vundle/</div><div class="line"></div><div class="line"><span class="keyword">call</span> vundle#begin()</div><div class="line"></div><div class="line"><span class="comment">" Let Vundle manage Vundle</span></div><div class="line">Bundle <span class="string">'gmarik/vundle'</span></div><div class="line"></div><div class="line"><span class="comment">" .... 其他插件</span></div><div class="line"></div><div class="line"><span class="keyword">call</span> vundle#end()</div><div class="line"><span class="comment">" required</span></div><div class="line"><span class="keyword">filetype</span> plugin <span class="built_in">indent</span> <span class="keyword">on</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle</div></pre></td></tr></table></figure>
+<p>为了方便管理再新建一个 <code>.vimrc.bundles</code> 来单独存放插件列表：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">set nocompatible    &quot; be iMproved, required</div><div class="line">filetype off        &quot; requried</div><div class="line">set rtp+=~/.vim/bundle/vundle/</div><div class="line"></div><div class="line">call vundle#begin()</div><div class="line"></div><div class="line">&quot; Let Vundle manage Vundle</div><div class="line">Bundle &apos;gmarik/vundle&apos;</div><div class="line"></div><div class="line">&quot; .... 其他插件</div><div class="line"></div><div class="line">call vundle#end()</div><div class="line">&quot; required</div><div class="line">filetype plugin indent on</div></pre></td></tr></table></figure>
 <p>以后添加插件的时候只需要在这个文件里面添加一行：</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Bundle <span class="string">'xxx'</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Bundle &apos;xxx&apos;</div></pre></td></tr></table></figure>
 <p>安装插件输入 <code>:BundleInstall</code> 命令即可，卸载插件时删除对应的配置并运行 <code>:BundleClean</code> 删除插件。</p>
 <h3 id="括号补全"><a href="#括号补全" class="headerlink" title="括号补全"></a>括号补全</h3><p>第一次用的时候，输入 <code>(</code> 居然没有自己蹦出来另外一个 <code>)</code>。这不科学，讲道理这个是一定要的。</p>
 <p>发现很多人用的是 <a href="https://github.com/Raimondi/delimitMate" target="_blank" rel="external">delimitMate</a> ，添加 <code>Bundle &#39;delimitMate&#39;</code> 到 <code>.vimrc.bundles</code>，运行 <code>BundleInstall</code>。</p>
 <p>安装完直接就可以自动补全括号了。</p>
 <h3 id="Emmet"><a href="#Emmet" class="headerlink" title="Emmet"></a>Emmet</h3><p>很多浏览器都支持 Emmet 插件，vim 同样也有。但这个 Emmet 是第三方的，叫 <a href="https://github.com/mattn/emmet-vim/" target="_blank" rel="external">Emmet.vim</a>。</p>
 <p>安装完之后主要是设置一下出发的快捷键，默认的快捷键是 <code>Ctrl + y</code>。<br>我把快捷键修改成 <code>Ctrl + e</code> 比较顺手。</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">" Emmet.vim</span></div><div class="line"><span class="keyword">let</span> <span class="variable">g:user_emmet_expandabbr_key</span> = <span class="string">'&lt;c-e&gt;'</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&quot; Emmet.vim</div><div class="line">let g:user_emmet_expandabbr_key = &apos;&lt;c-e&gt;&apos;</div></pre></td></tr></table></figure>
 <h3 id="目录树"><a href="#目录树" class="headerlink" title="目录树"></a>目录树</h3><p>目录树就基本上也就是使用 <a href="https://github.com/scrooloose/nerdtree" target="_blank" rel="external">NERDTree</a>。</p>
-<p>开启目录树的快捷键修改为 <code>Ctrl + b</code>，然后当 vim 只剩目录树显示的时候自动退出。<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">" NERDTree </span></div><div class="line"><span class="keyword">map</span> <span class="symbol">&lt;c-b&gt;</span> :NERDTreeToggle<span class="symbol">&lt;CR&gt;</span></div><div class="line"><span class="keyword">autocmd</span> vimenter * NERDTree</div><div class="line"><span class="keyword">autocmd</span> bufenter * <span class="keyword">if</span> (<span class="built_in">winnr</span>(<span class="string">"$"</span>) == <span class="number">1</span> &amp;&amp; <span class="built_in">exists</span>(<span class="string">"b:NERDTreeType"</span>) &amp;&amp;<span class="variable">b:NERDTreeType</span> == <span class="string">"primary"</span>) | q | <span class="keyword">endif</span></div></pre></td></tr></table></figure></p>
+<p>开启目录树的快捷键修改为 <code>Ctrl + b</code>，然后当 vim 只剩目录树显示的时候自动退出。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&quot; NERDTree </div><div class="line">map &lt;c-b&gt; :NERDTreeToggle&lt;CR&gt;</div><div class="line">autocmd vimenter * NERDTree</div><div class="line">autocmd bufenter * if (winnr(&quot;$&quot;) == 1 &amp;&amp; exists(&quot;b:NERDTreeType&quot;) &amp;&amp;b:NERDTreeType == &quot;primary&quot;) | q | endif</div></pre></td></tr></table></figure></p>
 <h3 id="代码补全"><a href="#代码补全" class="headerlink" title="代码补全"></a>代码补全</h3><p>补全用的就是大名鼎鼎的 <a href="https://github.com/Valloric/YouCompleteMe" target="_blank" rel="external">YouCompleteMe</a> 了。</p>
 <p>关于这个插件网上有很多插件，我就不啰嗦了。这里主要是抄的百度 EFE 的配置：</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">" YouCompleteMe</span></div><div class="line"><span class="comment">" http://efe.baidu.com/blog/vim-javascript-completion/#youcompleteme</span></div><div class="line"><span class="keyword">let</span> <span class="variable">g:ycm_min_num_of_chars_for_completion</span> = <span class="number">3</span> </div><div class="line"><span class="keyword">let</span> <span class="variable">g:ycm_autoclose_preview_window_after_completion</span>=<span class="number">1</span></div><div class="line"><span class="keyword">let</span> <span class="variable">g:ycm_complete_in_comments</span> = <span class="number">1</span></div><div class="line"><span class="keyword">let</span> <span class="variable">g:ycm_key_list_select_completion</span> = [<span class="string">'&lt;c-n&gt;'</span>, <span class="string">'&lt;Down&gt;'</span>]</div><div class="line"><span class="keyword">let</span> <span class="variable">g:ycm_key_list_previous_completion</span> = [<span class="string">'&lt;c-p&gt;'</span>, <span class="string">'&lt;Up&gt;'</span>]</div><div class="line"><span class="comment">" Use tab</span></div><div class="line"><span class="function"><span class="keyword">function</span>! <span class="title">TabFunction</span> <span class="params">()</span></span></div><div class="line">    <span class="keyword">let</span> <span class="built_in">line</span> = <span class="built_in">getline</span>(<span class="string">'.'</span>)</div><div class="line">    <span class="keyword">let</span> substr = <span class="built_in">strpart</span>(<span class="built_in">line</span>, -<span class="number">1</span>, <span class="keyword">col</span>(<span class="string">'.'</span>)+<span class="number">1</span>)</div><div class="line">    <span class="keyword">let</span> substr = <span class="built_in">matchstr</span>(substr, <span class="string">"[^ \t]*$"</span>)</div><div class="line">    <span class="keyword">if</span> <span class="built_in">strlen</span>(substr) == <span class="number">0</span></div><div class="line">        <span class="keyword">return</span> <span class="string">"\&lt;tab&gt;"</span></div><div class="line">    <span class="keyword">endif</span></div><div class="line">    <span class="keyword">return</span> <span class="built_in">pumvisible</span>() ? <span class="string">"\&lt;c-n&gt;"</span> : <span class="string">"\&lt;c-x&gt;\&lt;c-o&gt;"</span></div><div class="line"><span class="keyword">endfunction</span></div><div class="line"><span class="keyword">inoremap</span> <span class="symbol">&lt;tab&gt;</span> <span class="symbol">&lt;c-r&gt;</span>=TabFunction()<span class="symbol">&lt;cr&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> <span class="variable">g:ycm_semantic_triggers</span> = &#123;</div><div class="line">    \   <span class="string">'css'</span>: [ <span class="string">'re!^\s&#123;2&#125;'</span>, <span class="string">'re!:\s+'</span>],</div><div class="line">    \   <span class="string">'html'</span>: [ <span class="string">'&lt;/'</span> ],</div><div class="line">    \ &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&quot; YouCompleteMe</div><div class="line">&quot; http://efe.baidu.com/blog/vim-javascript-completion/#youcompleteme</div><div class="line">let g:ycm_min_num_of_chars_for_completion = 3 </div><div class="line">let g:ycm_autoclose_preview_window_after_completion=1</div><div class="line">let g:ycm_complete_in_comments = 1</div><div class="line">let g:ycm_key_list_select_completion = [&apos;&lt;c-n&gt;&apos;, &apos;&lt;Down&gt;&apos;]</div><div class="line">let g:ycm_key_list_previous_completion = [&apos;&lt;c-p&gt;&apos;, &apos;&lt;Up&gt;&apos;]</div><div class="line">&quot; Use tab</div><div class="line">function! TabFunction ()</div><div class="line">    let line = getline(&apos;.&apos;)</div><div class="line">    let substr = strpart(line, -1, col(&apos;.&apos;)+1)</div><div class="line">    let substr = matchstr(substr, &quot;[^ \t]*$&quot;)</div><div class="line">    if strlen(substr) == 0</div><div class="line">        return &quot;\&lt;tab&gt;&quot;</div><div class="line">    endif</div><div class="line">    return pumvisible() ? &quot;\&lt;c-n&gt;&quot; : &quot;\&lt;c-x&gt;\&lt;c-o&gt;&quot;</div><div class="line">endfunction</div><div class="line">inoremap &lt;tab&gt; &lt;c-r&gt;=TabFunction()&lt;cr&gt;</div><div class="line"></div><div class="line">let g:ycm_semantic_triggers = &#123;</div><div class="line">    \   &apos;css&apos;: [ &apos;re!^\s&#123;2&#125;&apos;, &apos;re!:\s+&apos;],</div><div class="line">    \   &apos;html&apos;: [ &apos;&lt;/&apos; ],</div><div class="line">    \ &#125;</div></pre></td></tr></table></figure>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>折腾了一下午，终于算是搞定了。其实过程还是蛮好玩的，有机会还想写写插件玩玩。抛弃 VS Code，开始 Vim 之旅感。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> Vim </tag>
+            
+            <tag> 折腾 </tag>
             
         </tags>
         
@@ -326,10 +334,18 @@
 <h2 id="ES6-中的继承"><a href="#ES6-中的继承" class="headerlink" title="ES6 中的继承"></a>ES6 中的继承</h2><p>ES6 引入了 <code>class</code> 关键子，可以像其他语言中一样使用 <code>extends</code> 关键字来继承。虽然能够使用 <code>extends</code> 实现继承，但实际上内部还是基于原型。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">SubType</span> <span class="keyword">extends</span> <span class="title">SuperType</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>() &#123;</div><div class="line">    <span class="keyword">super</span>();</div><div class="line">    <span class="comment">// ...</span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> JavaScript </tag>
+            
+            <tag> 前端 </tag>
             
         </tags>
         
@@ -352,7 +368,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── languages  语言文件，用于国际化</div><div class="line">├── layout     页面模板文件</div><div class="line">├── scripts    Hexo 脚本</div><div class="line">└── source     主题资源文件，包括页面样式，脚本，字体等</div></pre></td></tr></table></figure>
 <p>我们在 <code>themes</code> 中新建 <code>theme-example</code> 文件夹，然后在 <code>theme-demo</code> 中按照 landscape 主题的目录结构新建 <code>languages</code>，<code>layout</code>，<code>scripts</code> 与 <code>source</code> 文件夹。</p>
 <h2 id="创建布局模板"><a href="#创建布局模板" class="headerlink" title="创建布局模板"></a>创建布局模板</h2><p>在 <code>layout</code> 中创建 <code>index.ejs</code> 文件，首页将会使用该布局模板生成 HTML 文件。</p>
-<p><code>layout/index.ejs</code>:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"content-type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=utf-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"</span> <span class="attr">name</span>=<span class="string">"viewport"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello Word<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><code>layout/index.ejs</code>:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"content-type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=utf-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"</span> <span class="attr">name</span>=<span class="string">"viewport"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello Word<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>修改站点配置文件中的主题配置，使用我们刚刚创建的 <code>theme-example</code> 主题：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Extensions</span></div><div class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></div><div class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></div><div class="line"><span class="attr">theme:</span> <span class="string">theme-example</span></div></pre></td></tr></table></figure>
 <p>运行 <code>hexo server --debug</code> 以 debug 模式开启 Hexo 本地服务器预览，访问 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>。</p>
@@ -378,7 +395,7 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">"posts"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">%</span> <span class="attr">page.posts.each</span>(<span class="attr">function</span> (<span class="attr">post</span>) &#123; %&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">article</span> <span class="attr">class</span>=<span class="string">"post"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-title"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"post-title-link"</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for(post.path) %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">post.title</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-content"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">%-</span> <span class="attr">post.content</span> %&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-meta"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-time"</span>&gt;</span><span class="tag">&lt;<span class="name">%-</span> <span class="attr">date</span>(<span class="attr">post.date</span>, "<span class="attr">YYYY-MM-DD</span>") %&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">article</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">%</span> &#125;) %&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>从 <code>page.posts</code> 中获取单篇文章的数据，并获取文章的标题，内容等数据填充到模板中。处理文章创建时间的时候使用了 <code>date()</code> 函数，这是 Hexo 提供的时间处理的<a href="https://hexo.io/docs/helpers.html#date" target="_blank" rel="external">辅助函数</a>。本文中使用到的函数如无特别说明，即为 Hexo 的辅助函数。</p>
 <h3 id="文章摘录"><a href="#文章摘录" class="headerlink" title="文章摘录"></a>文章摘录</h3><p>由于首页显示文章内容时使用的是 <code>post.content</code>，即文章的全部内容。所以首页会显示每一篇文章的内容，实际上我们并不想在首页显示那么多内容，只想显示文章的摘录。</p>
-<p>Hexo 提供了 <code>excerpt</code> 属性来获取文章的摘录部分，不过这里需要在文章中添加一个 <code>&lt;!-- more --&gt;</code> 标记。添加了这个标记之后，<code>post.excerpt</code> 将会获取到标记之前的内容。如果没有这个标记，那么 <code>post.excerpt</code> 会是空的。所以我们可以把首页文章内容部分的 <code>post.content</code> 替换成 <code>post.excerpt</code>。</p>
+<p>Hexo 提供了 <code>excerpt</code> 属性来获取文章的摘录部分，不过这里需要在文章中添加一个 <code>&lt;!--more--&gt;</code> 标记。添加了这个标记之后，<code>post.excerpt</code> 将会获取到标记之前的内容。如果没有这个标记，那么 <code>post.excerpt</code> 会是空的。所以我们可以把首页文章内容部分的 <code>post.content</code> 替换成 <code>post.excerpt</code>。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-content"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">%-</span> <span class="attr">post.excerpt</span> %&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <h2 id="添加页面样式"><a href="#添加页面样式" class="headerlink" title="添加页面样式"></a>添加页面样式</h2><p>到目前为止，我们完成了首页的页面结构，但是并没有添加样式，所以看起来很丑。我们在 <code>source</code> 文件中创建一个 <code>css</code> 文件夹来存放样式文件。</p>
 <p>由于 Hexo 在新建项目的时候会安装 <code>hexo-renderer-stylus</code> 这个插件，所以我们无需其他步骤，只需要将样式文件放到 <code>css</code> 文件夹中。Hexo 在生成页面的时候会将 <code>source</code> 中的所有文件复制到生成的 <code>public</code> 文件中，并且在此之前会编译 styl 为 css 文件。</p>
@@ -423,10 +440,20 @@
 <p>感谢阅读，希望对你有所帮助。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
+            <tag> 前端 </tag>
+            
             <tag> Hexo </tag>
+            
+            <tag> 教程 </tag>
             
         </tags>
         
@@ -460,12 +487,16 @@
 </ul>
 ]]></content>
       
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> 生活 </tag>
-            
-            <tag> 总结 </tag>
+            <tag> 年终总结 </tag>
             
         </tags>
         
@@ -506,10 +537,18 @@
 <p>通过 <code>class</code> 关键字声明 Person 类，<code>constructor</code> 函数即为 Person 类的构造函数，类属性的初始化也在其中。需要在各个对象中共享的方法也写在 <code>class</code> 中，避免了原来定义在 <code>prototype</code> 上时的撕裂感。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> JavaScript </tag>
+            
+            <tag> 前端 </tag>
             
         </tags>
         
@@ -545,12 +584,18 @@
 <p>我们需要的是判断变量是否为对象，那么就需要排除 <code>null</code> 的情况，即将变量进行两次取反操作，将变量转换为 <code>Boolean</code> 类型。由于 <code>null</code> 会转换为 <code>false</code>，那么这样就可以排除 <code>null</code> 的干扰。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> JavaScript </tag>
             
-            <tag> Underscore </tag>
+            <tag> 前端 </tag>
             
         </tags>
         
@@ -584,6 +629,12 @@
 <p>这里使用了两次 <code>this.setData</code> 是因为在第二次执行上面的滑动切换页面再返回的时候，显示的子组件并不是最后一个非空的子组件，而是最后的那个空子组件。大概原因是因为第二次执行这个操作的时候，<code>current</code> 并没有更新。<br>所以解决的方案是在每次修改 <code>current</code> 之前修改一次它的值，使得后面修改 <code>current</code> 值时会触发视图的更新。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -609,12 +660,20 @@
 <p>所以推荐的使用方法是：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">  componentDidMount() &#123;</div><div class="line">    <span class="keyword">this</span>.node.scrollIntoView();</div><div class="line">  &#125;</div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">return</span> &lt;div ref=&#123;node =&gt; this.node = node&#125; /&gt;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
+            <tag> React </tag>
+            
             <tag> JavaScript </tag>
             
-            <tag> React </tag>
+            <tag> 前端 </tag>
             
         </tags>
         
@@ -639,12 +698,20 @@
 <h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><h3 id="componentWillUnmount"><a href="#componentWillUnmount" class="headerlink" title="componentWillUnmount"></a>componentWillUnmount</h3><p>在组件卸载前被调用，主要用来执行一些组件的清理工作。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
+            <tag> React </tag>
+            
             <tag> JavaScript </tag>
             
-            <tag> React </tag>
+            <tag> 前端 </tag>
             
         </tags>
         
@@ -693,10 +760,18 @@
 </ul>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> JavaScript </tag>
+            
+            <tag> 前端 </tag>
             
             <tag> RegExp </tag>
             
@@ -753,10 +828,18 @@
 </ul>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> JavaScript </tag>
+            
+            <tag> 前端 </tag>
             
         </tags>
         
@@ -795,10 +878,18 @@
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>减少浏览器回流的方式，就是将一切能够在内存完成的完成之后再应用到页面中，对元素样式的操作尽量通过添加修改 CSS 类来实现。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> JavaScript </tag>
+            
+            <tag> 前端 </tag>
             
         </tags>
         
@@ -821,14 +912,20 @@
 </ul>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> JavaScript </tag>
             
-            <tag> Underscore </tag>
+            <tag> 前端 </tag>
             
-            <tag> 算法 </tag>
+            <tag> Underscore </tag>
             
         </tags>
         
@@ -852,10 +949,14 @@
 <p>这是书中对于白纸的回信，这个回答对于所有人都算是解答吧。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
         
         <tags>
-            
-            <tag> 生活 </tag>
             
             <tag> 读书笔记 </tag>
             
@@ -876,8 +977,16 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-html</span>=<span class="string">"your_content"</span> <span class="attr">v-highlightjs</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
+            
+            <tag> 前端 </tag>
             
             <tag> Vue </tag>
             
@@ -906,8 +1015,16 @@
 <p>另外还有几种实现垂直居中的方法，并不常见与常用，使用就不提了。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
+            
+            <tag> 前端 </tag>
             
             <tag> CSS </tag>
             
@@ -941,6 +1058,12 @@
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// sass style</span></div><div class="line"><span class="variable">$color-list</span>: red green yellow;</div><div class="line">@<span class="keyword">each</span> <span class="variable">$color</span> in <span class="variable">$color-list</span> &#123;</div><div class="line">  .#&#123;<span class="variable">$color</span>&#125; &#123;</div><div class="line">    <span class="attribute">color</span>: <span class="variable">$color</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// css style</span></div><div class="line"><span class="selector-class">.red</span> &#123;</div><div class="line">  <span class="attribute">color</span>: red;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.green</span> &#123;</div><div class="line">  <span class="attribute">color</span>: green;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.yellow</span> &#123;</div><div class="line">  <span class="attribute">color</span>: yellow;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -970,12 +1093,18 @@
 <h3 id="限制选择器"><a href="#限制选择器" class="headerlink" title="限制选择器"></a>限制选择器</h3><p>Nokogiri 还提供了自定义筛选的限制选择器，返回结果集中符合条件的元素：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">links = doc.css(<span class="string">".nav-list a"</span>).select&#123; <span class="params">|link|</span> link[<span class="string">'href'</span>] == <span class="string">"/archives/"</span> &#125;</div><div class="line"></div><div class="line">links.each &#123; <span class="params">|link|</span> puts link.text &#125;  <span class="comment"># Archives</span></div></pre></td></tr></table></figure></p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> Ruby </tag>
-            
             <tag> Nokogiri </tag>
+            
+            <tag> Ruby </tag>
             
         </tags>
         
@@ -1019,12 +1148,18 @@
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>上面使用的简单的 JavaScript 代码实现了元素的拖拽，但并没有对兼容性问题全面考虑，也没有对性能优化，有不必要的事件触发。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> JavaScript </tag>
             
-            <tag> 面试 </tag>
+            <tag> 前端 </tag>
             
         </tags>
         
@@ -1052,12 +1187,18 @@
 <p>流水账般的写完了，小学语文水平…天…</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> 生活 </tag>
-            
             <tag> 面试 </tag>
+            
+            <tag> 实习 </tag>
             
         </tags>
         
@@ -1081,10 +1222,18 @@
 <h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>所以在编程过程中，如果要使用到 <code>call</code> 或者 <code>apply</code>，在知道参数个数的情况下，使用 <code>call</code> 是<br>一个好选择，使得编译器能够去优化。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> JavaScript </tag>
+            
+            <tag> 前端 </tag>
             
             <tag> Underscore </tag>
             
@@ -1118,10 +1267,18 @@
 <p>重复声明同名变量在 JavaScript 非严格模式中将会被忽略，所以实际上函数表达式的位置并没有改变。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> JavaScript </tag>
+            
+            <tag> 前端 </tag>
             
         </tags>
         
@@ -1168,10 +1325,18 @@
 <p>大多数情况下，都是讲事件处理程序添加到事件流的冒泡阶段，这样可以最大限度地兼容各个浏览器。只在需要在事件到达目标之截获的时候将事件处理程序添加到捕获阶段</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> JavaScript </tag>
+            
+            <tag> 前端 </tag>
             
         </tags>
         
@@ -1202,10 +1367,18 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> e = <span class="built_in">document</span>.getElementById(<span class="string">'id'</span>);</div><div class="line">  <span class="keyword">var</span> id = e.id;</div><div class="line"></div><div class="line">  e.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    alert(id);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  e = <span class="literal">null</span>; <span class="comment">// 删除不使用的局部变量值，只将需要的 id 保存为副本</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> JavaScript </tag>
+            
+            <tag> 前端 </tag>
             
         </tags>
         
@@ -1224,10 +1397,18 @@
 <p>So，begin here ..</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> 生活 </tag>
+            <tag> 记录 </tag>
+            
+            <tag> 思考 </tag>
             
         </tags>
         
@@ -1255,10 +1436,18 @@
 <p>实现原型继承的简单示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">function Animal() &#123;</div><div class="line">  this.name = &quot;Animal&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">Animal.prototype.eat = function () &#123;</div><div class="line">  console.log(&quot;Animal can eating&quot;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">function Dog() &#123;</div><div class="line">  this.name = &quot;Dog&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 通过原型继承，继承 Animal 的属性和方法，创建了 Dog 与 Animal 之间的原型链</div><div class="line">Dog.prototype = new Animal();</div><div class="line"></div><div class="line">// 修复 Dog 对象的原型对象中的 constructor</div><div class="line">Dog.prototype.constructor = Dog;</div><div class="line"></div><div class="line">var dog = new Dog();</div><div class="line"></div><div class="line">// Dog 中重写了原型中的 name 属性，即所继承的 Animal 中的 name 属性</div><div class="line">console.log(dog.name); // &quot;Dog&quot;;</div><div class="line"></div><div class="line">// 同时继承了原型中的方法</div><div class="line">dog.eat(); // &quot;Animal can eating&quot;</div></pre></td></tr></table></figure></p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> JavaScript </tag>
+            
+            <tag> 前端 </tag>
             
         </tags>
         
@@ -1285,10 +1474,18 @@
 <p>这样就把 <code>$(&#39;.someClass&#39;).on(&#39;click&#39;,function(event) {}</code> 外的上下文环境给绑定到了函数内了。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> JavaScript </tag>
+            
+            <tag> 前端 </tag>
             
         </tags>
         
@@ -1376,12 +1573,18 @@
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>使用 Jade 写模版非常的简洁，各种 <code>include</code> 和 <code>extends</code> 使用起来也非常方便，可以模块化的去写各个组件。优点显而易见，对于我这种写 Python 的来说简直是大爱。不过可能这种写法相对于其他模版引擎来说差别较大，跟 HTML 代码的差别也挺大，所以相对来说也是比较少人去用了。而且用这个写的话，写的人来维护的倒是挺方便简洁，但是如果是其他人来维护的话还是比较难上手的，有点增加维护成本的感觉。不过我个人倒是挺喜欢的。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> Jade </tag>
+            <tag> 前端 </tag>
             
-            <tag> HTML </tag>
+            <tag> Jade </tag>
             
         </tags>
         
@@ -1459,14 +1662,16 @@
 </ul>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> Python </tag>
-            
-            <tag> thread </tag>
-            
-            <tag> threading </tag>
             
         </tags>
         
@@ -1494,12 +1699,16 @@
 <h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> curses</div><div class="line"></div><div class="line"><span class="comment"># 初始化 curses</span></div><div class="line">screen = curses.initscr()</div><div class="line"><span class="comment"># 开启键盘模式</span></div><div class="line">screen.keypad(<span class="number">1</span>)</div><div class="line"><span class="comment"># 关闭屏幕回显</span></div><div class="line">curses.noecho()</div><div class="line"></div><div class="line"><span class="comment"># 开启颜色设置，并设置颜色对</span></div><div class="line">curses.start_color()</div><div class="line">curses.init_pair(<span class="number">1</span>, curses.COLOR_CYAN, curses.COLOR_RED)</div><div class="line">curses.init_pair(<span class="number">2</span>, curses.COLOR_BLUE, curses.COLOR_WHITE)</div><div class="line"></div><div class="line"><span class="comment"># 显示文本</span></div><div class="line">screen.addstr(<span class="number">12</span>, <span class="number">25</span>, <span class="string">"Hello, Ahonn!"</span>)</div><div class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">	<span class="comment"># 读取键盘输入</span></div><div class="line">	key = screen.getch()</div><div class="line"></div><div class="line">	<span class="comment"># 当输入 c 时，显示 you input 'c', 使用颜色对 1</span></div><div class="line">	<span class="keyword">if</span> key == ord(<span class="string">'c'</span>):</div><div class="line">		screen.addstr(<span class="number">12</span>, <span class="number">25</span>, <span class="string">"you input 'c' "</span>, curses.color_pair(<span class="number">1</span>))</div><div class="line">	<span class="comment"># 当输入 b 时，显示 you input 'b'，使用颜色对 2</span></div><div class="line">	<span class="keyword">elif</span> key == ord(<span class="string">'b'</span>):</div><div class="line">		screen.addstr(<span class="number">12</span>, <span class="number">25</span>, <span class="string">"you input 'b' "</span>, curses.color_pair(<span class="number">2</span>))</div><div class="line">	<span class="comment"># 当输入 q 时退出循环</span></div><div class="line">	<span class="keyword">elif</span> key == ord(<span class="string">'q'</span>):</div><div class="line">		<span class="keyword">break</span></div><div class="line"><span class="comment"># 刷新窗口</span></div><div class="line">screen.refresh()</div><div class="line"><span class="comment"># 退出到终端之前的状态</span></div><div class="line">curses.endwin()</div></pre></td></tr></table></figure>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> Python </tag>
-            
-            <tag> curses </tag>
             
         </tags>
         
@@ -1546,12 +1755,16 @@
 <p><strong>——————–End——————–</strong></p>
 ]]></content>
       
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> 生活 </tag>
-            
-            <tag> 总结 </tag>
+            <tag> 年终总结 </tag>
             
         </tags>
         
@@ -1597,12 +1810,16 @@
 <p>总之，对于用户输入的所有数据都应该在发送到数据库查询之前进行预处理，以此来过滤那些不安全的参数。使得不会因为被 SQL 注入攻击而产生意想不到的结果。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> PHP </tag>
-            
-            <tag> StackOverflow </tag>
             
             <tag> SQL </tag>
             
@@ -1645,12 +1862,16 @@
 <p>以上即是目前我已经简单使用过的 cURL 库的内容，cURL 库还可以实现多线程抓取，实现 IP 代理等。其他内容会在之后的使用中学习到。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> PHP </tag>
-            
-            <tag> cURL </tag>
             
         </tags>
         
@@ -1677,12 +1898,18 @@
 <p><code>$route[&#39;translate_uri_dashes&#39;] = FALSE;</code> ：这是一个路由设置，不是规则，表示是否把 URL 中的 <code>-</code> 替换为 <code>_</code>。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> CodeIgniter </tag>
-            
             <tag> PHP </tag>
+            
+            <tag> CodeIgniter </tag>
             
         </tags>
         
@@ -1723,12 +1950,18 @@
 <p>可以通过访问 <a href="http://localhost/index.php/HelloWorld" target="_blank" rel="external">http://localhost/index.php/HelloWorld</a> 来查看，虽然使用了 M 跟 V 之后所显示的页面与只使用 C 的显示是一样的，这是由于在这个简单的 Hello World 程序中没有实际到比较复杂的过程，MVC 在实际使用中可以很好的解耦，使得代码大量复用，也易于程序分层。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> CodeIgniter </tag>
-            
             <tag> PHP </tag>
+            
+            <tag> CodeIgniter </tag>
             
         </tags>
         
@@ -1775,10 +2008,16 @@
 <p>简洁，轻量，高效。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> CodeIgniter </tag>
+            <tag> CodeIgiter </tag>
             
             <tag> PHP </tag>
             
@@ -1800,7 +2039,7 @@
 <li>若是新动态，使用python的smtplib模块发送收件到设置的邮箱中并保存到本地文件，否则略过。</li>
 </ul>
 <a id="more"></a>
-<h4 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h4><p><code>os</code><br><code>time</code><br><code>re</code><br><code>sys</code><br><code>MIMEText</code><br><code>requests</code><br><code>smtplib</code><br><!-- more --></p>
+<h4 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h4><p><code>os</code><br><code>time</code><br><code>re</code><br><code>sys</code><br><code>MIMEText</code><br><code>requests</code><br><code>smtplib</code><br><!--more--></p>
 <h4 id="zhihu类：获取与匹配，保持内容"><a href="#zhihu类：获取与匹配，保持内容" class="headerlink" title="zhihu类：获取与匹配，保持内容"></a>zhihu类：获取与匹配，保持内容</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">class zhihu(object):</div><div class="line"></div><div class="line">    def __init__(self):</div><div class="line">        # 设置关注的知乎用户</div><div class="line">        self.url = &quot;http://www.zhihu.com/people/xxxx&quot;</div><div class="line">        # 设置request header</div><div class="line">        self.header = &#123;</div><div class="line">            &apos;Host&apos; : &apos;www.zhihu.com&apos;,</div><div class="line">            &apos;Connection&apos; : &apos;Keep-Alive&apos;,</div><div class="line">            &apos;Accept&apos; : &apos;text/html, application/xhtml+xml, image/jxr, */*&apos;,</div><div class="line">            &apos;User-Agent&apos; : &apos;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36&apos;,</div><div class="line">            &apos;Referer&apos;: self.url</div><div class="line">        &#125;</div><div class="line">        # 设置登录的Cookie</div><div class="line">        self.cookie = &#123;</div><div class="line">            &apos;Cookie&apos; : &apos;&apos;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    # 获取知乎用户的主页HTML</div><div class="line">    def getHTML(self):</div><div class="line">        html = requests.get(self.url, headers = self.header, cookies = self.cookie).content</div><div class="line">        return html</div><div class="line"></div><div class="line">    # 获取最新动态</div><div class="line">    def getContent(self, html):</div><div class="line">        self.name = re.findall(&apos;&lt;span class=&quot;name&quot;&gt;(.*?)&lt;/span&gt;&apos;, html, re.S)[0]</div><div class="line">        content = re.findall(&apos;&lt;div class=&quot;zm-profile-section-main zm-profile-section-activity-main zm-profile-activity-page-item-main&quot;&gt;(.*?)&lt;/div&gt;&apos;, html, re.S)</div><div class="line">        return content</div><div class="line"></div><div class="line">    # 获取每一条最新动态</div><div class="line">    def getText(self, contents):</div><div class="line">        data = &#123;&#125;</div><div class="line">        data[&apos;href&apos;] = re.findall(&apos;href=&quot;/question/(.*?)&quot;&apos;, contents, re.S)</div><div class="line">        data[&apos;question&apos;] = re.findall(&apos;&lt;a class=&quot;question_link&quot; .*?&quot;&gt;(.*?)&lt;/a&gt;&apos;, contents, re.S)</div><div class="line">        restr = &apos;&quot;&gt;&apos;+ self.name +&apos;&lt;/a&gt;(.*?)\n\n&lt;a&apos;</div><div class="line">        data[&apos;action&apos;] = re.findall(restr, contents, re.S)</div><div class="line">        text = self.name + data[&apos;action&apos;] + &apos;: &apos; +  data[&apos;question&apos;] + &apos; http://www.zhihu.com/question/&apos;+ data[&apos;href&apos;] + &apos;\n&apos;</div><div class="line">        return text</div><div class="line"></div><div class="line">    # 保存到文本</div><div class="line">    def toSave(self, text):</div><div class="line">        f = open(&apos;zhihu.txt&apos;, &apos;a&apos;)</div><div class="line">        f.write(text)</div><div class="line">        f.close()</div><div class="line"></div><div class="line">    # 检查动态是否已记录</div><div class="line">    def toCheck(self, text):</div><div class="line">        f = open(&apos;zhihu.txt&apos;, &apos;r&apos;)</div><div class="line">        existzhihu = f.readlines()</div><div class="line">        if text in existzhihu:</div><div class="line">            return False</div><div class="line">        else:</div><div class="line">            return True</div></pre></td></tr></table></figure>
 <h4 id="mail类：发送邮件"><a href="#mail类：发送邮件" class="headerlink" title="mail类：发送邮件"></a>mail类：发送邮件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">class mail(object):</div><div class="line"></div><div class="line">    def __init__(self):</div><div class="line">        #邮件服务器地址，需要打开smtp</div><div class="line">        self.mail_host = &quot;smtp.xxx.cn&quot;</div><div class="line">        #邮件账号</div><div class="line">        self.mail_user = &quot;&quot;</div><div class="line">        #邮箱密码</div><div class="line">        self.mail_pass = &quot;&quot;</div><div class="line">        #邮箱后缀</div><div class="line">        self.mail_postfix = &quot;xxx.com&quot;</div><div class="line"></div><div class="line">    def sendMail(self, toList, sub, content):</div><div class="line">        #发信人</div><div class="line">        me = &quot;zhihu spider&quot; + &quot;&lt;&quot; + self.mail_user + &quot;@&quot; + self.mail_postfix + &quot;&gt;&quot;</div><div class="line">        msg = MIMEText(content, _subtype=&apos;plain&apos;, _charset=&apos;utf-8&apos;)</div><div class="line">         #邮件标题</div><div class="line">        msg[&apos;Subject&apos;] = sub</div><div class="line">        #邮件发送人</div><div class="line">        msg[&apos;From&apos;] = me</div><div class="line">        #邮件收件人</div><div class="line">        msg[&apos;To&apos;] = &quot;;&quot;.join(toList)</div><div class="line">        try:</div><div class="line">            server = smtplib.SMTP()</div><div class="line">            #连接服务器</div><div class="line">            server.connect(self.mail_host)</div><div class="line">            #登录邮箱</div><div class="line">            server.login(self.mail_user,self.mail_pass)</div><div class="line">            #发送邮件</div><div class="line">            server.sendmail(me, toList, msg.as_string())</div><div class="line">            server.close()</div><div class="line">            return True</div><div class="line">        except Exception, e:</div><div class="line">            print str(e)</div><div class="line">            return False</div></pre></td></tr></table></figure>
 <h4 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">if __name__ == &apos;__main__&apos;:</div><div class="line">    # 设置收件人邮箱</div><div class="line">    mailToList = [&apos;xxx@xxx.com&apos;]</div><div class="line">    zhihu = zhihu();</div><div class="line">    while True:</div><div class="line">        html = zhihu.getHTML()</div><div class="line">        content = zhihu.getContent(html)</div><div class="line">        # 若没有动态记录，爬取所有动态，并保存</div><div class="line">        if not os.path.exists(&apos;zhihu.txt&apos;):</div><div class="line">            for contents in content:</div><div class="line">                text = zhihu.getText(contents)</div><div class="line">                zhihu.toSave(text)</div><div class="line">        else:</div><div class="line">            text = zhihu.getText(content[0])</div><div class="line">            print text</div><div class="line">            # 检查是否存在记录， 不存在则发送邮件，并保存到文件</div><div class="line">            if zhihu.toCheck(text):</div><div class="line">                if mail().sendMail(mailToList, &quot;知乎动态&quot;, text):</div><div class="line">                    zhihu.toSave(text)</div><div class="line">                    print &quot;发生成功&quot;</div><div class="line">                else:</div><div class="line">                    print &quot;发送失败&quot;</div><div class="line">            else:</div><div class="line">                print &quot;pass&quot;</div><div class="line">            # 每隔2分钟运行一次，检查新动态</div><div class="line">            time.sleep(120)</div></pre></td></tr></table></figure>
@@ -1810,12 +2049,18 @@
 <p>之前还有看到一个解析html内容的模块叫BeautifulSoup，准备去学习学习。然后打算下次使用pythopn的爬虫框架Scrapy来写更多功能的知乎爬虫。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> Python </tag>
             
-            <tag> Zhihu </tag>
+            <tag> 知乎 </tag>
             
         </tags>
         
@@ -1835,8 +2080,16 @@
 <h4 id="重启apache2"><a href="#重启apache2" class="headerlink" title="重启apache2"></a>重启apache2</h4><pre><code>sudo service apache2 restart
 </code></pre>]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
+            
+            <tag> PHP </tag>
             
             <tag> Ubuntu </tag>
             
@@ -1864,12 +2117,16 @@
 <p>依旧觉得写得跟屎一样。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> PHP </tag>
-            
-            <tag> Captcha </tag>
             
         </tags>
         
@@ -1900,12 +2157,16 @@
 <p>还有就是觉得类的设计跟变量名的命名方面还是有待加强。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
             <tag> PHP </tag>
-            
-            <tag> Captcha </tag>
             
         </tags>
         
@@ -1936,10 +2197,16 @@ sudo: no valid sudoers sources found, quitting
 <p>重启后就可以使用sudo。这里出现了一个提示，进入/etc目录删除sudoers.d文件夹即可解决。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> Ubuntu </tag>
+            <tag> Linux </tag>
             
         </tags>
         
@@ -1970,8 +2237,16 @@ sudo: no valid sudoers sources found, quitting
 <p>访问 <a href="http://localhost/mysql_test.php" target="_blank" rel="external">http://localhost/mysql_test.php</a>，显示“Mysql配置正确”即完成</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 技术 </category>
+            
+        </categories>
+        
         
         <tags>
+            
+            <tag> PHP </tag>
             
             <tag> Ubuntu </tag>
             
