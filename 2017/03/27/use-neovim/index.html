@@ -235,7 +235,7 @@
 <p>虽然说这两货的差别目前还不是很大，但是 Neovim 实现了嵌入式终端模拟器，Excited! 各种 REPL 插件统统都可以卸载了！</p>
 <a id="more"></a>
 <h2 id="迁移配置文件"><a href="#迁移配置文件" class="headerlink" title="迁移配置文件"></a>迁移配置文件</h2><p>Neovim 配置完全兼容原来的 <code>.vimrc</code>，只需要：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir -p <span class="variable">$&#123;XDG_CONFIG_HOME:=$HOME/.config&#125;</span></div><div class="line">ln <span class="_">-s</span> ~/.vim <span class="variable">$XDG_CONFIG_HOME</span>/nvim</div><div class="line">ln <span class="_">-s</span> ~/.vimrc <span class="variable">$XDG_CONFIG_HOME</span>/nvim/init.vim</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir -p <span class="variable">$&#123;XDG_CONFIG_HOME:=$HOME/.config&#125;</span></div><div class="line">ln -s ~/.vim <span class="variable">$XDG_CONFIG_HOME</span>/nvim</div><div class="line">ln -s ~/.vimrc <span class="variable">$XDG_CONFIG_HOME</span>/nvim/init.vim</div></pre></td></tr></table></figure>
 <h2 id="使用-ale-代替-syntastic"><a href="#使用-ale-代替-syntastic" class="headerlink" title="使用 ale 代替 syntastic"></a>使用 ale 代替 syntastic</h2><p>老早就觉得 <code>syntastic</code> 同步检查代码好难用，这下换成 <code>ale</code> 舒服多了。有之前使用 atom 时自带的代码检查的感觉。</p>
 <p>(Vim 8 好像也已经提供了异步 API，但是我等到换成 Neovim 才知道..)</p>
 <h2 id="把-Leader-改成空格"><a href="#把-Leader-改成空格" class="headerlink" title="把 Leader 改成空格"></a>把 Leader 改成空格</h2><p>其实是看了 <a href="https://zhuanlan.zhihu.com/p/25905625" target="_blank" rel="external">Vim 高效率配置导论</a> 这篇文章之后试着改的，改完发现空格比起原先的 <code>,</code> 好用多了。让大拇指动了起来。</p>
@@ -260,15 +260,15 @@
 
   <div class="post-copyright">
     <p class="copyright-item">
-      <span>Author: </span>
+      <span>作者: </span>
       <span>Ahonn</span>
     </p>
     <p class="copyright-item">
-      <span>Origin: </span>
+      <span>来源: </span>
       <a href="http://www.ahonn.me">http://www.ahonn.me</a>
     </p>
     <p class="copyright-item">
-      <span>Link: </span>
+      <span>链接: </span>
       <a href="http://www.ahonn.me/2017/03/27/use-neovim/">http://www.ahonn.me/2017/03/27/use-neovim/</a>
     </p>
 
@@ -284,7 +284,7 @@
       
   <div class="post-reward">
     <input type="checkbox" name="reward" id="reward" hidden />
-    <label class="reward-button" for="reward">Reward</label>
+    <label class="reward-button" for="reward">赞赏支持</label>
     <div class="qr-code">
       
       
@@ -316,6 +316,12 @@
         
         
   <nav class="post-nav">
+    
+      <a class="prev" href="/2017/05/17/koa2-analysis/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">Koa2 源码分析</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
     
     
       <a class="next" href="/2017/03/16/alibaba-summer-internship-interview-summary/">
