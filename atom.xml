@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Even</title>
   
-  <link href="/atom.xml" rel="self"/>
+  <link href="/hexo-theme-even/atom.xml" rel="self"/>
   
-  <link href="http://www.ahonn.me/"/>
+  <link href="http://ahonngithub.io/"/>
   <updated>2017-06-08T06:01:01.000Z</updated>
-  <id>http://www.ahonn.me/</id>
+  <id>http://ahonngithub.io/</id>
   
   <author>
     <name>Ahonn</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>中文测试</title>
-    <link href="http://www.ahonn.me/2016/01/31/Chinese-Test/"/>
-    <id>http://www.ahonn.me/2016/01/31/Chinese-Test/</id>
+    <link href="http://ahonngithub.io/2016/01/31/Chinese-Test/"/>
+    <id>http://ahonngithub.io/2016/01/31/Chinese-Test/</id>
     <published>2016-01-31T13:55:37.000Z</published>
     <updated>2017-06-08T06:01:01.000Z</updated>
     
@@ -46,15 +46,15 @@
     
     </summary>
     
-      <category term="Language Test" scheme="http://www.ahonn.me/categories/Language-Test/"/>
+      <category term="Language Test" scheme="http://ahonngithub.io/categories/Language-Test/"/>
     
     
   </entry>
   
   <entry>
     <title>اختبار اللغة العربية</title>
-    <link href="http://www.ahonn.me/2016/01/30/Arabic-Test/"/>
-    <id>http://www.ahonn.me/2016/01/30/Arabic-Test/</id>
+    <link href="http://ahonngithub.io/2016/01/30/Arabic-Test/"/>
+    <id>http://ahonngithub.io/2016/01/30/Arabic-Test/</id>
     <published>2016-01-30T02:15:01.000Z</published>
     <updated>2017-06-08T06:00:48.000Z</updated>
     
@@ -80,7 +80,7 @@
     
     </summary>
     
-      <category term="Language Test" scheme="http://www.ahonn.me/categories/Language-Test/"/>
+      <category term="Language Test" scheme="http://ahonngithub.io/categories/Language-Test/"/>
     
     
   </entry>
