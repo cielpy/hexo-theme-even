@@ -5,7 +5,7 @@
   <link href="/hexo-theme-even/atom.xml" rel="self"/>
   
   <link href="http://ahonngithub.io/"/>
-  <updated>2017-06-08T06:01:01.000Z</updated>
+  <updated>2017-06-08T06:09:48.000Z</updated>
   <id>http://ahonngithub.io/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://ahonngithub.io/2017/06/08/hello-world/"/>
+    <id>http://ahonngithub.io/2017/06/08/hello-world/</id>
+    <published>2017-06-08T06:09:48.000Z</published>
+    <updated>2017-06-08T06:09:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>中文测试</title>
@@ -43,40 +70,6 @@
 &lt;p&gt;　　见渔人，乃大惊，问所从来。具答之。便要还家，设酒杀鸡作食。村中闻有此人，咸来问讯。自云先世避秦时乱，率妻子邑人来此绝境，不复出焉，遂与外人间隔。问今是何世，乃不知有汉，无论魏晋。此人一一为具言所闻，皆叹惋。余人各复延至其家，皆出酒食。停数日，辞去。此中人语云：“不足为外人道也。”(间隔 一作：隔绝)&lt;/p&gt;
 &lt;p&gt;　　既出，得其船，便扶向路，处处志之。及郡下，诣太守，说如此。太守即遣人随其往，寻向所志，遂迷，不复得路。&lt;/p&gt;
 &lt;p&gt;　　南阳刘子骥，高尚士也，闻之，欣然规往。未果，寻病终，后遂无问津者。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Language Test" scheme="http://ahonngithub.io/categories/Language-Test/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>اختبار اللغة العربية</title>
-    <link href="http://ahonngithub.io/2016/01/30/Arabic-Test/"/>
-    <id>http://ahonngithub.io/2016/01/30/Arabic-Test/</id>
-    <published>2016-01-30T02:15:01.000Z</published>
-    <updated>2017-06-08T06:00:48.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>كل تصفح بالفشل التّحول ذات, أعمال اعتداء المتحدة مكن ٣٠. تلك للسيطرة واشتدّت أن, بل انذار العاصمة الخاسرة أما. تحت مع دفّة بالرّغم, وبالرغم وبالتحديد، مع جهة. مسارح يتمكن يتسنّى جهة ان, التي اتفاقية قد كان. فمرّ الوراء ان غير. شيء ما شمال أدوات بالجانب, لكل وشعار اتفاق بـ, بها الإنزال مواقعها في. أثره، الأوربيين تحت و, سقوط بالرغم الإتفاقية عن يبق, في هذا وجهان وإقامة مقاطعة.</p>
-<p>عن أخرى الأجل واشتدّت ضرب, يبق تم دارت جيوب, ٣٠ وبداية ابتدعها الأمريكي أخر. لم كما شرسة غرّة، الأعمال, كل بخطوط وعُرفت الضروري ولم, وسفن واستمرت تلك من. مع حيث وأزيز الأخذ, فاتّبع مقاطعة ويكيبيديا، عن وفي, بـ لها كثيرة المتحدة. قد ضرب وسوء إعلان, ان وتم اعتداء إستيلاء, يكن نقطة معاملة ثم. بحث في بلديهما الصينية, هذه ما حصدت شرسة, ذات أم الشمل والقرى.</p>
-<p>بينما أوراقهم مكن تم, تحت أي وفنلندا بمحاولة شموليةً. بحث عن بلديهما المنتصر, لم شاسعة للجزر كلا. بل مما وتنصيب بمباركة والكوري, هناك الأرض تم قبل. غضون عُقر الجديدة، يبق مع, أثره، واُسدل استعملت تم تلك.</p>
-<a id="more"></a>
-<p>عن فصل هُزم والنرويج. قد بحق أواخر نتيجة قُدُماً, جعل ان تمهيد الشتاء الشّعبين. علاقة بقيادة الانجليزية شيء عن, كان الستار استدعى هو, ذات تعديل المحيط الواقعة ان. في غير مليون وبالرغم تزامناً, ان جُل حقول يذكر بالعمل, ما انه فشكّل والنفيس.</p>
-<p>لكل معارضة بمحاولة الإقتصادية عن, من تلك الشمل الأبرياء. أمّا والعتاد هو ولم, مما كردة الجو ابتدعها ثم. الغالي العالم إيو هو. فسقط مشارف اكتوبر بل وفي, غير تحرّك وقامت المنتصر بـ, الطرفين الفرنسية قد على. الى هو إستعمل السيطرة, ضرب رئيس مساعدة ثم.</p>
-<p>عدد مرجع وبحلول عل, قبل الشرقية أوراقهم لبلجيكا، عن. هو إحتار والتي المنتصر بحث, قد بحق سياسة ميناء لإعادة, مكن لفشل الشّعبين إذ. كان عل جيما بشرية لإعلان. ٣٠ معاملة الأثنان بها. عملية الصين وتنصيب أخذ تم, يبق بالرغم العاصمة في.</p>
-<p>دفّة إختار ولاتّساع في عدم. دنو فهرست وقوعها، عل, قبل ٠٨٠٤ ومحاولة لم. الشرقي جزيرتي الثانية عل كما, حين هو رئيس واشتدّت المتساقطة،, بحق لمحاكم استعملت في. ان وإقامة والمعدات لها, هو إيو مئات يرتبط. بحق مع وصغار وهولندا،, بعد سقوط لإنعدام لم, يكن قد وكسبت الأوروبي.</p>
-<p>بل لعدم الأمور واستمر كلا. تم حول مكثّفة البرية الإنزال. هو إعلان مدينة لهيمنة أخذ. دار وبعض لهذه الأسيوي ان, حدى سكان بقسوة أن, أم الأولى الجديدة، كلا. عرض ٣٠ وبعد ماذا بتحدّي, بالفشل تزامناً التكاليف يكن عن.</p>
-<p>كل فمرّ وانتهاءً حين. شاسعة مهمّات ايطاليا، قد قبل, وتم هو أعلنت بلديهما, أي فقامت التنازلي اليابان، دار. ثم ضمنها الإمتعاض بريطانيا-فرنسا على, قد حول وقرى استدعى. أوروبا ألمانيا ٣٠ يبق. عرض إذ احداث الصين. في بين ببعض ويكيبيديا،, وصل بسبب تحرير النفط بـ.</p>
-<p>التي ضمنها به، إذ, دارت مشروط أي حول, فقد عن فقامت الأرضية ماليزيا،. تنفّس انتهت يونيو شيء إذ, أي عدم لليابان الدولارات. وإقامة الخاطفة والمانيا عن حول. بل جُل أكثر والإتحاد, تم ضرب انتباه والإتحاد. من قامت انتهت دنو.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> stone;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.util.ArrayList;</div><div class="line"><span class="keyword">import</span> java.util.Iterator;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by ppoffice on 2015/12/15.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ASTLeaf</span> <span class="keyword">extends</span> <span class="title">ASTree</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> ArrayList&lt;ASTree&gt; empty = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">    <span class="keyword">protected</span> Token token;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ASTLeaf</span><span class="params">(Token t)</span> </span>&#123;</div><div class="line">        token = t;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> ASTree <span class="title">child</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</div><div class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> IndexOutOfBoundsException();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numChildren</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> Iterator&lt;ASTree&gt; <span class="title">children</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> empty.iterator();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span> <span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> token.getText();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">location</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">"at line "</span> + token.getLineNumber();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> Token <span class="title">token</span> <span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> token;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;كل تصفح بالفشل التّحول ذات, أعمال اعتداء المتحدة مكن ٣٠. تلك للسيطرة واشتدّت أن, بل انذار العاصمة الخاسرة أما. تحت مع دفّة بالرّغم, وبالرغم وبالتحديد، مع جهة. مسارح يتمكن يتسنّى جهة ان, التي اتفاقية قد كان. فمرّ الوراء ان غير. شيء ما شمال أدوات بالجانب, لكل وشعار اتفاق بـ, بها الإنزال مواقعها في. أثره، الأوربيين تحت و, سقوط بالرغم الإتفاقية عن يبق, في هذا وجهان وإقامة مقاطعة.&lt;/p&gt;
-&lt;p&gt;عن أخرى الأجل واشتدّت ضرب, يبق تم دارت جيوب, ٣٠ وبداية ابتدعها الأمريكي أخر. لم كما شرسة غرّة، الأعمال, كل بخطوط وعُرفت الضروري ولم, وسفن واستمرت تلك من. مع حيث وأزيز الأخذ, فاتّبع مقاطعة ويكيبيديا، عن وفي, بـ لها كثيرة المتحدة. قد ضرب وسوء إعلان, ان وتم اعتداء إستيلاء, يكن نقطة معاملة ثم. بحث في بلديهما الصينية, هذه ما حصدت شرسة, ذات أم الشمل والقرى.&lt;/p&gt;
-&lt;p&gt;بينما أوراقهم مكن تم, تحت أي وفنلندا بمحاولة شموليةً. بحث عن بلديهما المنتصر, لم شاسعة للجزر كلا. بل مما وتنصيب بمباركة والكوري, هناك الأرض تم قبل. غضون عُقر الجديدة، يبق مع, أثره، واُسدل استعملت تم تلك.&lt;/p&gt;
     
     </summary>
     
