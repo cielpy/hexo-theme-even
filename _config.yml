@@ -17,9 +17,9 @@ rss: default
 # Menu Settings
 # ===========================================
 menu:
-  # Home: /
+  Home: /
   Archives: /archives/
-  Tags: /tags
+  # Tags: /tags
   # Categories: /categories
   # Github: https://github.com/ahonn
   About: /about
