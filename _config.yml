@@ -66,9 +66,14 @@ social:
 # ===========================================
 
 # Baidu Analytics
-baidu_analytics: 8466adbc25665cf7ee1a15e4fcb73643
+baidu_analytics: 0a275bcf7d954b807e1db498d8e5b192
+# Baidu Verification
+baidu_verification: 0a275bcf7d954b807e1db498d8e5b192
+
 # Google Analytics
 google_analytics: UA-74273646-1
+# Google Verification
+google_verification: j5dWC85DkoAfUR50W00ewfii3X9ouH55HnyBP6oZxGE
 
 # Disqus
 disqus_shortname: ahonn
@@ -76,4 +81,4 @@ disqus_shortname: ahonn
 # ===========================================
 # Version
 # ===========================================
-version: 2.4.x
+version: 2.5.0
