@@ -1,4 +1,4 @@
-{% if theme.google_analytics %}
+{%- if theme.google_analytics -%}
   <script id="sensorsdata_analytics">
 (function(para) {
   var p = para.sdk_url, n = para.name, w = window, d = document, s = 'script',x = null,y = null;
@@ -35,4 +35,4 @@
     });
     sensors.quick('autoTrack');
 </script>
-{% endif %}
+{%- endif -%}

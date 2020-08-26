@@ -5,13 +5,12 @@
 
   .copyright-item {
     margin: 5px 0;
-    
-    &.lincese {
-      font-weight: bold;
-    }
+    word-break: normal;
+    white-space: pre-warp;
+    word-wrap: break-word;
 
     a {
-      text-decoration: underline;
+      color: $theme-color;
     }
   }
 }
