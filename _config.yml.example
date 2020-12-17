@@ -18,10 +18,10 @@ rss: default
 # ===========================================
 menu:
   Home: /
-  Archives: /archives/
-  Tags: /tags
-  Categories: /categories
-  About: /about
+  # Archives: /archives/
+  # Tags: /tags/
+  # Categories: /categories/
+  # About: /about/
 
 # ===========================================
 # Theme Settings
@@ -55,13 +55,13 @@ reward:
 # Social links Settings
 # ===========================================
 social:
-  email: beijiu572@gmail.com
-  stack-overflow: https://stackoverflow.com/users/1841463/kevin-guo
-  twitter: https://twitter.com/cielpy5
+  email: your@email.com
+  stack-overflow:
+  twitter:
   facebook:
   linkedin:
   google:
-  github: https://github.com/cielpy
+  github: https://github.com/ahonn
   weibo:
   zhihu:
   douban:
@@ -84,12 +84,12 @@ baidu_analytics:
 baidu_verification:
 
 # Google Analytics
-google_analytics: UA-51259806-3
+google_analytics:
 # Google Verification
 google_verification:
 
 # Disqus
-disqus_shortname: cielpark
+disqus_shortname:
 
 #Changyan
 changyan:
@@ -128,4 +128,4 @@ utterances:
 # ===========================================
 # Version
 # ===========================================
-version: 2.11.2
+version: 2.11.0
